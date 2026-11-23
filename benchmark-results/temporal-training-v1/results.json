@@ -1,0 +1,5398 @@
+{
+  "baseline": [
+    {
+      "id": "temporal-grant-Korean-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다.",
+      "output": "2029년 1월 15일까지 applications.submit을 제출해 주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.541
+    },
+    {
+      "id": "temporal-grant-Korean-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "신청서 제출 마감일 2029년 1월 15일; 심사 결과 발표일 2029년 2월 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다.",
+      "output": "신청서 제출 마감일은 2029년 1월 15일입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.43
+    },
+    {
+      "id": "temporal-grant-English-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by January 15, 2029.",
+      "output": "Your application for the Grant Program is due on 2029-01-15.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.487
+    },
+    {
+      "id": "temporal-grant-English-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "Application submission deadline: January 15, 2029; Results announcement date: February 3, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by January 15, 2029.",
+      "output": "Your grant application is due by January 15, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.129
+    },
+    {
+      "id": "temporal-grant-Korean-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "output": "2029년 1월 15일에 다음 중 하나를 선택해 주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.557
+    },
+    {
+      "id": "temporal-grant-Korean-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "신청서 제출 마감일 2029년 1월 15일; 심사 결과 발표일 2029년 2월 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.466
+    },
+    {
+      "id": "temporal-grant-English-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on February 3, 2029.",
+      "output": "The grant review notice will be published on February 3, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.381
+    },
+    {
+      "id": "temporal-grant-English-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "Application submission deadline: January 15, 2029; Results announcement date: February 3, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on February 3, 2029.",
+      "output": "The application submission deadline is January 15, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.011
+    },
+    {
+      "id": "temporal-grant-Korean-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다.",
+      "output": "2029년 9월 6일에 지원금 신청서를 제출해 주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.064
+    },
+    {
+      "id": "temporal-grant-Korean-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "신청서 제출 마감일 2029년 9월 6일; 심사 결과 발표일 2029년 10월 10일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다.",
+      "output": "신청서 제출 마감일은 2029년 9월 6일입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.187
+    },
+    {
+      "id": "temporal-grant-English-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by September 6, 2029.",
+      "output": "Your application for the notice at the deadline on 2029-09-06 is already closed.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.451
+    },
+    {
+      "id": "temporal-grant-English-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "Application submission deadline: September 6, 2029; Results announcement date: October 10, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by September 6, 2029.",
+      "output": "Your grant application is due by September 6, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.954
+    },
+    {
+      "id": "temporal-grant-Korean-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 10월 10일에 발표될 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.319
+    },
+    {
+      "id": "temporal-grant-Korean-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "신청서 제출 마감일 2029년 9월 6일; 심사 결과 발표일 2029년 10월 10일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.397
+    },
+    {
+      "id": "temporal-grant-English-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on October 10, 2029.",
+      "output": "The application close date is 2029-09-06.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.167
+    },
+    {
+      "id": "temporal-grant-English-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "Application submission deadline: September 6, 2029; Results announcement date: October 10, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on October 10, 2029.",
+      "output": "The application for [Program Name] will be reviewed, with results likely to be announced by October 10, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.431
+    },
+    {
+      "id": "temporal-repair-Korean-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 2일이 추가로 소요됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.997
+    },
+    {
+      "id": "temporal-repair-Korean-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2,
+          "temporal_roles": "기존 예상 기간 5일; 기존 예상보다 2일 더 걸림"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 2일이 더 걸려 총 5일이 소요됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.025
+    },
+    {
+      "id": "temporal-repair-English-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 2 days longer than originally estimated.",
+      "output": "The repair will take 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.766
+    },
+    {
+      "id": "temporal-repair-English-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2,
+          "temporal_roles": "Original estimate: 5 days; Takes 2 days longer than the original estimate"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 2 days longer than originally estimated.",
+      "output": "The repair takes 2 days longer than the original estimate of 5 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.94
+    },
+    {
+      "id": "temporal-repair-Korean-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "output": "수리 완료까지 2일이 남았습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.87
+    },
+    {
+      "id": "temporal-repair-Korean-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2,
+          "temporal_roles": "기존 예상 기간 5일; 오늘부터 완료까지 2일 남음"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "output": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.913
+    },
+    {
+      "id": "temporal-repair-English-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 2 days.",
+      "output": "The repair is expected to be completed in 2 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.832
+    },
+    {
+      "id": "temporal-repair-English-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2,
+          "temporal_roles": "Original estimate: 5 days; 2 days remaining from today until completion"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 2 days.",
+      "output": "2 days remaining until completion.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.57
+    },
+    {
+      "id": "temporal-repair-Korean-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 5일이 추가로 소요됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.938
+    },
+    {
+      "id": "temporal-repair-Korean-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5,
+          "temporal_roles": "기존 예상 기간 2일; 기존 예상보다 5일 더 걸림"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 5일이 더 걸립니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.712
+    },
+    {
+      "id": "temporal-repair-English-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 5 days longer than originally estimated.",
+      "output": "The repair will take 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.656
+    },
+    {
+      "id": "temporal-repair-English-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5,
+          "temporal_roles": "Original estimate: 2 days; Takes 5 days longer than the original estimate"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 5 days longer than originally estimated.",
+      "output": "The repair takes 5 days longer than the original estimate of 2 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.918
+    },
+    {
+      "id": "temporal-repair-Korean-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "output": "수리 완료까지 5일이 남았습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.747
+    },
+    {
+      "id": "temporal-repair-Korean-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5,
+          "temporal_roles": "기존 예상 기간 2일; 오늘부터 완료까지 5일 남음"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "output": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.899
+    },
+    {
+      "id": "temporal-repair-English-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 5 days.",
+      "output": "The repair is expected to be completed in 5 days from now.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.865
+    },
+    {
+      "id": "temporal-repair-English-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5,
+          "temporal_roles": "Original estimate: 2 days; 5 days remaining from today until completion"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 5 days.",
+      "output": "The repair is expected to take 5 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.697
+    },
+    {
+      "id": "shipping-ko-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 3,
+          "original_estimate_days": 7
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프를 주문했습니다. 추가 배송은 3일 뒤에 받을 수 있습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.254
+    },
+    {
+      "id": "shipping-ko-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 3,
+          "original_estimate_days": 7,
+          "temporal_roles": "기존 예상보다 3일 더 걸림; 기존 예상 기간 7일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프는 기존 예상보다 3일 더 걸리게 되어 오늘 배송을 완료할 수 없습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.174
+    },
+    {
+      "id": "shipping-ko-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 7,
+          "original_estimate_days": 3
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프를 3일 후에 배송해 드리겠습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.832
+    },
+    {
+      "id": "shipping-ko-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 7,
+          "original_estimate_days": 3,
+          "temporal_roles": "기존 예상보다 7일 더 걸림; 기존 예상 기간 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프는 기존 예상보다 7일 더 걸리는데, 같은 날짜에 배송해 드리겠습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.17
+    },
+    {
+      "id": "shipping-en-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 3,
+          "original_estimate_days": 7
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp has been delivered.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.765
+    },
+    {
+      "id": "shipping-en-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 3,
+          "original_estimate_days": 7,
+          "temporal_roles": "Takes 3 days longer than the original estimate; Original estimate: 7 days"
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp is on delivery in 3 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.759
+    },
+    {
+      "id": "shipping-en-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 7,
+          "original_estimate_days": 3
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp will be delivered in 3 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.727
+    },
+    {
+      "id": "shipping-en-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 7,
+          "original_estimate_days": 3,
+          "temporal_roles": "Takes 7 days longer than the original estimate; Original estimate: 3 days"
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp is 7 days after the original estimate of 3 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.926
+    },
+    {
+      "id": "temporal-grant-Korean-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다.",
+      "output": "신청 마감일은 2029년 1월 15일이며, 지원금 신청은 2029년 2월 3일까지 완료해야 합니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.792
+    },
+    {
+      "id": "temporal-grant-Korean-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "신청서 제출 마감일 2029년 1월 15일; 심사 결과 발표일 2029년 2월 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다.",
+      "output": "신청서 제출 마감일은 2029년 1월 15일입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.21
+    },
+    {
+      "id": "temporal-grant-English-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by January 15, 2029.",
+      "output": "Your application will be considered by the deadline on January 15, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.239
+    },
+    {
+      "id": "temporal-grant-English-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "Application submission deadline: January 15, 2029; Results announcement date: February 3, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by January 15, 2029.",
+      "output": "Your grant application has a deadline of January 15, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.994
+    },
+    {
+      "id": "temporal-grant-Korean-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "output": "2029년 1월 15일에 지원금 심사 결과가 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.104
+    },
+    {
+      "id": "temporal-grant-Korean-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "신청서 제출 마감일 2029년 1월 15일; 심사 결과 발표일 2029년 2월 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.252
+    },
+    {
+      "id": "temporal-grant-English-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on February 3, 2029.",
+      "output": "The results of the grant review will be announced on February 3, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.079
+    },
+    {
+      "id": "temporal-grant-English-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "Application submission deadline: January 15, 2029; Results announcement date: February 3, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on February 3, 2029.",
+      "output": "The application for the new software course will be reviewed and the results will be announced on February 3, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.324
+    },
+    {
+      "id": "temporal-grant-Korean-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다.",
+      "output": "신청 마감일은 2029년 9월 6일입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.034
+    },
+    {
+      "id": "temporal-grant-Korean-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "신청서 제출 마감일 2029년 9월 6일; 심사 결과 발표일 2029년 10월 10일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다.",
+      "output": "신청서 제출 마감일은 2029년 9월 6일입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.179
+    },
+    {
+      "id": "temporal-grant-English-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by September 6, 2029.",
+      "output": "Your application will be considered by 2029-10-10.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.035
+    },
+    {
+      "id": "temporal-grant-English-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "Application submission deadline: September 6, 2029; Results announcement date: October 10, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by September 6, 2029.",
+      "output": "Your grant application is accepted. The deadline for submission is September 6, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.111
+    },
+    {
+      "id": "temporal-grant-Korean-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.215
+    },
+    {
+      "id": "temporal-grant-Korean-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "신청서 제출 마감일 2029년 9월 6일; 심사 결과 발표일 2029년 10월 10일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "output": "2029년 9월 6일에 신청이 마감되었고, 2029년 10월 10일에 지원금 심사 결과가 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.977
+    },
+    {
+      "id": "temporal-grant-English-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on October 10, 2029.",
+      "output": "The grant review results will be announced on 2029-10-10.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.12
+    },
+    {
+      "id": "temporal-grant-English-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "Application submission deadline: September 6, 2029; Results announcement date: October 10, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on October 10, 2029.",
+      "output": "The application submission deadline is September 6, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.94
+    },
+    {
+      "id": "temporal-repair-Korean-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 추가로 2일이 걸리면 총 7일이 소요됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.102
+    },
+    {
+      "id": "temporal-repair-Korean-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2,
+          "temporal_roles": "기존 예상 기간 5일; 기존 예상보다 2일 더 걸림"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 5일이 소요되며, 기존 예상보다 2일 더 걸릴 수 있습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.21
+    },
+    {
+      "id": "temporal-repair-English-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 2 days longer than originally estimated.",
+      "output": "The repair is now 7 days beyond the original estimate.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.804
+    },
+    {
+      "id": "temporal-repair-English-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2,
+          "temporal_roles": "Original estimate: 5 days; Takes 2 days longer than the original estimate"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 2 days longer than originally estimated.",
+      "output": "The repair takes 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.602
+    },
+    {
+      "id": "temporal-repair-Korean-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "output": "수리가 완료될 때까지 남은 일수는 2일입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.885
+    },
+    {
+      "id": "temporal-repair-Korean-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2,
+          "temporal_roles": "기존 예상 기간 5일; 오늘부터 완료까지 2일 남음"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "output": "기기 수리는 오늘부터 2일 후에 완료됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.85
+    },
+    {
+      "id": "temporal-repair-English-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 2 days.",
+      "output": "The repair is expected to be completed in 2 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.81
+    },
+    {
+      "id": "temporal-repair-English-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2,
+          "temporal_roles": "Original estimate: 5 days; 2 days remaining from today until completion"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 2 days.",
+      "output": "2 days remaining until completion.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.574
+    },
+    {
+      "id": "temporal-repair-Korean-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 추가로 5일이 걸리면 총 7일이 소요됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.066
+    },
+    {
+      "id": "temporal-repair-Korean-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5,
+          "temporal_roles": "기존 예상 기간 2일; 기존 예상보다 5일 더 걸림"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 2일이 소요되지만, 기존 예상보다 5일 더 걸릴 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.14
+    },
+    {
+      "id": "temporal-repair-English-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 5 days longer than originally estimated.",
+      "output": "The repair is now 7 days beyond the original estimate.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.793
+    },
+    {
+      "id": "temporal-repair-English-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5,
+          "temporal_roles": "Original estimate: 2 days; Takes 5 days longer than the original estimate"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 5 days longer than originally estimated.",
+      "output": "The repair takes 5 days longer than the original estimate.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.781
+    },
+    {
+      "id": "temporal-repair-Korean-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "output": "수리가 완료될 때까지 남은 일수는 5일입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.906
+    },
+    {
+      "id": "temporal-repair-Korean-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5,
+          "temporal_roles": "기존 예상 기간 2일; 오늘부터 완료까지 5일 남음"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "output": "기기 수리는 오늘부터 5일 후에 완료됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.841
+    },
+    {
+      "id": "temporal-repair-English-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 5 days.",
+      "output": "The repair is due in 5 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.675
+    },
+    {
+      "id": "temporal-repair-English-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5,
+          "temporal_roles": "Original estimate: 2 days; 5 days remaining from today until completion"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 5 days.",
+      "output": "The repair is due in 5 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.666
+    },
+    {
+      "id": "shipping-ko-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 3,
+          "original_estimate_days": 7
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프를 주문하셨습니다. 추가 배송은 오늘로부터 3일 후에 도착합니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.123
+    },
+    {
+      "id": "shipping-ko-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 3,
+          "original_estimate_days": 7,
+          "temporal_roles": "기존 예상보다 3일 더 걸림; 기존 예상 기간 7일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프를 3일 더 배송해 드리겠습니다. 기존 예상 기간은 7일이었습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.195
+    },
+    {
+      "id": "shipping-ko-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 7,
+          "original_estimate_days": 3
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프를 주문하셨습니다. 추가 배송은 오늘부터 7일까지 가능합니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.039
+    },
+    {
+      "id": "shipping-ko-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 7,
+          "original_estimate_days": 3,
+          "temporal_roles": "기존 예상보다 7일 더 걸림; 기존 예상 기간 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프는 기존 예상보다 7일 더 걸리네요. 오늘 주문은 3일 후에 배송될 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.277
+    },
+    {
+      "id": "shipping-en-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 3,
+          "original_estimate_days": 7
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp has been delivered, but it's 3 days late.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.92
+    },
+    {
+      "id": "shipping-en-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 3,
+          "original_estimate_days": 7,
+          "temporal_roles": "Takes 3 days longer than the original estimate; Original estimate: 7 days"
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "desk lamp delivery will take 3 days longer than the original estimate of 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.991
+    },
+    {
+      "id": "shipping-en-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 7,
+          "original_estimate_days": 3
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp will arrive in 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.685
+    },
+    {
+      "id": "shipping-en-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 7,
+          "original_estimate_days": 3,
+          "temporal_roles": "Takes 7 days longer than the original estimate; Original estimate: 3 days"
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "desk lamp delivery is expected in 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.697
+    }
+  ],
+  "temporal": [
+    {
+      "id": "temporal-grant-Korean-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다.",
+      "output": "지원금 신청은 2029년 1월 15일까지 제출해 주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.347
+    },
+    {
+      "id": "temporal-grant-Korean-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "신청서 제출 마감일 2029년 1월 15일; 심사 결과 발표일 2029년 2월 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다.",
+      "output": "신청서 제출 마감일은 2029년 1월 15일입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.213
+    },
+    {
+      "id": "temporal-grant-English-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by January 15, 2029.",
+      "output": "Your application will be reviewed between January 15th and March 3rd, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.38
+    },
+    {
+      "id": "temporal-grant-English-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "Application submission deadline: January 15, 2029; Results announcement date: February 3, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by January 15, 2029.",
+      "output": "Submit your application by January 15, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.998
+    },
+    {
+      "id": "temporal-grant-Korean-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.381
+    },
+    {
+      "id": "temporal-grant-Korean-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "신청서 제출 마감일 2029년 1월 15일; 심사 결과 발표일 2029년 2월 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.284
+    },
+    {
+      "id": "temporal-grant-English-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on February 3, 2029.",
+      "output": "Your application for the application to be closed on January 15th, 2029 will not be announced until February 3rd, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.875
+    },
+    {
+      "id": "temporal-grant-English-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "Application submission deadline: January 15, 2029; Results announcement date: February 3, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on February 3, 2029.",
+      "output": "Your application for [Program Name] will be reviewed by a committee that will announce the results on February 3, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.437
+    },
+    {
+      "id": "temporal-grant-Korean-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다.",
+      "output": "지원금 신청은 2029년 10월 10일까지 제출해주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.21
+    },
+    {
+      "id": "temporal-grant-Korean-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "신청서 제출 마감일 2029년 9월 6일; 심사 결과 발표일 2029년 10월 10일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다.",
+      "output": "신청서를 2029년 9월 6일에 제출해 주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.183
+    },
+    {
+      "id": "temporal-grant-English-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by September 6, 2029.",
+      "output": "Your application to the University of Technology is now closed. Please check for the application results on October 10, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.566
+    },
+    {
+      "id": "temporal-grant-English-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "Application submission deadline: September 6, 2029; Results announcement date: October 10, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by September 6, 2029.",
+      "output": "Your application will be reviewed on September 6, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.93
+    },
+    {
+      "id": "temporal-grant-Korean-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "output": "지원금 심사는 2029년 10월 10일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.179
+    },
+    {
+      "id": "temporal-grant-Korean-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "신청서 제출 마감일 2029년 9월 6일; 심사 결과 발표일 2029년 10월 10일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 10월 10일에 발표합니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.28
+    },
+    {
+      "id": "temporal-grant-English-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on October 10, 2029.",
+      "output": "Your application for the application to be closed on 2029-09-06 will not be announced.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.245
+    },
+    {
+      "id": "temporal-grant-English-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "Application submission deadline: September 6, 2029; Results announcement date: October 10, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on October 10, 2029.",
+      "output": "Your application to [Program Name] will be reviewed. Results will be announced on October 10, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.346
+    },
+    {
+      "id": "temporal-repair-Korean-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 처음 안내한 기간보다 추가로 2일이 걸립니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.095
+    },
+    {
+      "id": "temporal-repair-Korean-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2,
+          "temporal_roles": "기존 예상 기간 5일; 기존 예상보다 2일 더 걸림"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다.",
+      "output": "기기 수리는 처음에 5일이 걸리지만, 현재 상태를 고려하면 2일 더 걸릴 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.258
+    },
+    {
+      "id": "temporal-repair-English-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 2 days longer than originally estimated.",
+      "output": "The device repair will take 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.78
+    },
+    {
+      "id": "temporal-repair-English-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2,
+          "temporal_roles": "Original estimate: 5 days; Takes 2 days longer than the original estimate"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 2 days longer than originally estimated.",
+      "output": "The device repair takes 2 days longer than the original estimate.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.838
+    },
+    {
+      "id": "temporal-repair-Korean-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "output": "기기 수리는 오늘부터 2일 후에 완료됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.97
+    },
+    {
+      "id": "temporal-repair-Korean-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2,
+          "temporal_roles": "기존 예상 기간 5일; 오늘부터 완료까지 2일 남음"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "output": "기기 수리는 오늘부터 2일 후에 완료됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.852
+    },
+    {
+      "id": "temporal-repair-English-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 2 days.",
+      "output": "The device repair will be completed in 2 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.748
+    },
+    {
+      "id": "temporal-repair-English-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2,
+          "temporal_roles": "Original estimate: 5 days; 2 days remaining from today until completion"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 2 days.",
+      "output": "The device repair should be completed in 2 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.778
+    },
+    {
+      "id": "temporal-repair-Korean-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 처음 안내한 기간보다 추가로 걸리는 일수를 포함해 2일이 더 걸렸습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.203
+    },
+    {
+      "id": "temporal-repair-Korean-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5,
+          "temporal_roles": "기존 예상 기간 2일; 기존 예상보다 5일 더 걸림"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다.",
+      "output": "기기 수리는 처음에 2일 예상되었으나, 추가로 5일이 더 걸려 7일 후에 completion이 완료될 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.537
+    },
+    {
+      "id": "temporal-repair-English-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 5 days longer than originally estimated.",
+      "output": "The repair should be completed in 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.736
+    },
+    {
+      "id": "temporal-repair-English-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5,
+          "temporal_roles": "Original estimate: 2 days; Takes 5 days longer than the original estimate"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 5 days longer than originally estimated.",
+      "output": "The device repair takes 5 days longer than the original estimate.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.814
+    },
+    {
+      "id": "temporal-repair-Korean-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "output": "기기 수리는 오늘부터 5일 후에 완료됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.892
+    },
+    {
+      "id": "temporal-repair-Korean-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5,
+          "temporal_roles": "기존 예상 기간 2일; 오늘부터 완료까지 5일 남음"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "output": "기기 수리는 오늘부터 5일 후에 완료됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.879
+    },
+    {
+      "id": "temporal-repair-English-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 5 days.",
+      "output": "The device repair is expected to be completed in 5 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.82
+    },
+    {
+      "id": "temporal-repair-English-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5,
+          "temporal_roles": "Original estimate: 2 days; 5 days remaining from today until completion"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 5 days.",
+      "output": "The device repair is expected to take 5 days from today.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.81
+    },
+    {
+      "id": "shipping-ko-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 3,
+          "original_estimate_days": 7
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프는 오늘 오후 3시에 도착할 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.985
+    },
+    {
+      "id": "shipping-ko-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 3,
+          "original_estimate_days": 7,
+          "temporal_roles": "기존 예상보다 3일 더 걸림; 기존 예상 기간 7일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프 배송이 기존 예상보다 3일 더 걸립니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.825
+    },
+    {
+      "id": "shipping-ko-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 7,
+          "original_estimate_days": 3
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프는 오늘 오후 3시에 도착할 예정입니다. 추가 배송은 오늘 오후 5시에 받으시면 됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.391
+    },
+    {
+      "id": "shipping-ko-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 7,
+          "original_estimate_days": 3,
+          "temporal_roles": "기존 예상보다 7일 더 걸림; 기존 예상 기간 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.541
+    },
+    {
+      "id": "shipping-en-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 3,
+          "original_estimate_days": 7
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp will arrive in 3 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.885
+    },
+    {
+      "id": "shipping-en-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 3,
+          "original_estimate_days": 7,
+          "temporal_roles": "Takes 3 days longer than the original estimate; Original estimate: 7 days"
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp is on delivery.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.604
+    },
+    {
+      "id": "shipping-en-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 7,
+          "original_estimate_days": 3
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp will be delivered in 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.769
+    },
+    {
+      "id": "shipping-en-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 42,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 7,
+          "original_estimate_days": 3,
+          "temporal_roles": "Takes 7 days longer than the original estimate; Original estimate: 3 days"
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "The desk lamp will arrive in 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.758
+    },
+    {
+      "id": "temporal-grant-Korean-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다.",
+      "output": "지원금 신청은 2029년 1월 15일까지 제출해 주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.178
+    },
+    {
+      "id": "temporal-grant-Korean-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "신청서 제출 마감일 2029년 1월 15일; 심사 결과 발표일 2029년 2월 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다.",
+      "output": "신청서를 2029년 1월 15일에 제출해 주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.221
+    },
+    {
+      "id": "temporal-grant-English-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by January 15, 2029.",
+      "output": "Your application to the applications_close_on date of 2029-01-15 has not been received.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.333
+    },
+    {
+      "id": "temporal-grant-English-0",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "Application submission deadline: January 15, 2029; Results announcement date: February 3, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by January 15, 2029.",
+      "output": "Your application was not granted.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.566
+    },
+    {
+      "id": "temporal-grant-Korean-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "output": "지원금 심사는 2029년 1월 15일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.243
+    },
+    {
+      "id": "temporal-grant-Korean-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "신청서 제출 마감일 2029년 1월 15일; 심사 결과 발표일 2029년 2월 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.235
+    },
+    {
+      "id": "temporal-grant-English-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on February 3, 2029.",
+      "output": "Your application for [Application Name] will be reviewed and results will be announced on February 3, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.26
+    },
+    {
+      "id": "temporal-grant-English-1",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03",
+          "temporal_roles": "Application submission deadline: January 15, 2029; Results announcement date: February 3, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on February 3, 2029.",
+      "output": "Your application to the course is expected to be received by January 15, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.123
+    },
+    {
+      "id": "temporal-grant-Korean-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다.",
+      "output": "지원금 신청은 2029년 9월 6일까지 해야 합니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.07
+    },
+    {
+      "id": "temporal-grant-Korean-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "신청서 제출 마감일 2029년 9월 6일; 심사 결과 발표일 2029년 10월 10일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다.",
+      "output": "신청서를 2029년 9월 6일에 제출해 주세요.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.178
+    },
+    {
+      "id": "temporal-grant-English-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by September 6, 2029.",
+      "output": "Your application was not considered.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.573
+    },
+    {
+      "id": "temporal-grant-English-2",
+      "domain": "temporal-grant",
+      "role": "applications_close_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant application notice stating the submission deadline."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "Application submission deadline: September 6, 2029; Results announcement date: October 10, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant applications are due by September 6, 2029.",
+      "output": "Your application was not received. Please submit your application by September 6, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.095
+    },
+    {
+      "id": "temporal-grant-Korean-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "output": "지원금 심사는 2029년 9월 6일에 완료될 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.143
+    },
+    {
+      "id": "temporal-grant-Korean-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "신청서 제출 마감일 2029년 9월 6일; 심사 결과 발표일 2029년 10월 10일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "output": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.309
+    },
+    {
+      "id": "temporal-grant-English-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on October 10, 2029.",
+      "output": "Your application for the project is not accepted.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.659
+    },
+    {
+      "id": "temporal-grant-English-3",
+      "domain": "temporal-grant",
+      "role": "results_on",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Grant review notice stating the date results will be announced."
+        },
+        "target_type": "string",
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10",
+          "temporal_roles": "Application submission deadline: September 6, 2029; Results announcement date: October 10, 2029"
+        },
+        "output_language": "English"
+      },
+      "reference": "Grant review results will be announced on October 10, 2029.",
+      "output": "Your application for [Application Name] will be closed on September 6, 2029.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.097
+    },
+    {
+      "id": "temporal-repair-Korean-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 처음에 5일이 걸리는 것을 포함해 총 7일이 소요될 것입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 1.239
+    },
+    {
+      "id": "temporal-repair-Korean-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2,
+          "temporal_roles": "기존 예상 기간 5일; 기존 예상보다 2일 더 걸림"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다.",
+      "output": "기기 수리는 처음에는 5일이 걸리지만, 기존 예상보다 2일 더 걸릴 수 있습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.197
+    },
+    {
+      "id": "temporal-repair-English-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 2 days longer than originally estimated.",
+      "output": "The repair is estimated to take 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.71
+    },
+    {
+      "id": "temporal-repair-English-0",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2,
+          "temporal_roles": "Original estimate: 5 days; Takes 2 days longer than the original estimate"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 2 days longer than originally estimated.",
+      "output": "The repair took 2 days longer than the original estimate.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.781
+    },
+    {
+      "id": "temporal-repair-Korean-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "output": "기기 수리에 오늘부터 2일이 남았습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.789
+    },
+    {
+      "id": "temporal-repair-Korean-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2,
+          "temporal_roles": "기존 예상 기간 5일; 오늘부터 완료까지 2일 남음"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다.",
+      "output": "기기 수리에 오늘부터 2일이 더 남았습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.839
+    },
+    {
+      "id": "temporal-repair-English-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 2 days.",
+      "output": "The repair is expected to be completed in 2 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.772
+    },
+    {
+      "id": "temporal-repair-English-1",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2,
+          "temporal_roles": "Original estimate: 5 days; 2 days remaining from today until completion"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 2 days.",
+      "output": "The repair will be done in 2 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.708
+    },
+    {
+      "id": "temporal-repair-Korean-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다.",
+      "output": "기기 수리에 처음에 2일이 걸리지만, 추가로 5일이 더 걸릴 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.141
+    },
+    {
+      "id": "temporal-repair-Korean-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5,
+          "temporal_roles": "기존 예상 기간 2일; 기존 예상보다 5일 더 걸림"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다.",
+      "output": "기기 수리는 처음 예상한 2일보다 기존 예상보다 5일 더 걸릴 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.085
+    },
+    {
+      "id": "temporal-repair-English-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 5 days longer than originally estimated.",
+      "output": "The repair is estimated to take 7 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.704
+    },
+    {
+      "id": "temporal-repair-English-2",
+      "domain": "temporal-repair",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of additional days beyond the original estimate."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5,
+          "temporal_roles": "Original estimate: 2 days; Takes 5 days longer than the original estimate"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair will take 5 days longer than originally estimated.",
+      "output": "The repair took 5 days longer than the original estimate.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.768
+    },
+    {
+      "id": "temporal-repair-Korean-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "output": "기기 수리에 오늘부터 5일이 남았습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.792
+    },
+    {
+      "id": "temporal-repair-Korean-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5,
+          "temporal_roles": "기존 예상 기간 2일; 오늘부터 완료까지 5일 남음"
+        },
+        "output_language": "Korean"
+      },
+      "reference": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다.",
+      "output": "기기 수리에 오늘부터 5일이 더 남았습니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.835
+    },
+    {
+      "id": "temporal-repair-English-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 5 days.",
+      "output": "The device repair is still 5 days away.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.701
+    },
+    {
+      "id": "temporal-repair-English-3",
+      "domain": "temporal-repair",
+      "role": "remaining_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "Device repair update stating the number of days remaining until completion."
+        },
+        "target_type": "string",
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5,
+          "temporal_roles": "Original estimate: 2 days; 5 days remaining from today until completion"
+        },
+        "output_language": "English"
+      },
+      "reference": "Your device repair should be complete in 5 days.",
+      "output": "The device repair is due in 5 days.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 0.721
+    },
+    {
+      "id": "shipping-ko-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 3,
+          "original_estimate_days": 7
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.511
+    },
+    {
+      "id": "shipping-ko-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 3,
+          "original_estimate_days": 7,
+          "temporal_roles": "기존 예상보다 3일 더 걸림; 기존 예상 기간 7일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프는 오늘 도착합니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.6
+    },
+    {
+      "id": "shipping-ko-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 7,
+          "original_estimate_days": 3
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.522
+    },
+    {
+      "id": "shipping-ko-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "고객에게 발송되는 배송 안내. 상품명과 추가 배송 소요 일수를 포함합니다."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "책상 램프",
+          "additional_days": 7,
+          "original_estimate_days": 3,
+          "temporal_roles": "기존 예상보다 7일 더 걸림; 기존 예상 기간 3일"
+        },
+        "output_language": "Korean"
+      },
+      "reference": null,
+      "output": "책상 램프는 오늘 delivery되며, 기존 예상보다 7일 더 걸렸습니다. 오늘은 배송이 완료될 예정입니다.",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": true,
+        "temporal_role_proxy": true
+      },
+      "seconds": 1.301
+    },
+    {
+      "id": "shipping-en-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 3,
+          "original_estimate_days": 7
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "Your desk lamp is on its way!",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.655
+    },
+    {
+      "id": "shipping-en-1",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 3,
+          "original_estimate_days": 7,
+          "temporal_roles": "Takes 3 days longer than the original estimate; Original estimate: 7 days"
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "Desk lamp",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.505
+    },
+    {
+      "id": "shipping-en-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "raw",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 7,
+          "original_estimate_days": 3
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "Your desk lamp is on its way!",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.652
+    },
+    {
+      "id": "shipping-en-2",
+      "domain": "shipping",
+      "role": "additional_days",
+      "seed": 123,
+      "mode": "roles",
+      "request": {
+        "field_name": "message",
+        "path": "$.message",
+        "field_schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 130,
+          "description": "Delivery update to the customer containing the product name and the additional delivery time in days."
+        },
+        "target_type": "string",
+        "context": {
+          "product": "desk lamp",
+          "additional_days": 7,
+          "original_estimate_days": 3,
+          "temporal_roles": "Takes 7 days longer than the original estimate; Original estimate: 3 days"
+        },
+        "output_language": "English"
+      },
+      "reference": null,
+      "output": "Desk lamp",
+      "checks": {
+        "schema": true,
+        "language": true,
+        "value_only": true,
+        "temporal_value": false,
+        "temporal_role_proxy": false
+      },
+      "seconds": 0.549
+    }
+  ]
+}

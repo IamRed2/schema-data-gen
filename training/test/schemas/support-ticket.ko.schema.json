@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "refund",
+        "delivery",
+        "account"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "normal",
+        "high"
+      ]
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 70,
+      "description": "상담 목록에 표시되는 문의 제목. 문의 분류와 관련된 고객의 문제를 요약합니다."
+    },
+    "message": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 240,
+      "description": "고객 문의 본문. 문의 제목과 일치하는 문제 상황과 고객이 요청한 조치를 포함합니다."
+    },
+    "resolution": {
+      "type": "null",
+      "description": "미해결 문의의 처리 결과. 처리 전에는 null입니다."
+    }
+  },
+  "required": [
+    "category",
+    "priority",
+    "subject",
+    "message",
+    "resolution"
+  ],
+  "additionalProperties": false
+}

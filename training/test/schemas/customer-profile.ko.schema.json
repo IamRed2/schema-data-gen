@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 18,
+      "maximum": 90
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "maxLength": 120
+    },
+    "account_status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "suspended"
+      ]
+    },
+    "marketing_opt_in": {
+      "type": "boolean"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 40,
+          "description": "배송지의 시·군·구 중 시 또는 군 이름."
+        },
+        "street_address": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120,
+          "description": "시·군 내 배송지의 도로명과 건물번호."
+        }
+      },
+      "required": [
+        "city",
+        "street_address"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "name",
+    "age",
+    "email",
+    "account_status",
+    "marketing_opt_in",
+    "address"
+  ],
+  "additionalProperties": false
+}

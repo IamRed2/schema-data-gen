@@ -1,6 +1,6 @@
 # 데이터 생성 순서와 방식
 
-현재 `generate.py`와 `value_generator.py`의 기본 실행 경로를 설명합니다. Python이 스키마를 순회하며 객체·배열을 구성하고, 모델이 각 필드의 값을 문자열로 생성하면 Python이 타입을 변환해 검증합니다.
+현재 `generate.py`와 `schema_generator/value_generator.py`의 기본 실행 경로를 설명합니다. Python이 스키마를 순회하며 객체·배열을 구성하고, 모델이 각 필드의 값을 문자열로 생성하면 Python이 타입을 변환해 검증합니다.
 
 ## 1. 명령과 입력 확인
 
@@ -8,13 +8,13 @@
 py generate.py examples/person.schema.json --count 2 --language ko --seed 42 --out outputs/person.json
 ```
 
-`generate.py.main()`이 스키마 경로, 생성 건수, 출력 언어와 경로를 읽습니다. 건수는 1 이상이어야 합니다. 스키마는 UTF-8 또는 UTF-8 BOM으로 읽고 Draft 2020-12 형식인지 검사합니다. 모델·런타임·선택한 LoRA 파일이 있는지도 확인합니다.
+`schema_generator/cli.py`이 스키마 경로, 생성 건수, 출력 언어와 경로를 읽습니다. 건수는 1 이상이어야 합니다. 스키마는 UTF-8 또는 UTF-8 BOM으로 읽고 Draft 2020-12 형식인지 검사합니다. 값 단위 모드에서는 모델을 처음 사용하는 시점에 모델·런타임·LoRA 파일을 확인합니다.
 
-기본 모델은 루트의 `model.gguf`, 실행 파일은 `runtime/llama.cpp/llama-completion.exe`입니다. `--model`, `--runner`, `--adapter`로 경로를 지정할 수 있습니다.
+기본 모델은 `models/model.gguf`, 실행 파일은 `runtime/llama.cpp/llama-completion.exe`입니다. `--model`, `--runner`, `--adapter`로 경로를 지정할 수 있습니다.
 
 ## 2. 생성 경로 선택과 스키마 검사
 
-`generate_records()`는 기본값 `--mode auto`와 `--mode field`에서 `value_generator.generate_values()`를 호출합니다. 두 모드는 현재 같은 경로입니다. 설명 유무는 모드 선택에 영향을 주지 않고, 설명이 있으면 필드명과 함께 모델 입력에 포함됩니다.
+기본값 `--mode auto`와 `--mode field`에서는 `value_generator.generate_values()`를 호출합니다. 두 모드는 현재 같은 경로입니다. 설명 유무는 모드 선택에 영향을 주지 않고, 설명이 있으면 필드명과 함께 모델 입력에 포함됩니다.
 
 `check_supported()`에서 참조·조합·조건부 스키마 등 현재 생성기가 처리하지 않는 키워드를 발견하면 오류로 알립니다. 원본 검증기는 형식 검사와 최종 결과 검증에 사용합니다.
 
@@ -28,14 +28,19 @@ py generate.py examples/person.schema.json --count 2 --language ko --seed 42 --o
 | `enum` | Python이 제약을 통과하는 후보 중 하나를 난수 선택 |
 | `object` | Python이 빈 객체를 만들고 하위 필드를 순서대로 생성 |
 | `array` | Python이 길이를 정한 뒤 항목을 순서대로 생성 |
-| 스칼라 타입 | 모델에 값 문자열을 요청하고 Python이 파싱 |
+| 스칼라 타입 | 정형 값은 Python에서 먼저 생성. 다른 값은 모델에 요청하고 Python이 파싱 |
 | 타입 목록 | 목록에서 타입 하나를 난수 선택 |
 
 객체 필드는 `properties`에 적힌 순서를 따릅니다. 선언된 선택 필드도 생성하며, `required`에만 있는 필드는 이름순으로 뒤에 생성합니다. 그 필드의 스키마는 `additionalProperties`를 사용합니다.
 
 배열은 `minItems`·`maxItems`를 만족하는 길이를 선택합니다. 기본 상한은 3이지만 최소 길이나 `prefixItems` 길이가 더 크면 이를 고려합니다. 각 항목에는 해당 위치의 `prefixItems`, 이후에는 `items`를 적용합니다. `uniqueItems`이면 기존 항목과 중복되는 값을 최대 세 번까지 다시 생성합니다.
 
-## 4. 필드별 모델 입력 구성
+## 4. 규칙 생성과 필드별 모델 입력
+
+- 이메일은 `example.com` 주소를 만들고, 앞서 생성한 이름에서 ASCII 부분을 사용할 수 있으면 주소에 반영합니다. UUID는 시드 기반의 UUID v4 형식입니다.
+- `date`, `date-time`, `time`은 API 형식으로 출력합니다. 시각에는 UTC를 사용합니다. 일반 날짜는 기준일을 포함한 최근 1년, 만료일로 식별되는 필드는 기준일부터 향후 1년 안에서 선택합니다. 생년월일은 앞에 생성된 정수 나이를 반영하며, 나이를 알 수 없으면 성인 범위에서 선택합니다. 날짜를 재현하려면 시드와 함께 `--reference-date YYYY-MM-DD`를 고정합니다.
+- 범위·배수가 있는 수치는 경계 포함 여부까지 적용합니다. 한쪽 경계만 있으면 가까운 구간에서 선택하고, 일반 실수는 가능하면 소수점 둘째 자리까지 사용합니다. 소수 배수는 십진수로 검증합니다.
+- 규칙 후보도 스키마 검사를 거칩니다. 사용자 지정 패턴 등으로 후보가 조건에 맞지 않으면 모델 경로를 사용합니다. 여러 날짜의 앞뒤 관계처럼 스키마에 표현되지 않은 규칙은 별도의 처리가 필요합니다.
 
 모델에 전달하는 요청은 다음 항목으로 구성됩니다.
 
@@ -60,7 +65,7 @@ py generate.py examples/person.schema.json --count 2 --language ko --seed 42 --o
 
 예를 들어 모델의 실제 출력 텍스트가 `"27"`이면 첫 JSON 디코딩으로 Python 문자열 `27`을 얻습니다. 그 뒤 아래 단계에서 정수로 변환합니다. `--seed`는 Python의 타입·후보 선택과 각 모델 호출에 사용할 시드의 난수열을 제어합니다. 실행기나 모델이 바뀐 환경의 동일 출력까지 보장하는 옵션은 아닙니다.
 
-현재 모델 호출은 필드마다 별도 프로세스로 실행됩니다. 컨텍스트 크기는 4,096, 출력 토큰 상한은 512이며, 지정한 어댑터가 있으면 같은 호출에 붙입니다.
+기본 GGUF 실행기에서는 모델이 필요한 필드마다 별도 프로세스를 실행합니다. `--server-runner`를 사용하면 첫 모델 호출에서 시작한 프로세스를 재사용합니다. 컨텍스트 크기는 4,096, 출력 토큰 상한은 512이며, 지정한 어댑터가 있으면 같은 호출에 붙입니다.
 
 ## 6. 타입 파싱과 필드 검증
 

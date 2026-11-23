@@ -1,0 +1,211 @@
+{
+  "seed": 2746317213,
+  "rows": [
+    {
+      "case": "event",
+      "language": "ko",
+      "mode": "baseline",
+      "facts": {
+        "event": "도자기 체험",
+        "seats": 18
+      },
+      "value": "도자기 체험은 18인분 대용의 세안으로 진행되어 있습니다.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 4.625
+    },
+    {
+      "case": "event",
+      "language": "ko",
+      "mode": "planned",
+      "facts": {
+        "event": "도자기 체험",
+        "seats": 18
+      },
+      "value": "도자기 체험은 18석이 주었습니다.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 3.533
+    },
+    {
+      "case": "event",
+      "language": "en",
+      "mode": "planned",
+      "facts": {
+        "event": "Pottery workshop",
+        "seats": 18
+      },
+      "value": "Pottery workshop seat count is 18.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 3.88
+    },
+    {
+      "case": "event",
+      "language": "en",
+      "mode": "baseline",
+      "facts": {
+        "event": "Pottery workshop",
+        "seats": 18
+      },
+      "value": "During the pottery workshop, there are 18 seats available for the event.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 4.012
+    },
+    {
+      "case": "exhibit",
+      "language": "ko",
+      "mode": "baseline",
+      "facts": {
+        "exhibit": "빛의 정원",
+        "room": 4
+      },
+      "value": "빛의 정원 4번",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 3.599
+    },
+    {
+      "case": "exhibit",
+      "language": "ko",
+      "mode": "planned",
+      "facts": {
+        "exhibit": "빛의 정원",
+        "room": 4
+      },
+      "value": "빛의 정원은 4호 전시실에 위치해 있습니다.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 3.2
+    },
+    {
+      "case": "exhibit",
+      "language": "en",
+      "mode": "planned",
+      "facts": {
+        "exhibit": "Garden of Light",
+        "room": 4
+      },
+      "value": "Exhibit Garden of Light, room 4.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 3.084
+    },
+    {
+      "case": "exhibit",
+      "language": "en",
+      "mode": "baseline",
+      "facts": {
+        "exhibit": "Garden of Light",
+        "room": 4
+      },
+      "value": "Light Room 4",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": false,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 2.796
+    },
+    {
+      "case": "pickup",
+      "language": "ko",
+      "mode": "baseline",
+      "facts": {
+        "location": "솔빛 창고",
+        "boxes": 7
+      },
+      "value": "솔빛 창고에서 7개의 상자를 배달했습니다.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 3.398
+    },
+    {
+      "case": "pickup",
+      "language": "ko",
+      "mode": "planned",
+      "facts": {
+        "location": "솔빛 창고",
+        "boxes": 7
+      },
+      "value": "솔빛 창고에서 7개의 상자 중 3개를 받았습니다.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [
+        "3"
+      ],
+      "seconds": 3.654
+    },
+    {
+      "case": "pickup",
+      "language": "en",
+      "mode": "planned",
+      "facts": {
+        "location": "Maple Depot",
+        "boxes": 7
+      },
+      "value": "Notice at Maple Depot. 7 boxes.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 3.003
+    },
+    {
+      "case": "pickup",
+      "language": "en",
+      "mode": "baseline",
+      "facts": {
+        "location": "Maple Depot",
+        "boxes": 7
+      },
+      "value": "The Maple Depot is near your location, and there are 7 boxes waiting for you.",
+      "valid": true,
+      "error": null,
+      "attempts": 1,
+      "name_present": true,
+      "required_number_present": true,
+      "extra_numbers": [],
+      "seconds": 3.117
+    }
+  ]
+}

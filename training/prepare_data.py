@@ -67,7 +67,7 @@ def main():
         ("train", "person", "rating", {"type": "number", "minimum": 0, "maximum": 5}, "4.2", "3.5"),
         ("train", "person", "deleted_at", {"type": "null"}, "null", "null"),
         ("train", "tools", "label", {"type": "string", "description": "주방용품 이름 한 단어."}, "주전자", "kettle"),
-        ("train", "tools", "label", {"type": "string", "description": "주방용품의 결함을 한 문장으로 기록한다."},
+        ("train", "tools", "label", {"type": "string", "description": "주방용품 검사에서 확인된 결함을 기록한 한 문장."},
          "주전자 손잡이에 금이 가 있습니다.", "The kettle handle is cracked."),
         ("test", "garden", "plant_name", {"type": "string"}, "바질", "basil"),
         ("test", "garden", "pot_count", {"type": "integer", "minimum": 1, "maximum": 10}, "3", "5"),
@@ -111,6 +111,36 @@ def main():
                 splits[case["split"]].extend(
                     context_rows(schema, record, group, language, f"{group}-{language}-{index}")
                 )
+    for case in json.loads((source_dir / "scenario-examples.json").read_text(encoding="utf-8")):
+        for language, variants in case["variants"].items():
+            for index, (scenario, title, notice) in enumerate(variants):
+                for name, target in (("title", title), ("notice", notice)):
+                    description = {
+                        "Korean": {"title": "안내 목록에 표시되는 제목.",
+                                   "notice": "사용자에게 표시되는 안내 본문. 안내 대상과 관련 수량 또는 시각을 포함합니다."},
+                        "English": {"title": "Title displayed in the notice list.",
+                                    "notice": "User-facing notice text containing the subject and the applicable quantity or time."},
+                    }[language][name]
+                    schema = {"type": "string", "minLength": 3, "maxLength": 160, "description": description}
+                    group = case["group"]
+                    row = make_row(f"{group}-{language}-{index}-{name}", group, name, schema, {}, language, target)
+                    row["request"]["scenario"] = scenario
+                    splits[case["split"]].append(row)
+    for dataset in json.loads((source_dir / "temporal-examples.json").read_text(encoding="utf-8")):
+        group = dataset["group"]
+        field = dataset["field"]
+        for index, example in enumerate(dataset["examples"]):
+            for language in ("Korean", "English"):
+                answer = example[language]
+                schema = {
+                    "type": "string", "minLength": 3, "maxLength": 160,
+                    "description": answer["description"],
+                }
+                Draft202012Validator(schema).validate(answer["target"])
+                splits[dataset["split"]].append(make_row(
+                    f"{group}-{language}-{index}", group, field, schema,
+                    example["context"], language, answer["target"],
+                ))
     for split, rows in splits.items():
         folder = DATA_DIR / split
         folder.mkdir(exist_ok=True)

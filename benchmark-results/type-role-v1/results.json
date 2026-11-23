@@ -1,0 +1,337 @@
+{
+  "seed": 2746317213,
+  "rows": [
+    {
+      "id": "capacity-ko-count",
+      "task": "type",
+      "request": {
+        "field_name": "capacity",
+        "path": "$.capacity",
+        "field_schema": {
+          "type": "string"
+        },
+        "target_type": "string",
+        "output_language": "Korean",
+        "context": {},
+        "task": "Infer the described field's data type from its name and description.",
+        "answer_labels": [
+          "string",
+          "integer",
+          "number",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "instruction": "Return exactly one English type label. target_type is the response format.",
+        "field_description": "신청 가능한 최대 인원 수"
+      },
+      "expected": "integer",
+      "output": "string",
+      "valid": true,
+      "correct": false,
+      "error": null
+    },
+    {
+      "id": "capacity-ko-notice",
+      "task": "type",
+      "request": {
+        "field_name": "capacity",
+        "path": "$.capacity",
+        "field_schema": {
+          "type": "string"
+        },
+        "target_type": "string",
+        "output_language": "Korean",
+        "context": {},
+        "task": "Infer the described field's data type from its name and description.",
+        "answer_labels": [
+          "string",
+          "integer",
+          "number",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "instruction": "Return exactly one English type label. target_type is the response format.",
+        "field_description": "최대 인원을 포함한 방문객용 안내 문장"
+      },
+      "expected": "string",
+      "output": "string",
+      "valid": true,
+      "correct": true,
+      "error": null
+    },
+    {
+      "id": "available-en-flag",
+      "task": "type",
+      "request": {
+        "field_name": "available",
+        "path": "$.available",
+        "field_schema": {
+          "type": "string"
+        },
+        "target_type": "string",
+        "output_language": "English",
+        "context": {},
+        "task": "Infer the described field's data type from its name and description.",
+        "answer_labels": [
+          "string",
+          "integer",
+          "number",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "instruction": "Return exactly one English type label. target_type is the response format.",
+        "field_description": "Whether a reservation can be made right now"
+      },
+      "expected": "boolean",
+      "output": "boolean",
+      "valid": true,
+      "correct": true,
+      "error": null
+    },
+    {
+      "id": "available-en-slots",
+      "task": "type",
+      "request": {
+        "field_name": "available",
+        "path": "$.available",
+        "field_schema": {
+          "type": "string"
+        },
+        "target_type": "string",
+        "output_language": "English",
+        "context": {},
+        "task": "Infer the described field's data type from its name and description.",
+        "answer_labels": [
+          "string",
+          "integer",
+          "number",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "instruction": "Return exactly one English type label. target_type is the response format.",
+        "field_description": "List of available reservation time slots"
+      },
+      "expected": "array",
+      "output": "array",
+      "valid": true,
+      "correct": true,
+      "error": null
+    },
+    {
+      "id": "delivery-ko-address",
+      "task": "type",
+      "request": {
+        "field_name": "delivery",
+        "path": "$.delivery",
+        "field_schema": {
+          "type": "string"
+        },
+        "target_type": "string",
+        "output_language": "Korean",
+        "context": {},
+        "task": "Infer the described field's data type from its name and description.",
+        "answer_labels": [
+          "string",
+          "integer",
+          "number",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "instruction": "Return exactly one English type label. target_type is the response format.",
+        "field_description": "우편번호, 도로명 주소, 상세 주소를 각각 키로 담은 객체"
+      },
+      "expected": "object",
+      "output": "우편번호",
+      "valid": false,
+      "correct": false,
+      "error": "'우편번호' is not one of ['string', 'integer', 'number', 'boolean', 'object', 'array', 'null']\n\nFailed validating 'enum' in schema:\n    {'enum': ['string',\n              'integer',\n              'number',\n              'boolean',\n              'object',\n              'array',\n              'null']}\n\nOn instance:\n    '우편번호'"
+    },
+    {
+      "id": "delivery-ko-label",
+      "task": "type",
+      "request": {
+        "field_name": "delivery",
+        "path": "$.delivery",
+        "field_schema": {
+          "type": "string"
+        },
+        "target_type": "string",
+        "output_language": "Korean",
+        "context": {},
+        "task": "Infer the described field's data type from its name and description.",
+        "answer_labels": [
+          "string",
+          "integer",
+          "number",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "instruction": "Return exactly one English type label. target_type is the response format.",
+        "field_description": "배송 방법을 나타내는 한 줄 문구"
+      },
+      "expected": "string",
+      "output": "pickup",
+      "valid": false,
+      "correct": false,
+      "error": "'pickup' is not one of ['string', 'integer', 'number', 'boolean', 'object', 'array', 'null']\n\nFailed validating 'enum' in schema:\n    {'enum': ['string',\n              'integer',\n              'number',\n              'boolean',\n              'object',\n              'array',\n              'null']}\n\nOn instance:\n    'pickup'"
+    },
+    {
+      "id": "weight-en-exact",
+      "task": "type",
+      "request": {
+        "field_name": "weight",
+        "path": "$.weight",
+        "field_schema": {
+          "type": "string"
+        },
+        "target_type": "string",
+        "output_language": "English",
+        "context": {},
+        "task": "Infer the described field's data type from its name and description.",
+        "answer_labels": [
+          "string",
+          "integer",
+          "number",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "instruction": "Return exactly one English type label. target_type is the response format.",
+        "field_description": "Measured weight in kilograms, including fractional values"
+      },
+      "expected": "number",
+      "output": "number",
+      "valid": true,
+      "correct": true,
+      "error": null
+    },
+    {
+      "id": "weight-en-rounded",
+      "task": "type",
+      "request": {
+        "field_name": "weight",
+        "path": "$.weight",
+        "field_schema": {
+          "type": "string"
+        },
+        "target_type": "string",
+        "output_language": "English",
+        "context": {},
+        "task": "Infer the described field's data type from its name and description.",
+        "answer_labels": [
+          "string",
+          "integer",
+          "number",
+          "boolean",
+          "object",
+          "array",
+          "null"
+        ],
+        "instruction": "Return exactly one English type label. target_type is the response format.",
+        "field_description": "Weight in kilograms rounded to the nearest whole kilogram"
+      },
+      "expected": "integer",
+      "output": "string",
+      "valid": true,
+      "correct": false,
+      "error": null
+    },
+    {
+      "id": "space-ko-limit",
+      "task": "role",
+      "request": {
+        "field_name": "headcount",
+        "path": "$.headcount",
+        "field_schema": {
+          "type": "integer",
+          "description": "공간의 최대 수용 인원을 정수로 반환한다."
+        },
+        "target_type": "integer",
+        "output_language": "Korean",
+        "context": {},
+        "scenario": "공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다."
+      },
+      "expected": 28,
+      "output": "28",
+      "valid": true,
+      "correct": true,
+      "error": null
+    },
+    {
+      "id": "space-ko-booked",
+      "task": "role",
+      "request": {
+        "field_name": "headcount",
+        "path": "$.headcount",
+        "field_schema": {
+          "type": "integer",
+          "description": "현재 예약자 수를 정수로 반환한다."
+        },
+        "target_type": "integer",
+        "output_language": "Korean",
+        "context": {},
+        "scenario": "공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다."
+      },
+      "expected": 19,
+      "output": "28",
+      "valid": true,
+      "correct": false,
+      "error": null
+    },
+    {
+      "id": "shipment-en-ordered",
+      "task": "role",
+      "request": {
+        "field_name": "quantity",
+        "path": "$.quantity",
+        "field_schema": {
+          "type": "integer",
+          "description": "Return the number of units ordered as an integer."
+        },
+        "target_type": "integer",
+        "output_language": "English",
+        "context": {},
+        "scenario": "A shop ordered 35 units. The supplier shipped 21 units and will send the rest later."
+      },
+      "expected": 35,
+      "output": "21",
+      "valid": true,
+      "correct": false,
+      "error": null
+    },
+    {
+      "id": "shipment-en-shipped",
+      "task": "role",
+      "request": {
+        "field_name": "quantity",
+        "path": "$.quantity",
+        "field_schema": {
+          "type": "integer",
+          "description": "Return the number of units already shipped as an integer."
+        },
+        "target_type": "integer",
+        "output_language": "English",
+        "context": {},
+        "scenario": "A shop ordered 35 units. The supplier shipped 21 units and will send the rest later."
+      },
+      "expected": 21,
+      "output": "21",
+      "valid": true,
+      "correct": true,
+      "error": null
+    }
+  ]
+}

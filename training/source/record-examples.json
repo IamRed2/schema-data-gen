@@ -12,7 +12,7 @@
         },
         "message": {
           "type": "string",
-          "description": "고객이 고객센터에 보낸 문의다. category에 맞는 구체적인 문제를 고객의 입장에서 설명하고 원하는 조치를 요청한다."
+          "description": "고객 문의 본문. category에 해당하는 문제와 고객이 요청한 조치를 포함합니다."
         }
       },
       "required": [
@@ -57,7 +57,7 @@
         },
         "message": {
           "type": "string",
-          "description": "Write a message from a customer to support. Describe a concrete problem matching category and request a remedy."
+          "description": "Customer support message containing the issue in the selected category and the customer's requested resolution."
         }
       },
       "required": [
@@ -102,7 +102,7 @@
         },
         "message": {
           "type": "string",
-          "description": "상담원이 고객에게 보내는 답변이다. category에 맞는 확인 사항과 다음 조치를 안내한다."
+          "description": "고객에게 발송되는 상담 답변. category에 해당하는 확인 결과와 후속 조치를 포함합니다."
         }
       },
       "required": [
@@ -147,7 +147,7 @@
         },
         "message": {
           "type": "string",
-          "description": "Write a support agent's reply. Explain what the agent checked and what will happen next for the given category."
+          "description": "Support agent's reply to the customer, including the findings for the selected category and the next action."
         }
       },
       "required": [
@@ -192,7 +192,7 @@
         },
         "detail": {
           "type": "string",
-          "description": "소프트웨어 버그 재현 절차를 작성한다. category에 해당하는 동작과 실제로 발생한 오류를 구체적으로 적는다."
+          "description": "버그 신고의 재현 절차. category에 해당하는 사용자 동작과 관찰된 오류를 포함합니다."
         }
       },
       "required": [
@@ -237,7 +237,7 @@
         },
         "detail": {
           "type": "string",
-          "description": "Describe steps to reproduce a software bug, including the action and observed failure for the category."
+          "description": "Bug report reproduction steps, including the user action and observed failure for the selected category."
         }
       },
       "required": [
@@ -282,7 +282,7 @@
         },
         "text": {
           "type": "string",
-          "description": "방문자가 남긴 리뷰를 작성한다. category에 맞는 장소의 구체적인 경험을 한두 문장으로 적는다."
+          "description": "방문자 리뷰 본문. category에 해당하는 장소에서의 방문 경험을 담은 한두 문장입니다."
         }
       },
       "required": [
@@ -327,7 +327,7 @@
         },
         "text": {
           "type": "string",
-          "description": "Write a visitor review with a specific experience at the type of place given by category."
+          "description": "Visitor review describing an experience at a venue of the type specified by category."
         }
       },
       "required": [
@@ -372,7 +372,7 @@
         },
         "detail": {
           "type": "string",
-          "description": "사용자에게 알림을 보낸다. category에 맞는 일정 또는 처리 결과와 필요한 행동을 짧게 안내한다."
+          "description": "사용자 알림 본문. category에 해당하는 일정 또는 처리 결과와 필요한 사용자 조치를 포함합니다."
         }
       },
       "required": [
@@ -417,7 +417,7 @@
         },
         "detail": {
           "type": "string",
-          "description": "Write a short notification about the category, with a concrete time or outcome and any action needed."
+          "description": "User notification text containing the scheduled time or outcome for the selected category and any required action."
         }
       },
       "required": [
@@ -462,7 +462,7 @@
         },
         "text": {
           "type": "string",
-          "description": "직원이 사내 지원팀에 보내는 요청이다. category에 따라 필요한 대상과 이유를 한 문장에 적는다."
+          "description": "직원이 등록한 사내 지원 요청 본문. category에 해당하는 요청 대상과 요청 사유를 포함합니다."
         }
       },
       "required": [
@@ -507,7 +507,7 @@
         },
         "text": {
           "type": "string",
-          "description": "Write an employee's request to internal support, naming the resource and why it is needed."
+          "description": "Employee request to internal support containing the requested resource and the business reason."
         }
       },
       "required": [

@@ -15,7 +15,7 @@
         },
         "notice": {
           "type": "string",
-          "description": "Write a natural sentence that names the event and states the exact seat count.",
+          "description": "Attendee-facing capacity notice containing the event name and the seat count in seats.",
           "minLength": 15,
           "maxLength": 130
         }
@@ -33,7 +33,7 @@
       "uniqueItems": true,
       "items": {
         "type": "string",
-        "description": "행사 주제에 맞는 관련 단어 하나.",
+        "description": "행사 검색에 사용되는 주제 태그 한 개.",
         "minLength": 2,
         "maxLength": 20
       }

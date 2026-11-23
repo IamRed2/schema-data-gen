@@ -20,6 +20,8 @@
 
 범위 학습에는 같은 필드명에 서로 다른 범위를 준 예제가 있습니다. 정수와 소수의 상한·하한, 경곗값 제외, 배수, 문자열 길이를 포함합니다. 평가용 정원 예제는 학습에서 제외했습니다.
 
+`source/temporal-examples.json`은 Python이 준비한 날짜와 기간을 자연어 필드에 반영하는 예제입니다. 학습 32건은 제작 지연·전시·라이선스·서비스 점검이고, 평가 16건은 지원금 일정·기기 수리입니다. 한국어와 영어를 같은 수로 넣었습니다. 개막과 폐막, 갱신 시작과 만료, 기존 예상 대비 추가 소요와 오늘부터 남은 기간을 구분합니다. ISO 날짜, 윤일, 연도 경계, 자정을 넘는 한국 표준시 점검을 포함합니다.
+
 ## 환경 준비
 
 학습에는 Python 3.12를 권합니다. 프로젝트에 이미 준비한 `.training/venv`와 `.training/base`를 사용할 수 있습니다. 새 환경을 만들 때는 다음을 실행합니다.
@@ -36,7 +38,7 @@ CPU용 PyTorch를 선택하려면 학습 의존성 설치 전에 아래 명령�
 py -m pip install torch --index-url https://download.pytorch.org/whl/cpu
 ```
 
-학습은 Hugging Face 형식의 Qwen3-0.6B 원본 가중치를 사용합니다. `.training/base/`에 `config.json`, `model.safetensors`, `tokenizer.json`, `tokenizer_config.json`을 준비합니다. 추론용 4비트 `model.gguf`와 별도의 학습 입력입니다.
+학습은 Hugging Face 형식의 Qwen3-0.6B 원본 가중치를 사용합니다. `.training/base/`에 `config.json`, `model.safetensors`, `tokenizer.json`, `tokenizer_config.json`을 준비합니다. 추론용 4비트 `models/model.gguf`와 별도의 학습 입력입니다.
 
 ## 실행
 
@@ -50,7 +52,7 @@ py training/train.py --steps 48 --out .training/value-adapter-v1
 
 ## 데이터 형식
 
-한 줄에 JSON 객체 하나를 저장합니다. `request`는 `value_generator.py`가 모델에 전달하는 입력과 같은 형식입니다. `target`은 항상 문자열입니다. 정수 정답도 `"27"`, 불리언 정답도 `"true"`로 저장하며 학습 전에 타입 파싱과 스키마 검증을 합니다.
+한 줄에 JSON 객체 하나를 저장합니다. `request`는 `schema_generator/value_generator.py`가 모델에 전달하는 입력과 같은 형식입니다. `target`은 항상 문자열입니다. 정수 정답도 `"27"`, 불리언 정답도 `"true"`로 저장하며 학습 전에 타입 파싱과 스키마 검증을 합니다.
 
 ```json
 {"id":"age-en-1","source":"project-authored","split_group":"person","request":{"field_name":"age","path":"$.age","field_schema":{"type":"integer","minimum":18,"maximum":90},"target_type":"integer","context":{},"output_language":"English"},"target":"27"}
@@ -58,11 +60,17 @@ py training/train.py --steps 48 --out .training/value-adapter-v1
 
 ## GGUF 변환과 사용
 
+전체 상황을 읽는 학습 예제는 `source/scenario-examples.json`에 있습니다. 같은 상황에서 제목과 안내문을 각각 요청하고, 같은 요청에서 주제와 수치가 바뀐 상황도 포함합니다. 현장 적용 시 `--scenario`로 입력한 자연어 상황이 모든 값 생성 요청에 전달됩니다.
+
+```powershell
+py generate.py training/source/context-event.schema.json --adapter models/schema-value-scenario-lora.gguf --scenario "초보자 대상 도자기 컵 만들기 체험입니다. 앞치마와 재료가 제공됩니다." --language ko --count 1
+```
+
 현재 준비된 llama.cpp 변환 소스를 사용하는 예시입니다. 학습용 가상환경이 활성화된 상태에서 실행합니다.
 
 ```powershell
-py .training/llama.cpp-b12502/convert_lora_to_gguf.py --base .training/base --outtype f16 --outfile schema-value-lora.gguf .training/value-adapter-v1
-py generate.py examples/person.schema.json --adapter schema-value-lora.gguf --count 2 --language ko --out outputs/person.json
+py .training/llama.cpp-b12502/convert_lora_to_gguf.py --base .training/base --outtype f16 --outfile models/schema-value-lora.gguf .training/value-adapter-v1
+py generate.py examples/person.schema.json --adapter models/schema-value-lora.gguf --count 2 --language ko --out outputs/person.json
 ```
 
 변환 도구를 다른 위치에 준비했다면 해당 경로로 바꿉니다. 새 어댑터는 기존 기본 GGUF와 함께 사용합니다.

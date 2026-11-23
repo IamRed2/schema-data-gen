@@ -1,0 +1,944 @@
+{
+  "exaone": {
+    "model": "exaone-4.0-1.2b-q4.gguf",
+    "bytes": 812437792,
+    "startup_seconds": 1.51,
+    "rows": [
+      {
+        "id": "customer-ko",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "고객이 등록한 문의 본문. 환불 지연과 고객이 요청한 후속 조치를 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "refund",
+            "item": "무선 키보드",
+            "waiting_days": 7
+          },
+          "output_language": "Korean"
+        },
+        "expected": "무선 키보드 환불을 7일째 기다리는 고객이 처리 확인을 요청",
+        "seed": 42,
+        "output": "7일",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 0.767
+      },
+      {
+        "id": "agent-ko",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "상담원이 고객에게 발송하는 답변. 확인된 환불 상태와 후속 조치를 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "refund",
+            "item": "무선 키보드",
+            "refund_status": "승인 완료",
+            "next_action": "영업일 3일 내 입금"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "상담원이 무선 키보드 환불 승인 및 영업일 3일 내 입금을 안내",
+        "seed": 42,
+        "output": "값: 123456789",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.18
+      },
+      {
+        "id": "event-ko",
+        "request": {
+          "field_name": "notice",
+          "path": "$.notice",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "참가자에게 표시되는 예약 안내문. 행사명과 정원, 시작 시각을 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "event": "유리공예 체험",
+            "capacity": 18,
+            "bookings": 11,
+            "start_time": "오후 2시",
+            "end_time": "오후 4시"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "유리공예 체험의 정원 18명과 시작 시각 오후 2시",
+        "seed": 42,
+        "output": "notice: 유리공예 체험 (참가 가능: 7명, 시작 시간: 오후 2시, 종료 시간: 오후 4시)",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.846
+      },
+      {
+        "id": "catalog-ko",
+        "request": {
+          "field_name": "description",
+          "path": "$.description",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "상품 상세 페이지에 표시되는 소개. 상품의 용도와 주요 특징을 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "camping",
+            "product_name": "접이식 캠핑 테이블",
+            "feature": "높이 조절 가능"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "접이식 캠핑 테이블의 야외 사용과 높이 조절 특징",
+        "seed": 42,
+        "output": "값: 2.5m",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 0.965
+      },
+      {
+        "id": "incident-ko",
+        "request": {
+          "field_name": "title",
+          "path": "$.title",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "운영 장애 목록에 표시되는 제목. 영향을 받은 기능과 증상을 요약합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "component": "모바일 결제",
+            "symptom": "결제 승인 후 주문 확인 화면이 열리지 않음"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "모바일 결제 승인 이후 주문 확인 화면 미표시를 요약",
+        "seed": 42,
+        "output": "제목: 모바일 결제 운영 장애 - 결제 승인 후 주문 확인 미표시",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.304
+      },
+      {
+        "id": "name-ko",
+        "request": {
+          "field_name": "name",
+          "path": "$.name",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180
+          },
+          "target_type": "string",
+          "context": {},
+          "output_language": "Korean"
+        },
+        "expected": "자연스러운 한국어 사람 이름",
+        "seed": 42,
+        "output": "name: '천년의별'",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 0.809
+      },
+      {
+        "id": "customer-en",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Customer-submitted support message describing the delivery problem and requested action."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "delivery",
+            "item": "desk lamp",
+            "tracking_status": "delivered",
+            "received": false
+          },
+          "output_language": "English"
+        },
+        "expected": "Customer asks for help with desk lamp marked delivered but missing",
+        "seed": 42,
+        "output": "message: 'The desk lamp was delivered but not received by the customer.'",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.343
+      },
+      {
+        "id": "agent-en",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Support agent reply stating the confirmed shipping problem and the next step."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "delivery",
+            "item": "desk lamp",
+            "finding": "delivered to the wrong building",
+            "next_action": "send a replacement tomorrow"
+          },
+          "output_language": "English"
+        },
+        "expected": "Agent confirms wrong building and promises a replacement tomorrow",
+        "seed": 42,
+        "output": "{ \"message\": \"The desk lamp was delivered to the wrong building. Please reply to send a replacement tomorrow.\" }```",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.873
+      },
+      {
+        "id": "event-en",
+        "request": {
+          "field_name": "notice",
+          "path": "$.notice",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Public reservation notice including the event name, capacity and start time."
+          },
+          "target_type": "string",
+          "context": {
+            "event": "Paper Marbling Workshop",
+            "capacity": 14,
+            "bookings": 8,
+            "start_time": "10 a.m.",
+            "end_time": "noon"
+          },
+          "output_language": "English"
+        },
+        "expected": "Paper Marbling Workshop has capacity 14 and starts at 10 a.m.",
+        "seed": 42,
+        "output": "notice: 14-8/10-12pm",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.264
+      },
+      {
+        "id": "catalog-en",
+        "request": {
+          "field_name": "description",
+          "path": "$.description",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Product page copy stating the intended use and key feature of the named item."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "kitchen",
+            "product_name": "digital kitchen scale",
+            "feature": "tare function"
+          },
+          "output_language": "English"
+        },
+        "expected": "Kitchen weighing and the tare function of the digital kitchen scale",
+        "seed": 42,
+        "output": "400grams",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 0.851
+      },
+      {
+        "id": "incident-en",
+        "request": {
+          "field_name": "title",
+          "path": "$.title",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Incident title summarizing the affected feature and its observed failure."
+          },
+          "target_type": "string",
+          "context": {
+            "component": "password reset",
+            "symptom": "reset link expires immediately"
+          },
+          "output_language": "English"
+        },
+        "expected": "Password reset link expires immediately",
+        "seed": 42,
+        "output": "{ \"title\": \"Password reset link expiration within minutes\" }``````json```}``````{",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.89
+      },
+      {
+        "id": "name-en",
+        "request": {
+          "field_name": "name",
+          "path": "$.name",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180
+          },
+          "target_type": "string",
+          "context": {},
+          "output_language": "English"
+        },
+        "expected": "Plausible English-language human name",
+        "seed": 42,
+        "output": "name: 'AriaTheGentleman'",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 0.966
+      }
+    ]
+  },
+  "gemma": {
+    "model": "gemma-3-1b-it-Q4_K_M.gguf",
+    "bytes": 806058240,
+    "startup_seconds": 2.147,
+    "rows": [
+      {
+        "id": "customer-ko",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "고객이 등록한 문의 본문. 환불 지연과 고객이 요청한 후속 조치를 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "refund",
+            "item": "무선 키보드",
+            "waiting_days": 7
+          },
+          "output_language": "Korean"
+        },
+        "expected": "무선 키보드 환불을 7일째 기다리는 고객이 처리 확인을 요청",
+        "seed": 42,
+        "output": "message_value_refund_wait_7: '환불 지연 및 후속 조치 포함' 7``` 7 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 8.151
+      },
+      {
+        "id": "agent-ko",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "상담원이 고객에게 발송하는 답변. 확인된 환불 상태와 후속 조치를 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "refund",
+            "item": "무선 키보드",
+            "refund_status": "승인 완료",
+            "next_action": "영업일 3일 내 입금"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "상담원이 무선 키보드 환불 승인 및 영업일 3일 내 입금을 안내",
+        "seed": 42,
+        "output": "message: 상담원이 고객에게 발송하는 답변. 확인된 환불 상태와 후속 조치를 포함합니다. 승인 완료 후 영업일 3일 내 입금.",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 2.199
+      },
+      {
+        "id": "event-ko",
+        "request": {
+          "field_name": "notice",
+          "path": "$.notice",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "참가자에게 표시되는 예약 안내문. 행사명과 정원, 시작 시각을 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "event": "유리공예 체험",
+            "capacity": 18,
+            "bookings": 11,
+            "start_time": "오후 2시",
+            "end_time": "오후 4시"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "유리공예 체험의 정원 18명과 시작 시각 오후 2시",
+        "seed": 42,
+        "output": "notice: 11",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 0.993
+      },
+      {
+        "id": "catalog-ko",
+        "request": {
+          "field_name": "description",
+          "path": "$.description",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "상품 상세 페이지에 표시되는 소개. 상품의 용도와 주요 특징을 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "camping",
+            "product_name": "접이식 캠핑 테이블",
+            "feature": "높이 조절 가능"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "접이식 캠핑 테이블의 야외 사용과 높이 조절 특징",
+        "seed": 42,
+        "output": "상품 상세 페이지에 표시되는 소개: 접이식 캠핑 테이블은 높이 조절 가능하여 다양한 환경에서 활용 가능합니다.",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.771
+      },
+      {
+        "id": "incident-ko",
+        "request": {
+          "field_name": "title",
+          "path": "$.title",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "운영 장애 목록에 표시되는 제목. 영향을 받은 기능과 증상을 요약합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "component": "모바일 결제",
+            "symptom": "결제 승인 후 주문 확인 화면이 열리지 않음"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "모바일 결제 승인 이후 주문 확인 화면 미표시를 요약",
+        "seed": 42,
+        "output": "운영 장애 목록에 표시되는 제목: 결제 승인 후 주문 확인 화면이 열리지 않음",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.659
+      },
+      {
+        "id": "name-ko",
+        "request": {
+          "field_name": "name",
+          "path": "$.name",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180
+          },
+          "target_type": "string",
+          "context": {},
+          "output_language": "Korean"
+        },
+        "expected": "자연스러운 한국어 사람 이름",
+        "seed": 42,
+        "output": "홍길동",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 0.623
+      },
+      {
+        "id": "customer-en",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Customer-submitted support message describing the delivery problem and requested action."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "delivery",
+            "item": "desk lamp",
+            "tracking_status": "delivered",
+            "received": false
+          },
+          "output_language": "English"
+        },
+        "expected": "Customer asks for help with desk lamp marked delivered but missing",
+        "seed": 42,
+        "output": "message: 'Delivery problem - request to refund. Please investigate the tracking status of desk lamp.' ",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.496
+      },
+      {
+        "id": "agent-en",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Support agent reply stating the confirmed shipping problem and the next step."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "delivery",
+            "item": "desk lamp",
+            "finding": "delivered to the wrong building",
+            "next_action": "send a replacement tomorrow"
+          },
+          "output_language": "English"
+        },
+        "expected": "Agent confirms wrong building and promises a replacement tomorrow",
+        "seed": 42,
+        "output": "message: 'Confirmed shipping problem: Delivered to the wrong building. Next step: Send a replacement tomorrow.'",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.598
+      },
+      {
+        "id": "event-en",
+        "request": {
+          "field_name": "notice",
+          "path": "$.notice",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Public reservation notice including the event name, capacity and start time."
+          },
+          "target_type": "string",
+          "context": {
+            "event": "Paper Marbling Workshop",
+            "capacity": 14,
+            "bookings": 8,
+            "start_time": "10 a.m.",
+            "end_time": "noon"
+          },
+          "output_language": "English"
+        },
+        "expected": "Paper Marbling Workshop has capacity 14 and starts at 10 a.m.",
+        "seed": 42,
+        "output": "notice: 8",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 0.968
+      },
+      {
+        "id": "catalog-en",
+        "request": {
+          "field_name": "description",
+          "path": "$.description",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Product page copy stating the intended use and key feature of the named item."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "kitchen",
+            "product_name": "digital kitchen scale",
+            "feature": "tare function"
+          },
+          "output_language": "English"
+        },
+        "expected": "Kitchen weighing and the tare function of the digital kitchen scale",
+        "seed": 42,
+        "output": "The digital kitchen scale is designed for accurate weighing, and its tare function simplifies the process.",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.36
+      },
+      {
+        "id": "incident-en",
+        "request": {
+          "field_name": "title",
+          "path": "$.title",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Incident title summarizing the affected feature and its observed failure."
+          },
+          "target_type": "string",
+          "context": {
+            "component": "password reset",
+            "symptom": "reset link expires immediately"
+          },
+          "output_language": "English"
+        },
+        "expected": "Password reset link expires immediately",
+        "seed": 42,
+        "output": "Password Reset Failure",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 0.777
+      },
+      {
+        "id": "name-en",
+        "request": {
+          "field_name": "name",
+          "path": "$.name",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180
+          },
+          "target_type": "string",
+          "context": {},
+          "output_language": "English"
+        },
+        "expected": "Plausible English-language human name",
+        "seed": 42,
+        "output": "Robert",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 0.565
+      }
+    ]
+  },
+  "qwen": {
+    "model": "qwen3.5-0.8b-q4.gguf",
+    "bytes": 541903360,
+    "startup_seconds": 7.476,
+    "rows": [
+      {
+        "id": "customer-ko",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "고객이 등록한 문의 본문. 환불 지연과 고객이 요청한 후속 조치를 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "refund",
+            "item": "무선 키보드",
+            "waiting_days": 7
+          },
+          "output_language": "Korean"
+        },
+        "expected": "무선 키보드 환불을 7일째 기다리는 고객이 처리 확인을 요청",
+        "seed": 42,
+        "output": "유저가 등록한 문의 본문에 대한 응답 및 환불 지연은 7 일입니다.",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 0.954
+      },
+      {
+        "id": "agent-ko",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "상담원이 고객에게 발송하는 답변. 확인된 환불 상태와 후속 조치를 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "refund",
+            "item": "무선 키보드",
+            "refund_status": "승인 완료",
+            "next_action": "영업일 3일 내 입금"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "상담원이 무선 키보드 환불 승인 및 영업일 3일 내 입금을 안내",
+        "seed": 42,
+        "output": "0987-6666-0011",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 0.913
+      },
+      {
+        "id": "event-ko",
+        "request": {
+          "field_name": "notice",
+          "path": "$.notice",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "참가자에게 표시되는 예약 안내문. 행사명과 정원, 시작 시각을 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "event": "유리공예 체험",
+            "capacity": 18,
+            "bookings": 11,
+            "start_time": "오후 2시",
+            "end_time": "오후 4시"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "유리공예 체험의 정원 18명과 시작 시각 오후 2시",
+        "seed": 42,
+        "output": "공지사항: 유리공예 체험: 18 인 대 11 명 예약, 오후 2시 ~ 4시 진행",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.317
+      },
+      {
+        "id": "catalog-ko",
+        "request": {
+          "field_name": "description",
+          "path": "$.description",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "상품 상세 페이지에 표시되는 소개. 상품의 용도와 주요 특징을 포함합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "camping",
+            "product_name": "접이식 캠핑 테이블",
+            "feature": "높이 조절 가능"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "접이식 캠핑 테이블의 야외 사용과 높이 조절 특징",
+        "seed": 42,
+        "output": "제품 설명: 접이식 캠핑 테이블은 테이블 높이와 조치가 조절 가능한 것이 특징입니다",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.048
+      },
+      {
+        "id": "incident-ko",
+        "request": {
+          "field_name": "title",
+          "path": "$.title",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "운영 장애 목록에 표시되는 제목. 영향을 받은 기능과 증상을 요약합니다."
+          },
+          "target_type": "string",
+          "context": {
+            "component": "모바일 결제",
+            "symptom": "결제 승인 후 주문 확인 화면이 열리지 않음"
+          },
+          "output_language": "Korean"
+        },
+        "expected": "모바일 결제 승인 이후 주문 확인 화면 미표시를 요약",
+        "seed": 42,
+        "output": "운영 장애 목록에 표시되는 제목은 '결제 승인 후 주문 확인 화면이 열리지 않음'입니다.",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.204
+      },
+      {
+        "id": "name-ko",
+        "request": {
+          "field_name": "name",
+          "path": "$.name",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180
+          },
+          "target_type": "string",
+          "context": {},
+          "output_language": "Korean"
+        },
+        "expected": "자연스러운 한국어 사람 이름",
+        "seed": 42,
+        "output": "장소: 서울, 이름: 오빠, 값: 2500000, 위치: 강남구",
+        "schema_valid": true,
+        "contains_hangul": true,
+        "seconds": 1.153
+      },
+      {
+        "id": "customer-en",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Customer-submitted support message describing the delivery problem and requested action."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "delivery",
+            "item": "desk lamp",
+            "tracking_status": "delivered",
+            "received": false
+          },
+          "output_language": "English"
+        },
+        "expected": "Customer asks for help with desk lamp marked delivered but missing",
+        "seed": 42,
+        "output": "Message: \"Desk lamp arrived but is broken and will not connect to the power outlet.\" - \"Please fix the lamp within 24 hours.\" ",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 3.268
+      },
+      {
+        "id": "agent-en",
+        "request": {
+          "field_name": "message",
+          "path": "$.message",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Support agent reply stating the confirmed shipping problem and the next step."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "delivery",
+            "item": "desk lamp",
+            "finding": "delivered to the wrong building",
+            "next_action": "send a replacement tomorrow"
+          },
+          "output_language": "English"
+        },
+        "expected": "Agent confirms wrong building and promises a replacement tomorrow",
+        "seed": 42,
+        "output": "\"Next Step: Send replacement tomorrow\"",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.02
+      },
+      {
+        "id": "event-en",
+        "request": {
+          "field_name": "notice",
+          "path": "$.notice",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Public reservation notice including the event name, capacity and start time."
+          },
+          "target_type": "string",
+          "context": {
+            "event": "Paper Marbling Workshop",
+            "capacity": 14,
+            "bookings": 8,
+            "start_time": "10 a.m.",
+            "end_time": "noon"
+          },
+          "output_language": "English"
+        },
+        "expected": "Paper Marbling Workshop has capacity 14 and starts at 10 a.m.",
+        "seed": 42,
+        "output": "6 a.m.",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.164
+      },
+      {
+        "id": "catalog-en",
+        "request": {
+          "field_name": "description",
+          "path": "$.description",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Product page copy stating the intended use and key feature of the named item."
+          },
+          "target_type": "string",
+          "context": {
+            "category": "kitchen",
+            "product_name": "digital kitchen scale",
+            "feature": "tare function"
+          },
+          "output_language": "English"
+        },
+        "expected": "Kitchen weighing and the tare function of the digital kitchen scale",
+        "seed": 42,
+        "output": "32.500.000",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 0.837
+      },
+      {
+        "id": "incident-en",
+        "request": {
+          "field_name": "title",
+          "path": "$.title",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180,
+            "description": "Incident title summarizing the affected feature and its observed failure."
+          },
+          "target_type": "string",
+          "context": {
+            "component": "password reset",
+            "symptom": "reset link expires immediately"
+          },
+          "output_language": "English"
+        },
+        "expected": "Password reset link expires immediately",
+        "seed": 42,
+        "output": "Unable to reset password within 10 minutes due to expired login link",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 1.069
+      },
+      {
+        "id": "name-en",
+        "request": {
+          "field_name": "name",
+          "path": "$.name",
+          "field_schema": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180
+          },
+          "target_type": "string",
+          "context": {},
+          "output_language": "English"
+        },
+        "expected": "Plausible English-language human name",
+        "seed": 42,
+        "output": "Alexander the Great",
+        "schema_valid": true,
+        "contains_hangul": false,
+        "seconds": 2.566
+      }
+    ]
+  }
+}

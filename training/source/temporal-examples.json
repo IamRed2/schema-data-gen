@@ -1,0 +1,386 @@
+[
+  {
+    "split": "train",
+    "group": "temporal-production",
+    "field": "message",
+    "examples": [
+      {
+        "context": {
+          "product": "poster order",
+          "original_estimate_days": 4,
+          "additional_days": 7
+        },
+        "Korean": {
+          "description": "인쇄물 제작 안내. 기존 예상 대비 추가 제작 일수를 포함합니다.",
+          "target": "인쇄물 제작에 기존 예상보다 7일이 더 걸릴 예정입니다."
+        },
+        "English": {
+          "description": "Print production update stating how many extra days the job needs beyond the original estimate.",
+          "target": "Your print job will take 7 days longer than originally estimated."
+        }
+      },
+      {
+        "context": {
+          "product": "poster order",
+          "original_estimate_days": 7,
+          "additional_days": 4
+        },
+        "Korean": {
+          "description": "인쇄물 제작 안내. 기존 예상 대비 추가 제작 일수를 포함합니다.",
+          "target": "인쇄물 제작에 기존 예상보다 4일이 더 걸릴 예정입니다."
+        },
+        "English": {
+          "description": "Print production update stating how many extra days the job needs beyond the original estimate.",
+          "target": "Your print job will take 4 days longer than originally estimated."
+        }
+      },
+      {
+        "context": {
+          "original_estimate_days": 7,
+          "remaining_days": 4
+        },
+        "Korean": {
+          "description": "인쇄물 제작 안내. 오늘부터 제작 완료까지 남은 기간을 포함합니다.",
+          "target": "인쇄물 제작은 오늘부터 4일 후에 완료될 예정입니다."
+        },
+        "English": {
+          "description": "Print production update stating the days remaining until completion.",
+          "target": "Your print job should be ready in 4 days."
+        }
+      },
+      {
+        "context": {
+          "original_estimate_days": 4,
+          "remaining_days": 7
+        },
+        "Korean": {
+          "description": "인쇄물 제작 안내. 오늘부터 제작 완료까지 남은 기간을 포함합니다.",
+          "target": "인쇄물 제작은 오늘부터 7일 후에 완료될 예정입니다."
+        },
+        "English": {
+          "description": "Print production update stating the days remaining until completion.",
+          "target": "Your print job should be ready in 7 days."
+        }
+      }
+    ]
+  },
+  {
+    "split": "train",
+    "group": "temporal-exhibit",
+    "field": "notice",
+    "examples": [
+      {
+        "context": {
+          "opens_on": "2028-02-29",
+          "closes_on": "2028-03-05"
+        },
+        "Korean": {
+          "description": "전시 안내. 관람을 시작할 수 있는 개막일을 포함합니다.",
+          "target": "전시는 2028년 2월 29일에 개막합니다."
+        },
+        "English": {
+          "description": "Exhibition notice stating the date the exhibition opens to visitors.",
+          "target": "The exhibition opens to visitors on February 29, 2028."
+        }
+      },
+      {
+        "context": {
+          "opens_on": "2028-02-29",
+          "closes_on": "2028-03-05"
+        },
+        "Korean": {
+          "description": "전시 안내. 관람이 끝나는 폐막일을 포함합니다.",
+          "target": "전시는 2028년 3월 5일에 폐막합니다."
+        },
+        "English": {
+          "description": "Exhibition notice stating the date the exhibition closes.",
+          "target": "The exhibition closes on March 5, 2028."
+        }
+      },
+      {
+        "context": {
+          "opens_on": "2028-12-30",
+          "closes_on": "2029-01-04"
+        },
+        "Korean": {
+          "description": "전시 안내. 관람을 시작할 수 있는 개막일을 포함합니다.",
+          "target": "전시는 2028년 12월 30일에 개막합니다."
+        },
+        "English": {
+          "description": "Exhibition notice stating the date the exhibition opens to visitors.",
+          "target": "The exhibition opens to visitors on December 30, 2028."
+        }
+      },
+      {
+        "context": {
+          "opens_on": "2028-12-30",
+          "closes_on": "2029-01-04"
+        },
+        "Korean": {
+          "description": "전시 안내. 관람이 끝나는 폐막일을 포함합니다.",
+          "target": "전시는 2029년 1월 4일에 폐막합니다."
+        },
+        "English": {
+          "description": "Exhibition notice stating the date the exhibition closes.",
+          "target": "The exhibition closes on January 4, 2029."
+        }
+      }
+    ]
+  },
+  {
+    "split": "train",
+    "group": "temporal-license",
+    "field": "notice",
+    "examples": [
+      {
+        "context": {
+          "renewal_opens_on": "2027-08-12",
+          "expires_on": "2027-09-01"
+        },
+        "Korean": {
+          "description": "라이선스 갱신 안내. 갱신 신청 접수 시작일을 포함합니다.",
+          "target": "라이선스 갱신은 2027년 8월 12일부터 신청할 수 있습니다."
+        },
+        "English": {
+          "description": "License renewal notice stating the date renewal applications open.",
+          "target": "License renewal applications open on August 12, 2027."
+        }
+      },
+      {
+        "context": {
+          "renewal_opens_on": "2027-08-12",
+          "expires_on": "2027-09-01"
+        },
+        "Korean": {
+          "description": "라이선스 만료 안내. 현재 라이선스의 만료일을 포함합니다.",
+          "target": "현재 라이선스는 2027년 9월 1일에 만료됩니다."
+        },
+        "English": {
+          "description": "License expiration notice stating when the current license expires.",
+          "target": "Your current license expires on September 1, 2027."
+        }
+      },
+      {
+        "context": {
+          "renewal_opens_on": "2027-11-04",
+          "expires_on": "2027-12-20"
+        },
+        "Korean": {
+          "description": "라이선스 갱신 안내. 갱신 신청 접수 시작일을 포함합니다.",
+          "target": "라이선스 갱신은 2027년 11월 4일부터 신청할 수 있습니다."
+        },
+        "English": {
+          "description": "License renewal notice stating the date renewal applications open.",
+          "target": "License renewal applications open on November 4, 2027."
+        }
+      },
+      {
+        "context": {
+          "renewal_opens_on": "2027-11-04",
+          "expires_on": "2027-12-20"
+        },
+        "Korean": {
+          "description": "라이선스 만료 안내. 현재 라이선스의 만료일을 포함합니다.",
+          "target": "현재 라이선스는 2027년 12월 20일에 만료됩니다."
+        },
+        "English": {
+          "description": "License expiration notice stating when the current license expires.",
+          "target": "Your current license expires on December 20, 2027."
+        }
+      }
+    ]
+  },
+  {
+    "split": "train",
+    "group": "temporal-maintenance-window",
+    "field": "notice",
+    "examples": [
+      {
+        "context": {
+          "starts_at": "2027-04-08T23:30:00+09:00",
+          "ends_at": "2027-04-09T01:00:00+09:00",
+          "time_zone": "KST"
+        },
+        "Korean": {
+          "description": "서비스 점검 안내. 한국 표준시 기준 점검 시작 시각을 포함합니다.",
+          "target": "점검은 한국 표준시로 4월 8일 오후 11시 30분에 시작됩니다."
+        },
+        "English": {
+          "description": "Service maintenance notice stating the start time in Korea Standard Time.",
+          "target": "Maintenance begins on April 8 at 11:30 p.m. KST."
+        }
+      },
+      {
+        "context": {
+          "starts_at": "2027-04-08T23:30:00+09:00",
+          "ends_at": "2027-04-09T01:00:00+09:00",
+          "time_zone": "KST"
+        },
+        "Korean": {
+          "description": "서비스 점검 안내. 한국 표준시 기준 점검 종료 예정 시각을 포함합니다.",
+          "target": "점검은 한국 표준시로 4월 9일 오전 1시에 종료될 예정입니다."
+        },
+        "English": {
+          "description": "Service maintenance notice stating the scheduled end time in Korea Standard Time.",
+          "target": "Maintenance is scheduled to end on April 9 at 1 a.m. KST."
+        }
+      },
+      {
+        "context": {
+          "starts_at": "2027-10-17T22:00:00+09:00",
+          "ends_at": "2027-10-17T23:15:00+09:00",
+          "time_zone": "KST"
+        },
+        "Korean": {
+          "description": "서비스 점검 안내. 한국 표준시 기준 점검 시작 시각을 포함합니다.",
+          "target": "점검은 한국 표준시로 10월 17일 오후 10시에 시작됩니다."
+        },
+        "English": {
+          "description": "Service maintenance notice stating the start time in Korea Standard Time.",
+          "target": "Maintenance begins on October 17 at 10 p.m. KST."
+        }
+      },
+      {
+        "context": {
+          "starts_at": "2027-10-17T22:00:00+09:00",
+          "ends_at": "2027-10-17T23:15:00+09:00",
+          "time_zone": "KST"
+        },
+        "Korean": {
+          "description": "서비스 점검 안내. 한국 표준시 기준 점검 종료 예정 시각을 포함합니다.",
+          "target": "점검은 한국 표준시로 10월 17일 오후 11시 15분에 종료될 예정입니다."
+        },
+        "English": {
+          "description": "Service maintenance notice stating the scheduled end time in Korea Standard Time.",
+          "target": "Maintenance is scheduled to end on October 17 at 11:15 p.m. KST."
+        }
+      }
+    ]
+  },
+  {
+    "split": "test",
+    "group": "temporal-grant",
+    "field": "notice",
+    "examples": [
+      {
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "Korean": {
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다.",
+          "target": "지원금 신청서는 2029년 1월 15일까지 제출할 수 있습니다."
+        },
+        "English": {
+          "description": "Grant application notice stating the submission deadline.",
+          "target": "Grant applications are due by January 15, 2029."
+        }
+      },
+      {
+        "context": {
+          "applications_close_on": "2029-01-15",
+          "results_on": "2029-02-03"
+        },
+        "Korean": {
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다.",
+          "target": "지원금 심사 결과는 2029년 2월 3일에 발표됩니다."
+        },
+        "English": {
+          "description": "Grant review notice stating the date results will be announced.",
+          "target": "Grant review results will be announced on February 3, 2029."
+        }
+      },
+      {
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "Korean": {
+          "description": "지원금 신청 안내. 신청서 제출 마감일을 포함합니다.",
+          "target": "지원금 신청서는 2029년 9월 6일까지 제출할 수 있습니다."
+        },
+        "English": {
+          "description": "Grant application notice stating the submission deadline.",
+          "target": "Grant applications are due by September 6, 2029."
+        }
+      },
+      {
+        "context": {
+          "applications_close_on": "2029-09-06",
+          "results_on": "2029-10-10"
+        },
+        "Korean": {
+          "description": "지원금 심사 안내. 심사 결과 발표일을 포함합니다.",
+          "target": "지원금 심사 결과는 2029년 10월 10일에 발표됩니다."
+        },
+        "English": {
+          "description": "Grant review notice stating the date results will be announced.",
+          "target": "Grant review results will be announced on October 10, 2029."
+        }
+      }
+    ]
+  },
+  {
+    "split": "test",
+    "group": "temporal-repair",
+    "field": "message",
+    "examples": [
+      {
+        "context": {
+          "original_estimate_days": 5,
+          "additional_days": 2
+        },
+        "Korean": {
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다.",
+          "target": "기기 수리에 처음 안내해 드린 기간보다 2일이 더 걸릴 예정입니다."
+        },
+        "English": {
+          "description": "Device repair update stating the number of additional days beyond the original estimate.",
+          "target": "Your device repair will take 2 days longer than originally estimated."
+        }
+      },
+      {
+        "context": {
+          "original_estimate_days": 5,
+          "remaining_days": 2
+        },
+        "Korean": {
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다.",
+          "target": "기기 수리는 오늘부터 2일 후에 완료될 예정입니다."
+        },
+        "English": {
+          "description": "Device repair update stating the number of days remaining until completion.",
+          "target": "Your device repair should be complete in 2 days."
+        }
+      },
+      {
+        "context": {
+          "original_estimate_days": 2,
+          "additional_days": 5
+        },
+        "Korean": {
+          "description": "기기 수리 안내. 처음 안내한 기간보다 추가로 걸리는 일수를 포함합니다.",
+          "target": "기기 수리에 처음 안내해 드린 기간보다 5일이 더 걸릴 예정입니다."
+        },
+        "English": {
+          "description": "Device repair update stating the number of additional days beyond the original estimate.",
+          "target": "Your device repair will take 5 days longer than originally estimated."
+        }
+      },
+      {
+        "context": {
+          "original_estimate_days": 2,
+          "remaining_days": 5
+        },
+        "Korean": {
+          "description": "기기 수리 안내. 오늘부터 수리 완료까지 남은 일수를 포함합니다.",
+          "target": "기기 수리는 오늘부터 5일 후에 완료될 예정입니다."
+        },
+        "English": {
+          "description": "Device repair update stating the number of days remaining until completion.",
+          "target": "Your device repair should be complete in 5 days."
+        }
+      }
+    ]
+  }
+]

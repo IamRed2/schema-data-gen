@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "currency": {
+      "const": "USD"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "paid",
+        "shipped"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_name": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 70,
+            "description": "Display name of the product on the order line."
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "unit_price": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 250,
+            "multipleOf": 0.01
+          }
+        },
+        "required": [
+          "product_name",
+          "quantity",
+          "unit_price"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "shipping_address": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 100
+        },
+        "street_address": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120,
+          "description": "Street name and building number for the delivery address."
+        }
+      },
+      "required": [
+        "city",
+        "street_address"
+      ],
+      "additionalProperties": false
+    },
+    "customer_note": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 160,
+      "description": "Checkout note from the customer containing delivery instructions for this order."
+    }
+  },
+  "required": [
+    "currency",
+    "status",
+    "items",
+    "shipping_address",
+    "customer_note"
+  ],
+  "additionalProperties": false
+}

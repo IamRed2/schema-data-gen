@@ -6,15 +6,17 @@
 
 | 위치 | 역할 |
 |---|---|
-| `generate.py` | CLI 옵션 처리, 모델·실행기 경로 확인, 결과 배열의 콘솔 출력 또는 파일 저장 |
-| `value_generator.py` | 스키마 순회, 객체·배열 조립, enum·const 선택, 모델 값 요청, 숫자·불리언·null 파싱, 필드 재시도와 검증 |
+| `generate.py`, `generate.bat` | Python 및 Windows 배치 실행 진입점 |
+| `schema_generator/cli.py` | CLI 옵션 처리, 런타임 경로 확인, 결과 출력 |
+| `schema_generator/value_generator.py` | 스키마 순회, 객체·배열 조립, enum·const 선택, 모델 값 요청, 숫자·불리언·null 파싱, 필드 재시도와 검증 |
+| `schema_generator/llama_server_backend.py`, `schema_generator/openvino_backend.py` | GPU 모델 재사용 및 OpenVINO 추론 연결 |
 | `runtime/llama.cpp/` | 서버 없이 로컬 추론을 실행하는 실행 파일과 DLL |
-| `model.gguf` | 기본 Qwen3-0.6B 양자화 가중치 |
-| `schema-lora.gguf` | 이전 레코드 단위 학습으로 만든 초기 LoRA. 새 값 단위 학습 결과는 별도 경로에 생성 |
-| `qwen3.5-0.8b-q4.gguf` | 비교용 백본 가중치 |
+| `models/model.gguf` | 기본 Qwen3-0.6B 양자화 가중치 |
+| `models/schema-lora.gguf` | 이전 레코드 단위 학습으로 만든 초기 LoRA. 새 값 단위 학습 결과는 별도 경로에 생성 |
+| `models/qwen3.5-0.8b-q4.gguf` | 비교용 백본 가중치 |
 | `examples/` | 사용자가 CLI로 실행할 예제 스키마 |
 | `outputs/` | 생성 결과 파일 |
-| `benchmark.py` | 같은 스키마·언어·시드에서 두 모델이나 실행 방식을 비교 |
+| `tools/benchmark.py` | 같은 스키마·언어·시드에서 두 모델이나 실행 방식을 비교 |
 | `benchmark-results/` | 이전 비교 결과와 생성 샘플. 이전 구현의 측정치는 당시 구현에 해당 |
 | `training/train.py` | 필드 입력을 받아 값 문자열을 예측하는 LoRA 학습, test 데이터의 토큰 손실 측정 |
 | `training/prepare_data.py` | 기존 프로젝트 예제를 값 단위 데이터로 변환하고 스칼라 타입 예제를 추가 |

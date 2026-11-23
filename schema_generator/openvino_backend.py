@@ -1,7 +1,7 @@
 import json
 import sys
 
-from value_generator import INSTRUCTIONS, decode_value, value_output_schema
+from schema_generator.value_generator import INSTRUCTIONS, decode_value, value_output_schema
 
 
 def load_backend(model, device):

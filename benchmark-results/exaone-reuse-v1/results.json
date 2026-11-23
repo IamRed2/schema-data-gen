@@ -1,0 +1,864 @@
+{
+  "paired": [
+    {
+      "id": "scenario-observatory-Korean-0-notice",
+      "previous": "정원은 16명이고 달이 지평선 근처에서 관측됟을 수 있습니다.",
+      "reused": "정원에서 16명이 달 관측을 합니다.",
+      "previous_seconds": 3.494,
+      "reused_seconds": 1.0522219999984372
+    },
+    {
+      "id": "scenario-observatory-Korean-1-notice",
+      "previous": "The view from the terrace overlooks the Saturn belt, but you may not see them clearly. If you are standing on the first floor, the Saturn belt should be well-fr",
+      "reused": "정원에서 토성 관측을 진행합니다.",
+      "previous_seconds": 4.43,
+      "reused_seconds": 0.8576422999976785
+    },
+    {
+      "id": "scenario-observatory-English-0-notice",
+      "previous": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance.",
+      "reused": "The Moon viewing is for up to 16 participants.",
+      "previous_seconds": 4.026,
+      "reused_seconds": 1.029768200001854
+    },
+    {
+      "id": "scenario-observatory-English-1-notice",
+      "previous": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance.",
+      "reused": "Saturn viewing will include up to 24 people.",
+      "previous_seconds": 3.347,
+      "reused_seconds": 1.018573400000605
+    },
+    {
+      "id": "scenario-sports-Korean-0-notice",
+      "previous": "배드민턴 체험은 오후 2시에 진행됩니다.",
+      "reused": "배드민턴 체험은 오후 2시부터 시작합니다.",
+      "previous_seconds": 2.969,
+      "reused_seconds": 1.0693582000021706
+    },
+    {
+      "id": "scenario-sports-Korean-1-notice",
+      "previous": "실내 체육관에서 탁구 체험을 오후 4시에 진행합니다.",
+      "reused": "오후 4시 탁구 체험을 시작합니다.",
+      "previous_seconds": 3.382,
+      "reused_seconds": 0.9253009999993083
+    },
+    {
+      "id": "scenario-sports-English-0-notice",
+      "previous": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed.",
+      "reused": "The indoor gym hosts a badminton session at 2 p.m.",
+      "previous_seconds": 6.443,
+      "reused_seconds": 1.0856687999985297
+    },
+    {
+      "id": "scenario-sports-English-1-notice",
+      "previous": "table tennis is scheduled for 4 p.m.",
+      "reused": "Table tennis session is scheduled at 4 p.m.",
+      "previous_seconds": 13.803,
+      "reused_seconds": 0.9703087999987474
+    }
+  ],
+  "batch": [
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명이 달 관측을 한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명이 토성 관측을 진행한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시부터 시작된다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명을 데리고 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명에게 토성 관측을 제공합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 실내 체육관에서 배드민턴 체험을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시 탁구 체험을 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명은 관측실에서 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시까지 배드민턴 체험을 진행해요."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시부터 진행됩니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명을 대상으로 달 관측을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명에게 토성 관측을 진행한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 시작할 수 있습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시에 탁구 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명과 함께 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명이 토성 관측에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 실내 체육관에서 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시 탁구 체험을 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명을 대상으로 달 관측을 실시하겠습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "배드민턴 체험은 오후 2시부터 시작된다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시에 탁구 체험을 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명은 전망대에서 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 할 수 있습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 시작할 예정입니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시에 시작됩니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명은 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원에서 토성 관측을 진행합니다."
+      },
+      "fact_match": false
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시부터 탁구 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명과 함께 달 관측을 진행한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명에게 토성 관측을 설명하고 물 판매소로 안내합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "배드민턴 체험은 오후 2시에 시작됩니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험을 오후 4시에 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명을 대상으로 달 관측을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명에게 토성 관측을 설명하면서 입구에서 물을 판매합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "배드민턴 체험은 오후 2시에 진행됩니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시 탁구 체험에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명이 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시부터 배드민턴 체험을 진행하겠습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시에 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명을 관찰하기 위해 달 관측을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원에서 토성 관측이 진행됩니다."
+      },
+      "fact_match": false
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험을 오후 4시에 진행해요."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명을 대상으로 달 관측을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명, 토성 관측을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시까지 진행된다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명에게 달 관측을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 즐길 수 있습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시에 탁구 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명은 달 관측에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 관찰합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시에 진행됩니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명이 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험을 오후 4시에 실내 체육관에서 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명에게 달 관측을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 관측한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 실내 체육관에서 배드민턴 체험을 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시에 시작됩니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명 중 한 명이 달 관측에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "배드민턴 체험은 오후 2시까지 진행됩니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시 탁구 체험을 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명은 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 실내 체육관에서 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험을 오후 4시에 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명이 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명에게 토성 관측을 진행한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 실내 체육관에서 배드민턴 체험을 시작하겠습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시에 탁구 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명에게 달 관측을 진행한다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 함께합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시부터 탁구 체험을 진행합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명 중 4명이 달 관측에 참여합니다."
+      },
+      "fact_match": false
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명에게 토성 관측을 안내했습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시에 시작합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명은 전망대에서 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명을 초대해 토성 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시에 진행됩니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명이 달 관측에 참여했습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험을 하세요."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "오후 4시에 탁구 체험을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "달 관측",
+        "detail": "정원 16명",
+        "notice": "정원 16명은 전망대에서 달 관측을 합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "토성 관측",
+        "detail": "정원 24명",
+        "notice": "정원 24명은 토성 관측을 하고 있습니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "배드민턴 체험",
+        "detail": "오후 2시",
+        "notice": "오후 2시에 배드민턴 체험에 참여합니다."
+      },
+      "fact_match": true
+    },
+    {
+      "record": {
+        "activity": "탁구 체험",
+        "detail": "오후 4시",
+        "notice": "탁구 체험은 오후 4시부터 시작합니다."
+      },
+      "fact_match": true
+    }
+  ],
+  "startup_seconds": 1.193209900000511,
+  "batch_seconds": 55.45932670000184
+}

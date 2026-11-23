@@ -9,7 +9,7 @@
     "message": {
       "type": "string",
       "minLength": 10,
-      "description": "Write one sentence from a customer to the support team describing a specific issue in the given category and requesting an action."
+      "description": "Customer support message containing the issue in the selected category and the customer's requested resolution."
     }
   },
   "required": ["category", "message"],

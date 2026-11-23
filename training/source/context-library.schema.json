@@ -17,7 +17,7 @@
         },
         "notice": {
           "type": "string",
-          "description": "지점과 도서 제목, 연장 일수를 빠짐없이 포함해 대출 연장 안내를 한 문장으로 작성한다.",
+          "description": "이용자에게 표시되는 대출 연장 안내문. 대출 지점, 도서 제목, 연장 일수를 포함합니다.",
           "minLength": 20,
           "maxLength": 160
         }

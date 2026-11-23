@@ -1,0 +1,4604 @@
+{
+  "timing": {
+    "encoder_load_seconds": 1.878,
+    "index_seconds": 0.363,
+    "unique_queries": 12,
+    "unique_generation_requests": 116,
+    "keyword_median_ms": 0.101,
+    "semantic_median_ms": 26.624
+  },
+  "summary": {
+    "full": {
+      "selection_exact": 0,
+      "selection_contains_all": 24,
+      "automatic_pass": 24,
+      "median_generation_seconds": 0.998
+    },
+    "keyword": {
+      "selection_exact": 20,
+      "selection_contains_all": 20,
+      "automatic_pass": 29,
+      "median_generation_seconds": 0.842
+    },
+    "semantic": {
+      "selection_exact": 14,
+      "selection_contains_all": 14,
+      "automatic_pass": 19,
+      "median_generation_seconds": 0.849
+    },
+    "oracle": {
+      "selection_exact": 24,
+      "selection_contains_all": 24,
+      "automatic_pass": 33,
+      "median_generation_seconds": 0.837
+    }
+  },
+  "selections": {
+    "reservation-ko-1": {
+      "gold": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "full": [
+        "event",
+        "capacity",
+        "booked",
+        "remaining",
+        "start_time"
+      ],
+      "keyword": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "semantic": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "oracle": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "keyword_scores": {
+        "event": 2,
+        "capacity": 2,
+        "booked": 0,
+        "remaining": 0,
+        "start_time": 2
+      },
+      "semantic_scores": {
+        "event": 0.8875842094421387,
+        "capacity": 0.886326253414154,
+        "booked": 0.8595343232154846,
+        "remaining": 0.8297213315963745,
+        "start_time": 0.8599719405174255
+      },
+      "keyword_ms": 1.759,
+      "semantic_ms": 27.123
+    },
+    "reservation-ko-2": {
+      "gold": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "full": [
+        "event",
+        "capacity",
+        "booked",
+        "remaining",
+        "start_time"
+      ],
+      "keyword": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "semantic": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "oracle": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "keyword_scores": {
+        "event": 2,
+        "capacity": 2,
+        "booked": 0,
+        "remaining": 0,
+        "start_time": 2
+      },
+      "semantic_scores": {
+        "event": 0.8875842094421387,
+        "capacity": 0.886326253414154,
+        "booked": 0.8595343232154846,
+        "remaining": 0.8297213315963745,
+        "start_time": 0.8599719405174255
+      },
+      "keyword_ms": 1.759,
+      "semantic_ms": 27.123
+    },
+    "reservation-en-1": {
+      "gold": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "full": [
+        "event",
+        "capacity",
+        "booked",
+        "remaining",
+        "start_time"
+      ],
+      "keyword": [
+        "capacity",
+        "event",
+        "start_time"
+      ],
+      "semantic": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "oracle": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "keyword_scores": {
+        "event": 2,
+        "capacity": 3,
+        "booked": 1,
+        "remaining": 0,
+        "start_time": 2
+      },
+      "semantic_scores": {
+        "event": 0.8725051283836365,
+        "capacity": 0.8673379421234131,
+        "booked": 0.8445066809654236,
+        "remaining": 0.8027511835098267,
+        "start_time": 0.8500844240188599
+      },
+      "keyword_ms": 0.14,
+      "semantic_ms": 32.473
+    },
+    "reservation-en-2": {
+      "gold": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "full": [
+        "event",
+        "capacity",
+        "booked",
+        "remaining",
+        "start_time"
+      ],
+      "keyword": [
+        "capacity",
+        "event",
+        "start_time"
+      ],
+      "semantic": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "oracle": [
+        "event",
+        "capacity",
+        "start_time"
+      ],
+      "keyword_scores": {
+        "event": 2,
+        "capacity": 3,
+        "booked": 1,
+        "remaining": 0,
+        "start_time": 2
+      },
+      "semantic_scores": {
+        "event": 0.8725051283836365,
+        "capacity": 0.8673379421234131,
+        "booked": 0.8445066809654236,
+        "remaining": 0.8027511835098267,
+        "start_time": 0.8500844240188599
+      },
+      "keyword_ms": 0.14,
+      "semantic_ms": 32.473
+    },
+    "shipping-ko-1": {
+      "gold": [
+        "product",
+        "additional_days"
+      ],
+      "full": [
+        "product",
+        "additional_days",
+        "original_estimate_days"
+      ],
+      "keyword": [
+        "additional_days",
+        "product"
+      ],
+      "semantic": [
+        "additional_days",
+        "product"
+      ],
+      "oracle": [
+        "product",
+        "additional_days"
+      ],
+      "keyword_scores": {
+        "product": 2,
+        "additional_days": 4,
+        "original_estimate_days": 1
+      },
+      "semantic_scores": {
+        "product": 0.8725574612617493,
+        "additional_days": 0.911001980304718,
+        "original_estimate_days": 0.8673588633537292
+      },
+      "keyword_ms": 0.136,
+      "semantic_ms": 33.213
+    },
+    "shipping-ko-2": {
+      "gold": [
+        "product",
+        "additional_days"
+      ],
+      "full": [
+        "product",
+        "additional_days",
+        "original_estimate_days"
+      ],
+      "keyword": [
+        "additional_days",
+        "product"
+      ],
+      "semantic": [
+        "additional_days",
+        "product"
+      ],
+      "oracle": [
+        "product",
+        "additional_days"
+      ],
+      "keyword_scores": {
+        "product": 2,
+        "additional_days": 4,
+        "original_estimate_days": 1
+      },
+      "semantic_scores": {
+        "product": 0.8725574612617493,
+        "additional_days": 0.911001980304718,
+        "original_estimate_days": 0.8673588633537292
+      },
+      "keyword_ms": 0.136,
+      "semantic_ms": 33.213
+    },
+    "shipping-en-1": {
+      "gold": [
+        "product",
+        "additional_days"
+      ],
+      "full": [
+        "product",
+        "additional_days",
+        "original_estimate_days"
+      ],
+      "keyword": [
+        "additional_days",
+        "original_estimate_days"
+      ],
+      "semantic": [
+        "additional_days",
+        "original_estimate_days"
+      ],
+      "oracle": [
+        "product",
+        "additional_days"
+      ],
+      "keyword_scores": {
+        "product": 2,
+        "additional_days": 5,
+        "original_estimate_days": 3
+      },
+      "semantic_scores": {
+        "product": 0.8470376133918762,
+        "additional_days": 0.8829636573791504,
+        "original_estimate_days": 0.8594046831130981
+      },
+      "keyword_ms": 0.124,
+      "semantic_ms": 24.598
+    },
+    "shipping-en-2": {
+      "gold": [
+        "product",
+        "additional_days"
+      ],
+      "full": [
+        "product",
+        "additional_days",
+        "original_estimate_days"
+      ],
+      "keyword": [
+        "additional_days",
+        "original_estimate_days"
+      ],
+      "semantic": [
+        "additional_days",
+        "original_estimate_days"
+      ],
+      "oracle": [
+        "product",
+        "additional_days"
+      ],
+      "keyword_scores": {
+        "product": 2,
+        "additional_days": 5,
+        "original_estimate_days": 3
+      },
+      "semantic_scores": {
+        "product": 0.8470376133918762,
+        "additional_days": 0.8829636573791504,
+        "original_estimate_days": 0.8594046831130981
+      },
+      "keyword_ms": 0.124,
+      "semantic_ms": 24.598
+    },
+    "subscription-ko-1": {
+      "gold": [
+        "plan",
+        "new_price_usd"
+      ],
+      "full": [
+        "plan",
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "keyword": [
+        "plan",
+        "new_price_usd"
+      ],
+      "semantic": [
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "oracle": [
+        "plan",
+        "new_price_usd"
+      ],
+      "keyword_scores": {
+        "plan": 2,
+        "new_price_usd": 1,
+        "previous_price_usd": 1
+      },
+      "semantic_scores": {
+        "plan": 0.8737226128578186,
+        "new_price_usd": 0.8951254487037659,
+        "previous_price_usd": 0.8755348324775696
+      },
+      "keyword_ms": 0.095,
+      "semantic_ms": 26.636
+    },
+    "subscription-ko-2": {
+      "gold": [
+        "plan",
+        "new_price_usd"
+      ],
+      "full": [
+        "plan",
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "keyword": [
+        "plan",
+        "new_price_usd"
+      ],
+      "semantic": [
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "oracle": [
+        "plan",
+        "new_price_usd"
+      ],
+      "keyword_scores": {
+        "plan": 2,
+        "new_price_usd": 1,
+        "previous_price_usd": 1
+      },
+      "semantic_scores": {
+        "plan": 0.8737226128578186,
+        "new_price_usd": 0.8951254487037659,
+        "previous_price_usd": 0.8755348324775696
+      },
+      "keyword_ms": 0.095,
+      "semantic_ms": 26.636
+    },
+    "subscription-en-1": {
+      "gold": [
+        "plan",
+        "new_price_usd"
+      ],
+      "full": [
+        "plan",
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "keyword": [
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "semantic": [
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "oracle": [
+        "plan",
+        "new_price_usd"
+      ],
+      "keyword_scores": {
+        "plan": 2,
+        "new_price_usd": 4,
+        "previous_price_usd": 3
+      },
+      "semantic_scores": {
+        "plan": 0.8497816324234009,
+        "new_price_usd": 0.8698433041572571,
+        "previous_price_usd": 0.8611043691635132
+      },
+      "keyword_ms": 0.123,
+      "semantic_ms": 23.88
+    },
+    "subscription-en-2": {
+      "gold": [
+        "plan",
+        "new_price_usd"
+      ],
+      "full": [
+        "plan",
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "keyword": [
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "semantic": [
+        "new_price_usd",
+        "previous_price_usd"
+      ],
+      "oracle": [
+        "plan",
+        "new_price_usd"
+      ],
+      "keyword_scores": {
+        "plan": 2,
+        "new_price_usd": 4,
+        "previous_price_usd": 3
+      },
+      "semantic_scores": {
+        "plan": 0.8497816324234009,
+        "new_price_usd": 0.8698433041572571,
+        "previous_price_usd": 0.8611043691635132
+      },
+      "keyword_ms": 0.123,
+      "semantic_ms": 23.88
+    },
+    "inventory-ko-1": {
+      "gold": [
+        "item_name"
+      ],
+      "full": [
+        "item_name",
+        "related_item"
+      ],
+      "keyword": [
+        "item_name"
+      ],
+      "semantic": [
+        "item_name"
+      ],
+      "oracle": [
+        "item_name"
+      ],
+      "keyword_scores": {
+        "item_name": 4,
+        "related_item": 1
+      },
+      "semantic_scores": {
+        "item_name": 0.8968433141708374,
+        "related_item": 0.8738369941711426
+      },
+      "keyword_ms": 0.083,
+      "semantic_ms": 25.072
+    },
+    "inventory-ko-2": {
+      "gold": [
+        "item_name"
+      ],
+      "full": [
+        "item_name",
+        "related_item"
+      ],
+      "keyword": [
+        "item_name"
+      ],
+      "semantic": [
+        "item_name"
+      ],
+      "oracle": [
+        "item_name"
+      ],
+      "keyword_scores": {
+        "item_name": 4,
+        "related_item": 1
+      },
+      "semantic_scores": {
+        "item_name": 0.8968433141708374,
+        "related_item": 0.8738369941711426
+      },
+      "keyword_ms": 0.083,
+      "semantic_ms": 25.072
+    },
+    "inventory-en-1": {
+      "gold": [
+        "item_name"
+      ],
+      "full": [
+        "item_name",
+        "related_item"
+      ],
+      "keyword": [
+        "item_name"
+      ],
+      "semantic": [
+        "related_item"
+      ],
+      "oracle": [
+        "item_name"
+      ],
+      "keyword_scores": {
+        "item_name": 2,
+        "related_item": 1
+      },
+      "semantic_scores": {
+        "item_name": 0.8584616184234619,
+        "related_item": 0.8588929176330566
+      },
+      "keyword_ms": 0.085,
+      "semantic_ms": 26.612
+    },
+    "inventory-en-2": {
+      "gold": [
+        "item_name"
+      ],
+      "full": [
+        "item_name",
+        "related_item"
+      ],
+      "keyword": [
+        "item_name"
+      ],
+      "semantic": [
+        "related_item"
+      ],
+      "oracle": [
+        "item_name"
+      ],
+      "keyword_scores": {
+        "item_name": 2,
+        "related_item": 1
+      },
+      "semantic_scores": {
+        "item_name": 0.8584616184234619,
+        "related_item": 0.8588929176330566
+      },
+      "keyword_ms": 0.085,
+      "semantic_ms": 26.612
+    },
+    "facilities-ko-1": {
+      "gold": [
+        "building",
+        "closed_floor"
+      ],
+      "full": [
+        "building",
+        "closed_floor",
+        "open_floor"
+      ],
+      "keyword": [
+        "closed_floor",
+        "building"
+      ],
+      "semantic": [
+        "closed_floor",
+        "building"
+      ],
+      "oracle": [
+        "building",
+        "closed_floor"
+      ],
+      "keyword_scores": {
+        "building": 2,
+        "closed_floor": 6,
+        "open_floor": 1
+      },
+      "semantic_scores": {
+        "building": 0.8825172185897827,
+        "closed_floor": 0.8901636004447937,
+        "open_floor": 0.8668217658996582
+      },
+      "keyword_ms": 0.096,
+      "semantic_ms": 24.801
+    },
+    "facilities-ko-2": {
+      "gold": [
+        "building",
+        "closed_floor"
+      ],
+      "full": [
+        "building",
+        "closed_floor",
+        "open_floor"
+      ],
+      "keyword": [
+        "closed_floor",
+        "building"
+      ],
+      "semantic": [
+        "closed_floor",
+        "building"
+      ],
+      "oracle": [
+        "building",
+        "closed_floor"
+      ],
+      "keyword_scores": {
+        "building": 2,
+        "closed_floor": 6,
+        "open_floor": 1
+      },
+      "semantic_scores": {
+        "building": 0.8825172185897827,
+        "closed_floor": 0.8901636004447937,
+        "open_floor": 0.8668217658996582
+      },
+      "keyword_ms": 0.096,
+      "semantic_ms": 24.801
+    },
+    "facilities-en-1": {
+      "gold": [
+        "building",
+        "closed_floor"
+      ],
+      "full": [
+        "building",
+        "closed_floor",
+        "open_floor"
+      ],
+      "keyword": [
+        "closed_floor",
+        "building"
+      ],
+      "semantic": [
+        "closed_floor",
+        "building"
+      ],
+      "oracle": [
+        "building",
+        "closed_floor"
+      ],
+      "keyword_scores": {
+        "building": 3,
+        "closed_floor": 4,
+        "open_floor": 1
+      },
+      "semantic_scores": {
+        "building": 0.8562715649604797,
+        "closed_floor": 0.8825148344039917,
+        "open_floor": 0.8325631618499756
+      },
+      "keyword_ms": 0.092,
+      "semantic_ms": 24.953
+    },
+    "facilities-en-2": {
+      "gold": [
+        "building",
+        "closed_floor"
+      ],
+      "full": [
+        "building",
+        "closed_floor",
+        "open_floor"
+      ],
+      "keyword": [
+        "closed_floor",
+        "building"
+      ],
+      "semantic": [
+        "closed_floor",
+        "building"
+      ],
+      "oracle": [
+        "building",
+        "closed_floor"
+      ],
+      "keyword_scores": {
+        "building": 3,
+        "closed_floor": 4,
+        "open_floor": 1
+      },
+      "semantic_scores": {
+        "building": 0.8562715649604797,
+        "closed_floor": 0.8825148344039917,
+        "open_floor": 0.8325631618499756
+      },
+      "keyword_ms": 0.092,
+      "semantic_ms": 24.953
+    },
+    "billing-ko-1": {
+      "gold": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "full": [
+        "invoice_id",
+        "outstanding_usd",
+        "paid_usd"
+      ],
+      "keyword": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "semantic": [
+        "invoice_id",
+        "paid_usd"
+      ],
+      "oracle": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "keyword_scores": {
+        "invoice_id": 3,
+        "outstanding_usd": 3,
+        "paid_usd": 2
+      },
+      "semantic_scores": {
+        "invoice_id": 0.9004112482070923,
+        "outstanding_usd": 0.8644901514053345,
+        "paid_usd": 0.8705354928970337
+      },
+      "keyword_ms": 0.084,
+      "semantic_ms": 31.628
+    },
+    "billing-ko-2": {
+      "gold": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "full": [
+        "invoice_id",
+        "outstanding_usd",
+        "paid_usd"
+      ],
+      "keyword": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "semantic": [
+        "invoice_id",
+        "paid_usd"
+      ],
+      "oracle": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "keyword_scores": {
+        "invoice_id": 3,
+        "outstanding_usd": 3,
+        "paid_usd": 2
+      },
+      "semantic_scores": {
+        "invoice_id": 0.9004112482070923,
+        "outstanding_usd": 0.8644901514053345,
+        "paid_usd": 0.8705354928970337
+      },
+      "keyword_ms": 0.084,
+      "semantic_ms": 31.628
+    },
+    "billing-en-1": {
+      "gold": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "full": [
+        "invoice_id",
+        "outstanding_usd",
+        "paid_usd"
+      ],
+      "keyword": [
+        "outstanding_usd",
+        "invoice_id"
+      ],
+      "semantic": [
+        "outstanding_usd",
+        "invoice_id"
+      ],
+      "oracle": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "keyword_scores": {
+        "invoice_id": 2,
+        "outstanding_usd": 3,
+        "paid_usd": 2
+      },
+      "semantic_scores": {
+        "invoice_id": 0.857524037361145,
+        "outstanding_usd": 0.8669792413711548,
+        "paid_usd": 0.8458592891693115
+      },
+      "keyword_ms": 0.105,
+      "semantic_ms": 28.902
+    },
+    "billing-en-2": {
+      "gold": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "full": [
+        "invoice_id",
+        "outstanding_usd",
+        "paid_usd"
+      ],
+      "keyword": [
+        "outstanding_usd",
+        "invoice_id"
+      ],
+      "semantic": [
+        "outstanding_usd",
+        "invoice_id"
+      ],
+      "oracle": [
+        "invoice_id",
+        "outstanding_usd"
+      ],
+      "keyword_scores": {
+        "invoice_id": 2,
+        "outstanding_usd": 3,
+        "paid_usd": 2
+      },
+      "semantic_scores": {
+        "invoice_id": 0.857524037361145,
+        "outstanding_usd": 0.8669792413711548,
+        "paid_usd": 0.8458592891693115
+      },
+      "keyword_ms": 0.105,
+      "semantic_ms": 28.902
+    }
+  },
+  "rows": {
+    "full": [
+      {
+        "output": "도예 체험은 최대 24명까지 참여할 수 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.22,
+        "id": "reservation-ko-1",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "booked",
+          "remaining",
+          "start_time"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 18명까지 수용되며, 현재 15명이 예약했습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.272,
+        "id": "reservation-ko-2",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "booked",
+          "remaining",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has 6 spots left. 18 attendees are booked and 6 will join.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.354,
+        "id": "reservation-en-1",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "booked",
+          "remaining",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop is open until 4 p.m., with a maximum capacity of 18 people, and there are 3 spots remaining.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.535,
+        "id": "reservation-en-2",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "booked",
+          "remaining",
+          "start_time"
+        ]
+      },
+      {
+        "output": "책상 램프를 주문했습니다. 추가 배송은 3일 뒤에 받을 수 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.355,
+        "id": "shipping-ko-1",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "책상 램프를 3일 후에 배송해 드리겠습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.877,
+        "id": "shipping-ko-2",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "The desk lamp has been delivered.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.807,
+        "id": "shipping-en-1",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "The desk lamp will be delivered in 3 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.764,
+        "id": "shipping-en-2",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "팀 플랜은 월 29달러로 변경되었습니다. 이전에는 19달러였었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.46,
+        "id": "subscription-ko-1",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "팀 플랜은 현재 월 29달러이고 새 월 19달러로 변경됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.219,
+        "id": "subscription-ko-2",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "Your Team plan is now $29/month.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.952,
+        "id": "subscription-en-1",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "Your Team plan subscription has been renewed for $19 per month, replacing the previous price of $29.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.225,
+        "id": "subscription-en-2",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.639,
+        "id": "inventory-ko-1",
+        "seed": 42,
+        "keys": [
+          "item_name",
+          "related_item"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.462,
+        "id": "inventory-ko-2",
+        "seed": 42,
+        "keys": [
+          "item_name",
+          "related_item"
+        ]
+      },
+      {
+        "output": "wrench",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.503,
+        "id": "inventory-en-1",
+        "seed": 42,
+        "keys": [
+          "item_name",
+          "related_item"
+        ]
+      },
+      {
+        "output": "hammer",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.441,
+        "id": "inventory-en-2",
+        "seed": 42,
+        "keys": [
+          "item_name",
+          "related_item"
+        ]
+      },
+      {
+        "output": "서관은 2층과 3층을 포함한 특정 층을 폐쇄하고 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.332,
+        "id": "facilities-ko-1",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor",
+          "open_floor"
+        ]
+      },
+      {
+        "output": "서관은 5층까지 폐쇄되었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.796,
+        "id": "facilities-ko-2",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor",
+          "open_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on floor 2 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.936,
+        "id": "facilities-en-1",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor",
+          "open_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on floor 5 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.809,
+        "id": "facilities-en-2",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor",
+          "open_floor"
+        ]
+      },
+      {
+        "output": "청구서 번호는 INV-582, 미결제 금액은 42,000원입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.5,
+        "id": "billing-ko-1",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "청구서 번호는 INV-582, 미결제 금액은 17달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.17,
+        "id": "billing-ko-2",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $42.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.123,
+        "id": "billing-en-1",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "The invoice ID is INV-582. The outstanding amount is $17.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.038,
+        "id": "billing-en-2",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 24명까지 가능하며, 현재 18명이 예약되어 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.547,
+        "id": "reservation-ko-1",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "booked",
+          "remaining",
+          "start_time"
+        ]
+      },
+      {
+        "output": "도예 체험은 총 18명 중 15명이 예약했고, 남은 자리는 3석입니다. 시작 시간은 오후 4시입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.772,
+        "id": "reservation-ko-2",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "booked",
+          "remaining",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop is full, 18 spots taken out of 24.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.196,
+        "id": "reservation-en-1",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "booked",
+          "remaining",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop is booked for 15 attendees out of 18.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.0,
+        "id": "reservation-en-2",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "booked",
+          "remaining",
+          "start_time"
+        ]
+      },
+      {
+        "output": "책상 램프를 주문하셨습니다. 추가 배송은 오늘로부터 3일 후에 도착합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.396,
+        "id": "shipping-ko-1",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "책상 램프를 주문하셨습니다. 추가 배송은 오늘부터 7일까지 가능합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.126,
+        "id": "shipping-ko-2",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "The desk lamp has been delivered, but it's 3 days late.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 2.217,
+        "id": "shipping-en-1",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "The desk lamp will arrive in 7 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.777,
+        "id": "shipping-en-2",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "팀 플랜의 새 월 요금은 29달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.997,
+        "id": "subscription-ko-1",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "팀 플랜의 새 월 요금은 19달러입니다. 이전에는 29달러였습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.273,
+        "id": "subscription-ko-2",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "The Team plan is now $29 a month.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.969,
+        "id": "subscription-en-1",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "The Team plan is now $19 per month.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.831,
+        "id": "subscription-en-2",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.5,
+        "id": "inventory-ko-1",
+        "seed": 123,
+        "keys": [
+          "item_name",
+          "related_item"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.484,
+        "id": "inventory-ko-2",
+        "seed": 123,
+        "keys": [
+          "item_name",
+          "related_item"
+        ]
+      },
+      {
+        "output": "wrench",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.499,
+        "id": "inventory-en-1",
+        "seed": 123,
+        "keys": [
+          "item_name",
+          "related_item"
+        ]
+      },
+      {
+        "output": "hammer",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.443,
+        "id": "inventory-en-2",
+        "seed": 123,
+        "keys": [
+          "item_name",
+          "related_item"
+        ]
+      },
+      {
+        "output": "서관은 2층을 폐쇄하고 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.856,
+        "id": "facilities-ko-1",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor",
+          "open_floor"
+        ]
+      },
+      {
+        "output": "서관은 5층이 폐쇄되고 2층은 사용 가능합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.092,
+        "id": "facilities-ko-2",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor",
+          "open_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on Floor 2 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.861,
+        "id": "facilities-en-1",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor",
+          "open_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on Floor 5 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.84,
+        "id": "facilities-en-2",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor",
+          "open_floor"
+        ]
+      },
+      {
+        "output": "청구서는 42,000원이 남아 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.088,
+        "id": "billing-ko-1",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "청구서는 17,000원이 남았습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.08,
+        "id": "billing-ko-2",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $42.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.935,
+        "id": "billing-en-1",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $17.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.914,
+        "id": "billing-en-2",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd",
+          "paid_usd"
+        ]
+      }
+    ],
+    "keyword": [
+      {
+        "output": "도예 체험은 최대 24명까지 수용됩니다. 오전 10시에 시작하겠습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.299,
+        "id": "reservation-ko-1",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 18명까지 참가할 수 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.952,
+        "id": "reservation-ko-2",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has a maximum capacity of 24. It takes place at 10 a.m.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.244,
+        "id": "reservation-en-1",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has a maximum capacity of 18, and the event starts at 4 p.m.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.243,
+        "id": "reservation-en-2",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "책상 램프는 오늘 배송되었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.748,
+        "id": "shipping-ko-1",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "책상 램프는 오늘 배송됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.683,
+        "id": "shipping-ko-2",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "Your order will arrive in 3 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.706,
+        "id": "shipping-en-1",
+        "seed": 42,
+        "keys": [
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "The product is in transit and will arrive in 3 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.841,
+        "id": "shipping-en-2",
+        "seed": 42,
+        "keys": [
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "팀 플랜은 한 달에 29달러를 내는 새 요금이 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.13,
+        "id": "subscription-ko-1",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "팀 플랜은 월 19달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.767,
+        "id": "subscription-ko-2",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "Your subscription is valid until June 30, 2024. Your new monthly price is $29.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.28,
+        "id": "subscription-en-1",
+        "seed": 42,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "Your subscription has been renewed for $19.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.75,
+        "id": "subscription-en-2",
+        "seed": 42,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "망치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.497,
+        "id": "inventory-ko-1",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.496,
+        "id": "inventory-ko-2",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "hammer",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.469,
+        "id": "inventory-en-1",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "wrench",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.497,
+        "id": "inventory-en-2",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "서관 2층은 오늘부터 closed floor로 운영이 정지됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.022,
+        "id": "facilities-ko-1",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "서관 5층은 오늘부터 closed floor로 운영됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.95,
+        "id": "facilities-ko-2",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on floor 2 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.851,
+        "id": "facilities-en-1",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on floor 5 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.834,
+        "id": "facilities-en-2",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "청구서 번호는 12345입니다. 현재 미결제 금액은 42 USD입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.304,
+        "id": "billing-ko-1",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "청구서 번호는 12345입니다. 현재 미결제 금액은 17만 원입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.352,
+        "id": "billing-ko-2",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $42.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.971,
+        "id": "billing-en-1",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $17.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.957,
+        "id": "billing-en-2",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 24명까지 참가 가능합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.881,
+        "id": "reservation-ko-1",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 18명까지 가능합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.847,
+        "id": "reservation-ko-2",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has 24 attendees.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.718,
+        "id": "reservation-en-1",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has 18 attendees.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.694,
+        "id": "reservation-en-2",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "책상 램프 배송은 오늘로 시작됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.768,
+        "id": "shipping-ko-1",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "책상 램프 배송은 오늘 오후 3시에 도착합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.88,
+        "id": "shipping-ko-2",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "Your order arrives in 3 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.69,
+        "id": "shipping-en-1",
+        "seed": 123,
+        "keys": [
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "Your order will arrive in 7 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.707,
+        "id": "shipping-en-2",
+        "seed": 123,
+        "keys": [
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "팀 플랜은 현재 29달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.736,
+        "id": "subscription-ko-1",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "팀 플랜은 현재 19달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.746,
+        "id": "subscription-ko-2",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "Your subscription is valid until the end of April 2024. Your new monthly price is $29.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.427,
+        "id": "subscription-en-1",
+        "seed": 123,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "Your subscription has been renewed. Your new monthly price is $19.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.993,
+        "id": "subscription-en-2",
+        "seed": 123,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "망치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.523,
+        "id": "inventory-ko-1",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.529,
+        "id": "inventory-ko-2",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "hammer",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.474,
+        "id": "inventory-en-1",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "wrench",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.518,
+        "id": "inventory-en-2",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "서관 2층은 현재 점검 중입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.845,
+        "id": "facilities-ko-1",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "서관은 5층을 폐쇄합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.801,
+        "id": "facilities-ko-2",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing floor 2 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.84,
+        "id": "facilities-en-1",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing floor 5 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.843,
+        "id": "facilities-en-2",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "청구서 번호는 INV-582이고 미결제 금액은 42,000원입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.465,
+        "id": "billing-ko-1",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "청구서 번호는 INV-582이고, 미결제 금액은 17달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.388,
+        "id": "billing-ko-2",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $42.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.944,
+        "id": "billing-en-1",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $17.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.944,
+        "id": "billing-en-2",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      }
+    ],
+    "semantic": [
+      {
+        "output": "도예 체험은 최대 24명까지 수용됩니다. 오전 10시에 시작하겠습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.299,
+        "id": "reservation-ko-1",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 18명까지 참가할 수 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.952,
+        "id": "reservation-ko-2",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has a maximum capacity of 24. It takes place at 10 a.m.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.244,
+        "id": "reservation-en-1",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has a maximum capacity of 18, and the event starts at 4 p.m.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.243,
+        "id": "reservation-en-2",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "책상 램프는 오늘 배송되었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.748,
+        "id": "shipping-ko-1",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "책상 램프는 오늘 배송됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.683,
+        "id": "shipping-ko-2",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "Your order will arrive in 3 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.706,
+        "id": "shipping-en-1",
+        "seed": 42,
+        "keys": [
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "The product is in transit and will arrive in 3 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.841,
+        "id": "shipping-en-2",
+        "seed": 42,
+        "keys": [
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "월 29,000원으로 구독 갱신이 완료되었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.05,
+        "id": "subscription-ko-1",
+        "seed": 42,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "월 19,000원으로 변경되었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.938,
+        "id": "subscription-ko-2",
+        "seed": 42,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "Your subscription is valid until June 30, 2024. Your new monthly price is $29.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.28,
+        "id": "subscription-en-1",
+        "seed": 42,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "Your subscription has been renewed for $19.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.75,
+        "id": "subscription-en-2",
+        "seed": 42,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "망치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.497,
+        "id": "inventory-ko-1",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.496,
+        "id": "inventory-ko-2",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "wrench",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.457,
+        "id": "inventory-en-1",
+        "seed": 42,
+        "keys": [
+          "related_item"
+        ]
+      },
+      {
+        "output": "hammer",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.486,
+        "id": "inventory-en-2",
+        "seed": 42,
+        "keys": [
+          "related_item"
+        ]
+      },
+      {
+        "output": "서관 2층은 오늘부터 closed floor로 운영이 정지됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.022,
+        "id": "facilities-ko-1",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "서관 5층은 오늘부터 closed floor로 운영됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.95,
+        "id": "facilities-ko-2",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on floor 2 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.851,
+        "id": "facilities-en-1",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on floor 5 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.834,
+        "id": "facilities-en-2",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "INV-582 청구서는 17만 원 이상 결제되었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.07,
+        "id": "billing-ko-1",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "INV-582 청구서의 미결제 금액은 80,000원입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.184,
+        "id": "billing-ko-2",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $42.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.971,
+        "id": "billing-en-1",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $17.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.957,
+        "id": "billing-en-2",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 24명까지 참가 가능합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.881,
+        "id": "reservation-ko-1",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 18명까지 가능합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.847,
+        "id": "reservation-ko-2",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has 24 attendees.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.718,
+        "id": "reservation-en-1",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has 18 attendees.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.694,
+        "id": "reservation-en-2",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "책상 램프 배송은 오늘로 시작됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.768,
+        "id": "shipping-ko-1",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "책상 램프 배송은 오늘 오후 3시에 도착합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.88,
+        "id": "shipping-ko-2",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "Your order arrives in 3 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.69,
+        "id": "shipping-en-1",
+        "seed": 123,
+        "keys": [
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "Your order will arrive in 7 days.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.707,
+        "id": "shipping-en-2",
+        "seed": 123,
+        "keys": [
+          "additional_days",
+          "original_estimate_days"
+        ]
+      },
+      {
+        "output": "구독 갱신을 신청했습니다. 새 월 요금은 29,000원입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.198,
+        "id": "subscription-ko-1",
+        "seed": 123,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "구독 갱신을 필요로 합니다. 현재 월 요금은 29,000원이며, 갱신 후에는 19,000원이 됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.856,
+        "id": "subscription-ko-2",
+        "seed": 123,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "Your subscription is valid until the end of April 2024. Your new monthly price is $29.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.427,
+        "id": "subscription-en-1",
+        "seed": 123,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "Your subscription has been renewed. Your new monthly price is $19.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.993,
+        "id": "subscription-en-2",
+        "seed": 123,
+        "keys": [
+          "new_price_usd",
+          "previous_price_usd"
+        ]
+      },
+      {
+        "output": "망치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.523,
+        "id": "inventory-ko-1",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.529,
+        "id": "inventory-ko-2",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "wrench",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.478,
+        "id": "inventory-en-1",
+        "seed": 123,
+        "keys": [
+          "related_item"
+        ]
+      },
+      {
+        "output": "hammer",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.483,
+        "id": "inventory-en-2",
+        "seed": 123,
+        "keys": [
+          "related_item"
+        ]
+      },
+      {
+        "output": "서관 2층은 현재 점검 중입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.845,
+        "id": "facilities-ko-1",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "서관은 5층을 폐쇄합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.801,
+        "id": "facilities-ko-2",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing floor 2 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.84,
+        "id": "facilities-en-1",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing floor 5 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.843,
+        "id": "facilities-en-2",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "INV-582에서 17,000원이 결제되었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.207,
+        "id": "billing-ko-1",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "INV-582에서 결제 금액은 42,000원입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.101,
+        "id": "billing-ko-2",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "paid_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $42.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.944,
+        "id": "billing-en-1",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $17.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.944,
+        "id": "billing-en-2",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      }
+    ],
+    "oracle": [
+      {
+        "output": "도예 체험은 최대 24명까지 수용됩니다. 오전 10시에 시작하겠습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.299,
+        "id": "reservation-ko-1",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 18명까지 참가할 수 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.952,
+        "id": "reservation-ko-2",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has a maximum capacity of 24. It takes place at 10 a.m.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.244,
+        "id": "reservation-en-1",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has a maximum capacity of 18, and the event starts at 4 p.m.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.243,
+        "id": "reservation-en-2",
+        "seed": 42,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "책상 램프는 오늘 배송되었습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.748,
+        "id": "shipping-ko-1",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "책상 램프는 오늘 배송됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.683,
+        "id": "shipping-ko-2",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "The desk lamp has been delivered.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.624,
+        "id": "shipping-en-1",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "The desk lamp has been delivered.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.629,
+        "id": "shipping-en-2",
+        "seed": 42,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "팀 플랜은 한 달에 29달러를 내는 새 요금이 있습니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.13,
+        "id": "subscription-ko-1",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "팀 플랜은 월 19달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.767,
+        "id": "subscription-ko-2",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "The Team plan is now $29 a month.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.787,
+        "id": "subscription-en-1",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "The Team plan is now $19 a month.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.765,
+        "id": "subscription-en-2",
+        "seed": 42,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "망치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.497,
+        "id": "inventory-ko-1",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.496,
+        "id": "inventory-ko-2",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "hammer",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.469,
+        "id": "inventory-en-1",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "wrench",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.497,
+        "id": "inventory-en-2",
+        "seed": 42,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "서관 2층은 오늘부터 closed floor로 운영이 정지됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.022,
+        "id": "facilities-ko-1",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "서관 5층은 오늘부터 closed floor로 운영됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.95,
+        "id": "facilities-ko-2",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on floor 2 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.851,
+        "id": "facilities-en-1",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing on floor 5 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.834,
+        "id": "facilities-en-2",
+        "seed": 42,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "청구서 번호는 12345입니다. 현재 미결제 금액은 42 USD입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.304,
+        "id": "billing-ko-1",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "청구서 번호는 12345입니다. 현재 미결제 금액은 17만 원입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 1.352,
+        "id": "billing-ko-2",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $42.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.971,
+        "id": "billing-en-1",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $17.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.957,
+        "id": "billing-en-2",
+        "seed": 42,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 24명까지 참가 가능합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.881,
+        "id": "reservation-ko-1",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "도예 체험은 최대 18명까지 가능합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.847,
+        "id": "reservation-ko-2",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has 24 attendees.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.718,
+        "id": "reservation-en-1",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "Pottery workshop has 18 attendees.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.694,
+        "id": "reservation-en-2",
+        "seed": 123,
+        "keys": [
+          "event",
+          "capacity",
+          "start_time"
+        ]
+      },
+      {
+        "output": "책상 램프 배송은 오늘로 시작됩니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.768,
+        "id": "shipping-ko-1",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "책상 램프 배송은 오늘 오후 3시에 도착합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": false,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.88,
+        "id": "shipping-ko-2",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "The desk lamp has arrived.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.576,
+        "id": "shipping-en-1",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "The desk lamp has arrived.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": false,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": false,
+        "seconds": 0.561,
+        "id": "shipping-en-2",
+        "seed": 123,
+        "keys": [
+          "product",
+          "additional_days"
+        ]
+      },
+      {
+        "output": "팀 플랜은 현재 29달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.736,
+        "id": "subscription-ko-1",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "팀 플랜은 현재 19달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.746,
+        "id": "subscription-ko-2",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "Your Team plan subscription will be renewed for $29.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.924,
+        "id": "subscription-en-1",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "Your Team plan subscription will be renewed for $19.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.864,
+        "id": "subscription-en-2",
+        "seed": 123,
+        "keys": [
+          "plan",
+          "new_price_usd"
+        ]
+      },
+      {
+        "output": "망치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.523,
+        "id": "inventory-ko-1",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "렌치",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.529,
+        "id": "inventory-ko-2",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "hammer",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.474,
+        "id": "inventory-en-1",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "wrench",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.518,
+        "id": "inventory-en-2",
+        "seed": 123,
+        "keys": [
+          "item_name"
+        ]
+      },
+      {
+        "output": "서관 2층은 현재 점검 중입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.845,
+        "id": "facilities-ko-1",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "서관은 5층을 폐쇄합니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.801,
+        "id": "facilities-ko-2",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing floor 2 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.84,
+        "id": "facilities-en-1",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "The West Wing floor 5 is closed for maintenance.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.843,
+        "id": "facilities-en-2",
+        "seed": 123,
+        "keys": [
+          "building",
+          "closed_floor"
+        ]
+      },
+      {
+        "output": "청구서 번호는 INV-582이고 미결제 금액은 42,000원입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.465,
+        "id": "billing-ko-1",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "청구서 번호는 INV-582이고, 미결제 금액은 17달러입니다.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 1.388,
+        "id": "billing-ko-2",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $42.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.944,
+        "id": "billing-en-1",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      },
+      {
+        "output": "The outstanding amount for invoice INV-582 is $17.",
+        "checks": {
+          "schema": true,
+          "value_only": true,
+          "language_proxy": true,
+          "required": true,
+          "distractor_free": true,
+          "shape": true
+        },
+        "passed": true,
+        "seconds": 0.944,
+        "id": "billing-en-2",
+        "seed": 123,
+        "keys": [
+          "invoice_id",
+          "outstanding_usd"
+        ]
+      }
+    ]
+  }
+}

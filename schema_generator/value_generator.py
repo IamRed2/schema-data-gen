@@ -1,15 +1,21 @@
 import json
 import math
 import random
+import re
 import subprocess
+import unicodedata
+from datetime import date, datetime, time, timedelta, timezone
 from fractions import Fraction
+from uuid import UUID
 
 from jsonschema import Draft202012Validator
 from jsonschema.exceptions import ValidationError
+from jsonschema.validators import extend
 
 
 INSTRUCTIONS = """Generate one fictional field value as a JSON string.
 Read the field name, description, type, constraints and related values together.
+When a scenario is provided, read it in full and use the facts relevant to the field.
 Descriptions are optional. Infer familiar fields such as name and age from names.
 Use the requested language for natural language values.
 For integer/number return numeric text, for boolean return "true" or "false",
@@ -22,6 +28,17 @@ UNSUPPORTED = {
     "dependentSchemas", "dependentRequired", "patternProperties", "contains",
     "unevaluatedProperties", "unevaluatedItems",
 }
+
+
+def validate_decimal_multiple(validator, divisor, value, schema):
+    if validator.is_type(value, "number"):
+        ratio = Fraction(str(value)) / Fraction(str(divisor))
+        if ratio.denominator != 1:
+            yield ValidationError(f"{value!r} is not a multiple of {divisor}")
+
+
+# JSON decimal literals can give a near-integer quotient in binary floating point.
+GenerationValidator = extend(Draft202012Validator, {"multipleOf": validate_decimal_multiple})
 
 
 def check_supported(schema, path="$"):
@@ -79,9 +96,9 @@ def sample_bounded_number(validator, kind, sampler):
         upper = exclusive_upper
     else:
         exclusive_upper = None
-    if lower is None and upper is None:
-        return None
     multiple = schema.get("multipleOf")
+    if lower is None and upper is None and multiple is None:
+        return None
     step = Fraction(str(multiple)) if multiple is not None else Fraction(1)
     if kind == "integer":
         step = Fraction(step.numerator)
@@ -92,7 +109,10 @@ def sample_bounded_number(validator, kind, sampler):
             first += 1
         if last is not None and exclusive_upper is not None and last * step == Fraction(str(upper)):
             last -= 1
-        first = last - 100 if first is None else first
+        if first is None and last is None:
+            first, last = 0, 100
+        if first is None:
+            first = max(0, last - 100) if last > 0 else last - 100
         last = first + 100 if last is None else last
         if first <= last:
             for _ in range(16):
@@ -103,13 +123,76 @@ def sample_bounded_number(validator, kind, sampler):
     else:
         first = math.nextafter(lower, math.inf) if exclusive_lower is not None else lower
         last = math.nextafter(upper, -math.inf) if exclusive_upper is not None else upper
-        first = last - 100 if first is None else first
+        if first is None:
+            first = max(0, last - 100) if last > 0 else last - 100
         last = first + 100 if last is None else last
         if first <= last:
             ratio = sampler.random()
-            for value in (first * (1 - ratio) + last * ratio, first, last):
+            sampled = first * (1 - ratio) + last * ratio
+            rounded = round(sampled, 2)
+            for value in (rounded, sampled, first, last):
                 if math.isfinite(value) and validator.is_valid(value):
                     return value
+    return None
+
+
+def sample_formatted_string(validator, name, context, reference_date, sampler):
+    format_name = validator.schema.get("format")
+    if format_name not in {"email", "idn-email", "uuid", "date", "date-time", "time"}:
+        return None
+
+    field = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", "_", name).lower()
+    if format_name in {"date", "date-time"}:
+        first = max(date.min.toordinal(), reference_date.toordinal() - 365)
+        last = reference_date.toordinal()
+        if field in {"expires_at", "expiry_date", "expiration_date", "만료일", "만료일시"}:
+            first, last = last, min(date.max.toordinal(), last + 365)
+        if field in {"birth_date", "birthdate", "date_of_birth", "dob", "생년월일"}:
+            age = next((context[key] for key in ("age", "나이") if key in context), None)
+            if type(age) is int and 0 <= age < reference_date.year:
+                year = reference_date.year - age
+                first = date(max(1, year - 1), 1, 1).toordinal()
+                last = min(date(year, 12, 31), reference_date).toordinal()
+            else:
+                age = None
+                first = max(date.min.toordinal(), last - 80 * 366)
+                last = max(first, last - 18 * 365)
+        else:
+            age = None
+
+    if format_name in {"email", "idn-email"}:
+        display_name = context.get("name", context.get("full_name", ""))
+        ascii_name = unicodedata.normalize("NFKD", display_name if isinstance(display_name, str) else "")
+        stem = ".".join(re.findall(r"[a-z0-9]+", ascii_name.lower()))[:40].strip(".") or "user"
+        suffix = str(sampler.randint(1000, 999999))
+        maximum = min(64, validator.schema.get("maxLength", 76) - len("@example.com"))
+        minimum = max(1, validator.schema.get("minLength", 1) - len("@example.com"))
+        if maximum < minimum:
+            return None
+        local = (stem[:max(0, maximum - len(suffix))] + suffix)[-maximum:]
+        candidate = local.ljust(minimum, "0") + "@example.com"
+        return candidate if validator.is_valid(candidate) else None
+
+    for _ in range(24):
+        if format_name == "uuid":
+            candidate = str(UUID(int=sampler.getrandbits(128), version=4))
+        else:
+            if format_name != "time":
+                day = date.fromordinal(sampler.randint(first, last))
+                if age is not None:
+                    elapsed = reference_date.year - day.year - (
+                        (reference_date.month, reference_date.day) < (day.month, day.day)
+                    )
+                    if elapsed != age:
+                        continue
+            if format_name == "date":
+                candidate = day.isoformat()
+            else:
+                clock = time(sampler.randrange(24), sampler.randrange(60), sampler.randrange(60), tzinfo=timezone.utc)
+                stamp = clock if format_name == "time" else datetime.combine(day, clock)
+                candidate = stamp.isoformat(timespec="seconds").replace("+00:00", "Z")
+        if validator.is_valid(candidate):
+            return candidate
     return None
 
 
@@ -168,9 +251,11 @@ def decode_value(output):
     return value
 
 
-def generate_values(validator, count, language, runner, model, adapter=None, seed=None, backend=None):
+def generate_values(validator, count, language, runner, model, adapter=None, seed=None, backend=None,
+                    scenario=None, reference_date=None):
     check_supported(validator.schema)
     sampler = random.Random(seed)
+    reference_date = reference_date if reference_date is not None else date.today()
 
     def build(current, name, path, context, depth=0, parent_description=None):
         if depth > 32:
@@ -232,6 +317,17 @@ def generate_values(validator, count, language, runner, model, adapter=None, see
             current.validate(result)
             return result
 
+        if kind == "string":
+            candidate = sample_formatted_string(current, name, context, reference_date, sampler)
+            if candidate is not None:
+                return candidate
+        elif kind in ("integer", "number"):
+            candidate = sample_bounded_number(current, kind, sampler)
+            if candidate is not None:
+                return candidate
+        elif kind in ("boolean", "null"):
+            return bool(sampler.getrandbits(1)) if kind == "boolean" else None
+
         request = {
             "field_name": name, "path": path, "field_schema": schema,
             "target_type": kind, "context": context,
@@ -239,6 +335,8 @@ def generate_values(validator, count, language, runner, model, adapter=None, see
         }
         if parent_description:
             request["parent_description"] = parent_description
+        if scenario:
+            request["scenario"] = scenario
         for attempt in range(3):
             try:
                 attempt_seed = sampler.randrange(2**32 - 1)
@@ -252,10 +350,6 @@ def generate_values(validator, count, language, runner, model, adapter=None, see
             except (ValueError, ValidationError) as error:
                 failure = error.message if isinstance(error, ValidationError) else str(error)
                 request["previous_validation_error"] = failure
-        if kind in ("integer", "number"):
-            value = sample_bounded_number(current, kind, sampler)
-            if value is not None:
-                return value
         raise RuntimeError(f"{path}: value generation failed after 3 attempts: {failure}")
 
     records = []

@@ -6,26 +6,39 @@
   "split_rule": "Domains grouped together; translated description variants share a split",
   "splits": {
     "train": {
-      "count": 98,
+      "count": 170,
       "groups": [
         "library-renewal",
         "notification",
         "person",
         "restaurant-e2e",
         "review",
+        "scenario-community",
+        "scenario-craft",
+        "scenario-exhibit",
+        "scenario-inventory",
+        "scenario-transit",
         "shipping",
         "software",
         "support",
+        "temporal-exhibit",
+        "temporal-license",
+        "temporal-maintenance-window",
+        "temporal-production",
         "tools",
         "weather"
       ]
     },
     "test": {
-      "count": 38,
+      "count": 70,
       "groups": [
         "event-booking",
         "garden",
-        "internal-support"
+        "internal-support",
+        "scenario-observatory",
+        "scenario-sports",
+        "temporal-grant",
+        "temporal-repair"
       ]
     }
   }

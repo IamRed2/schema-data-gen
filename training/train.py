@@ -12,7 +12,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_DIR))
 
-from value_generator import INSTRUCTIONS, parse_value
+from schema_generator.value_generator import INSTRUCTIONS, parse_value
 
 
 def load_examples(path):
@@ -50,7 +50,14 @@ def sequence_loss(model, prefix, target, device):
     positions = torch.arange(tokens.shape[-1])
     mask = torch.zeros((tokens.shape[-1], tokens.shape[-1]), dtype=torch.float32)
     mask.masked_fill_(positions[None, :] > positions[:, None], torch.finfo(mask.dtype).min)
-    return model(input_ids=tokens, labels=labels, attention_mask=mask[None, None].to(device)).loss
+    attention_mask = mask[None, None].to(device)
+    if model.config.model_type in {"exaone4", "gemma3_text", "qwen3"}:
+        # Prompt positions are masked out of the loss. Project only tokens that
+        # predict the answer to avoid allocating vocabulary logits for the full prompt.
+        logits = model(input_ids=tokens, attention_mask=attention_mask, logits_to_keep=len(target) + 1).logits
+        answer_logits = logits[0, :-1].float()
+        return torch.nn.functional.cross_entropy(answer_logits, labels[0, -len(target):])
+    return model(input_ids=tokens, labels=labels, attention_mask=attention_mask).loss
 
 
 def main():

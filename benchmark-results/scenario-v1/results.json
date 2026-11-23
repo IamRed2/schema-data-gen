@@ -1,0 +1,709 @@
+{
+  "seed": 2746317213,
+  "rows": [
+    {
+      "id": "scenario-observatory-Korean-0-title",
+      "mode": "field-only",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 주제가 드러나는 짧은 제목."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다."
+      },
+      "reference": "달 관측",
+      "output": "중간간의 조별",
+      "error": null,
+      "seconds": 4.775
+    },
+    {
+      "id": "scenario-observatory-Korean-0-title",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 주제가 드러나는 짧은 제목."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다."
+      },
+      "reference": "달 관측",
+      "output": "달 관측",
+      "error": null,
+      "seconds": 2.82
+    },
+    {
+      "id": "scenario-observatory-Korean-0-notice",
+      "mode": "field-only",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다."
+      },
+      "reference": "달 관측 프로그램은 16명까지 신청할 수 있습니다.",
+      "output": "모바일 사용 경험을 기준으로 가족에 따르면 70%에게 햄버거 먹는 경향이 생겼다.",
+      "error": null,
+      "seconds": 4.089
+    },
+    {
+      "id": "scenario-observatory-Korean-0-notice",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다."
+      },
+      "reference": "달 관측 프로그램은 16명까지 신청할 수 있습니다.",
+      "output": "전망대에서 물을 판매합니다.",
+      "error": null,
+      "seconds": 2.91
+    },
+    {
+      "id": "scenario-observatory-Korean-1-title",
+      "mode": "field-only",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 주제가 드러나는 짧은 제목."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다."
+      },
+      "reference": "토성 관측",
+      "output": "중간간의 조별",
+      "error": null,
+      "seconds": 4.775
+    },
+    {
+      "id": "scenario-observatory-Korean-1-title",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 주제가 드러나는 짧은 제목."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다."
+      },
+      "reference": "토성 관측",
+      "output": "도보를 하다",
+      "error": null,
+      "seconds": 2.99
+    },
+    {
+      "id": "scenario-observatory-Korean-1-notice",
+      "mode": "field-only",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다."
+      },
+      "reference": "토성 관측 프로그램은 24명까지 신청할 수 있습니다.",
+      "output": "모바일 사용 경험을 기준으로 가족에 따르면 70%에게 햄버거 먹는 경향이 생겼다.",
+      "error": null,
+      "seconds": 4.089
+    },
+    {
+      "id": "scenario-observatory-Korean-1-notice",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다."
+      },
+      "reference": "토성 관측 프로그램은 24명까지 신청할 수 있습니다.",
+      "output": "전망대에서 물을 판매합니다.",
+      "error": null,
+      "seconds": 3.089
+    },
+    {
+      "id": "scenario-observatory-English-0-title",
+      "mode": "field-only",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "A short title naming the main subject of the situation."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance."
+      },
+      "reference": "Moon Viewing",
+      "output": "the subject of the situation",
+      "error": null,
+      "seconds": 2.741
+    },
+    {
+      "id": "scenario-observatory-English-0-title",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "A short title naming the main subject of the situation."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance."
+      },
+      "reference": "Moon Viewing",
+      "output": "Moon Observation",
+      "error": null,
+      "seconds": 2.629
+    },
+    {
+      "id": "scenario-observatory-English-0-notice",
+      "mode": "field-only",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance."
+      },
+      "reference": "The Moon viewing has room for 16 participants.",
+      "output": "The number of visitors today is 12.",
+      "error": null,
+      "seconds": 2.968
+    },
+    {
+      "id": "scenario-observatory-English-0-notice",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance."
+      },
+      "reference": "The Moon viewing has room for 16 participants.",
+      "output": "Water is sold at the observatory entrance.",
+      "error": null,
+      "seconds": 2.734
+    },
+    {
+      "id": "scenario-observatory-English-1-title",
+      "mode": "field-only",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "A short title naming the main subject of the situation."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance."
+      },
+      "reference": "Saturn Viewing",
+      "output": "the subject of the situation",
+      "error": null,
+      "seconds": 2.741
+    },
+    {
+      "id": "scenario-observatory-English-1-title",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "A short title naming the main subject of the situation."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance."
+      },
+      "reference": "Saturn Viewing",
+      "output": "Saturn",
+      "error": null,
+      "seconds": 2.826
+    },
+    {
+      "id": "scenario-observatory-English-1-notice",
+      "mode": "field-only",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance."
+      },
+      "reference": "The Saturn viewing has room for 24 participants.",
+      "output": "The number of visitors today is 12.",
+      "error": null,
+      "seconds": 2.968
+    },
+    {
+      "id": "scenario-observatory-English-1-notice",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance."
+      },
+      "reference": "The Saturn viewing has room for 24 participants.",
+      "output": "Saturn Observation",
+      "error": null,
+      "seconds": 2.788
+    },
+    {
+      "id": "scenario-sports-Korean-0-title",
+      "mode": "field-only",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 주제가 드러나는 짧은 제목."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다."
+      },
+      "reference": "배드민턴 체험",
+      "output": "중간간의 조별",
+      "error": null,
+      "seconds": 4.775
+    },
+    {
+      "id": "scenario-sports-Korean-0-title",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 주제가 드러나는 짧은 제목."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다."
+      },
+      "reference": "배드민턴 체험",
+      "output": "배드민턴 라켓",
+      "error": null,
+      "seconds": 3.052
+    },
+    {
+      "id": "scenario-sports-Korean-0-notice",
+      "mode": "field-only",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다."
+      },
+      "reference": "배드민턴 체험은 오후 2시에 시작합니다.",
+      "output": "모바일 사용 경험을 기준으로 가족에 따르면 70%에게 햄버거 먹는 경향이 생겼다.",
+      "error": null,
+      "seconds": 4.089
+    },
+    {
+      "id": "scenario-sports-Korean-0-notice",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다."
+      },
+      "reference": "배드민턴 체험은 오후 2시에 시작합니다.",
+      "output": "배드민전을 라켓을 이용한 배드민전 체험을 떨었어요.",
+      "error": null,
+      "seconds": 3.845
+    },
+    {
+      "id": "scenario-sports-Korean-1-title",
+      "mode": "field-only",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 주제가 드러나는 짧은 제목."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다."
+      },
+      "reference": "탁구 체험",
+      "output": "중간간의 조별",
+      "error": null,
+      "seconds": 4.775
+    },
+    {
+      "id": "scenario-sports-Korean-1-title",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 주제가 드러나는 짧은 제목."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다."
+      },
+      "reference": "탁구 체험",
+      "output": "체육관",
+      "error": null,
+      "seconds": 2.795
+    },
+    {
+      "id": "scenario-sports-Korean-1-notice",
+      "mode": "field-only",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다."
+      },
+      "reference": "탁구 체험은 오후 4시에 시작합니다.",
+      "output": "모바일 사용 경험을 기준으로 가족에 따르면 70%에게 햄버거 먹는 경향이 생겼다.",
+      "error": null,
+      "seconds": 4.089
+    },
+    {
+      "id": "scenario-sports-Korean-1-notice",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다."
+      },
+      "reference": "탁구 체험은 오후 4시에 시작합니다.",
+      "output": "탁구를 빌 수 있는 라켓을 선물받아 이용할 수 있어요.",
+      "error": null,
+      "seconds": 3.38
+    },
+    {
+      "id": "scenario-sports-English-0-title",
+      "mode": "field-only",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "A short title naming the main subject of the situation."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed."
+      },
+      "reference": "Badminton Session",
+      "output": "the subject of the situation",
+      "error": null,
+      "seconds": 2.741
+    },
+    {
+      "id": "scenario-sports-English-0-title",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "A short title naming the main subject of the situation."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed."
+      },
+      "reference": "Badminton Session",
+      "output": "rookie",
+      "error": null,
+      "seconds": 2.546
+    },
+    {
+      "id": "scenario-sports-English-0-notice",
+      "mode": "field-only",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed."
+      },
+      "reference": "The badminton session starts at 2 p.m.",
+      "output": "The number of visitors today is 12.",
+      "error": null,
+      "seconds": 2.968
+    },
+    {
+      "id": "scenario-sports-English-0-notice",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed."
+      },
+      "reference": "The badminton session starts at 2 p.m.",
+      "output": "Book your slot in the indoor gym",
+      "error": null,
+      "seconds": 2.922
+    },
+    {
+      "id": "scenario-sports-English-1-title",
+      "mode": "field-only",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "A short title naming the main subject of the situation."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed."
+      },
+      "reference": "Table Tennis Session",
+      "output": "the subject of the situation",
+      "error": null,
+      "seconds": 2.741
+    },
+    {
+      "id": "scenario-sports-English-1-title",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "title",
+        "path": "$.title",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "A short title naming the main subject of the situation."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed."
+      },
+      "reference": "Table Tennis Session",
+      "output": "Table Tennis",
+      "error": null,
+      "seconds": 2.832
+    },
+    {
+      "id": "scenario-sports-English-1-notice",
+      "mode": "field-only",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed."
+      },
+      "reference": "The table tennis session starts at 4 p.m.",
+      "output": "The number of visitors today is 12.",
+      "error": null,
+      "seconds": 2.968
+    },
+    {
+      "id": "scenario-sports-English-1-notice",
+      "mode": "with-scenario",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed."
+      },
+      "reference": "The table tennis session starts at 4 p.m.",
+      "output": "Please bring a paddle from the indoor gym.",
+      "error": null,
+      "seconds": 3.531
+    }
+  ]
+}

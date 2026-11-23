@@ -9,7 +9,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 
-APP_DIR = Path(__file__).resolve().parent
+APP_DIR = Path(__file__).resolve().parents[1]
 CASES = (
     ("support-request", "examples/support.en.schema.json", "message", "고객 문의"),
     ("support-reply", "training/support-reply.en.schema.json", "message", "상담원 답변"),
@@ -81,7 +81,7 @@ def evaluate(model, adapter, mode, label, case, language, args):
 
 def main():
     parser = argparse.ArgumentParser(description="Compare local schema-generation backbones.")
-    parser.add_argument("--baseline", type=Path, default=APP_DIR / "model.gguf")
+    parser.add_argument("--baseline", type=Path, default=APP_DIR / "models/model.gguf")
     parser.add_argument("--candidate", type=Path, required=True)
     parser.add_argument("--baseline-adapter", type=Path)
     parser.add_argument("--candidate-mode", choices=("auto", "record", "field"), default="auto")

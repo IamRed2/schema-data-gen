@@ -9,7 +9,7 @@
     "message": {
       "type": "string",
       "minLength": 10,
-      "description": "고객이 상담팀에 보낸 문의. category에 해당하는 구체적인 문제와 원하는 조치를 한 문장으로 작성한다."
+      "description": "고객 문의 본문. category에 해당하는 문제와 고객이 요청한 조치를 포함합니다."
     }
   },
   "required": ["category", "message"],

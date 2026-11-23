@@ -1,0 +1,117 @@
+{
+  "automatic": {
+    "baseline": {
+      "raw": {
+        "median_seconds": 1.034,
+        "all": {
+          "passed": 18,
+          "total": 40
+        },
+        "dates": {
+          "passed": 12,
+          "total": 16
+        },
+        "remaining": {
+          "passed": 4,
+          "total": 8
+        },
+        "additional": {
+          "passed": 2,
+          "total": 16
+        },
+        "shipping": {
+          "passed": 0,
+          "total": 8
+        }
+      },
+      "roles": {
+        "median_seconds": 1.002,
+        "all": {
+          "passed": 31,
+          "total": 40
+        },
+        "dates": {
+          "passed": 14,
+          "total": 16
+        },
+        "remaining": {
+          "passed": 5,
+          "total": 8
+        },
+        "additional": {
+          "passed": 12,
+          "total": 16
+        },
+        "shipping": {
+          "passed": 5,
+          "total": 8
+        }
+      }
+    },
+    "temporal": {
+      "raw": {
+        "median_seconds": 0.978,
+        "all": {
+          "passed": 13,
+          "total": 40
+        },
+        "dates": {
+          "passed": 7,
+          "total": 16
+        },
+        "remaining": {
+          "passed": 5,
+          "total": 8
+        },
+        "additional": {
+          "passed": 1,
+          "total": 16
+        },
+        "shipping": {
+          "passed": 0,
+          "total": 8
+        }
+      },
+      "roles": {
+        "median_seconds": 0.905,
+        "all": {
+          "passed": 27,
+          "total": 40
+        },
+        "dates": {
+          "passed": 12,
+          "total": 16
+        },
+        "remaining": {
+          "passed": 5,
+          "total": 8
+        },
+        "additional": {
+          "passed": 10,
+          "total": 16
+        },
+        "shipping": {
+          "passed": 2,
+          "total": 8
+        }
+      }
+    }
+  },
+  "paired_changes": {
+    "baseline/raw -> temporal/raw": {
+      "new_pass": 4,
+      "regression": 9,
+      "both_pass": 9
+    },
+    "baseline/raw -> baseline/roles": {
+      "new_pass": 18,
+      "regression": 5,
+      "both_pass": 13
+    },
+    "temporal/raw -> temporal/roles": {
+      "new_pass": 16,
+      "regression": 2,
+      "both_pass": 11
+    }
+  }
+}

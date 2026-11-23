@@ -24,6 +24,16 @@ Intel AI Boost에서 장치 연산과 위 생성 명령을 실행했습니다. �
 
 Intel Arc에서도 같은 명령에 `--device gpu`를 지정해 실행했습니다. 장치 표시가 `GPU`였고 [출력 JSON](../outputs/gpu-smoke.json)이 검증을 통과했습니다. 값은 NPU 샘플과 같았습니다.
 
+## GGUF 모델 재사용
+
+Vulkan 배포본의 `llama-server.exe`로 명령 한 번 동안 GGUF와 LoRA를 GPU에 올려 두고 재사용할 수 있습니다. 현재 로컬에 설치한 Vulkan 실행기와 EXAONE을 쓰는 예입니다.
+
+```powershell
+py generate.py training/source/context-event.schema.json --server-runner .training/llama-vulkan/llama-server.exe --device gpu --model .training/exaone-4.0-1.2b-q4.gguf --adapter .training/exaone-scenario-lora.gguf --language ko --count 5 --scenario "초보자 대상 도자기 체험 행사입니다."
+```
+
+실행 중에만 로컬 작업 프로세스가 열립니다. 시작 시간과 GPU에 배치한 레이어 수는 표준 오류에 표시됩니다. 현재는 필드 요청을 순서대로 처리하고 같은 입력 앞부분을 재사용합니다. GPU를 지정했는데 레이어 배치가 확인되지 않으면 오류를 반환합니다.
+
 ## 학습
 
 `training/train.py --device auto`는 현재 PyTorch 환경에서 사용 가능한 CUDA, Intel XPU, CPU를 순서대로 선택합니다. `--device cuda`, `--device xpu`, `--device cpu`로 지정할 수도 있습니다. Intel Arc 학습에는 XPU 지원 PyTorch가 필요합니다. 이 프로젝트에서 Intel NPU는 OpenVINO 추론 경로로 사용합니다. [PyTorch XPU 설치 및 확인](https://docs.pytorch.org/get-started/additional-platforms/)

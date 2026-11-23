@@ -1,0 +1,53 @@
+{
+  "results_sha256": "d00defc5e13a00d983d7917ed189f5de9c4265e8a6fc30a94c804019ab95e63f",
+  "decisions": {
+    "exaone": {},
+    "exaone-lora": {
+      "shipping-ko-1@42": "wrong_role",
+      "subscription-en-1@42": "usable",
+      "inventory-ko-2@42": "usable",
+      "facilities-ko-1@42": "unsupported_fact",
+      "facilities-ko-2@42": "unsupported_fact",
+      "facilities-en-1@42": "wrong_relation",
+      "facilities-en-2@42": "wrong_relation",
+      "billing-ko-1@42": "wrong_amount_or_currency",
+      "billing-ko-2@42": "usable",
+      "billing-en-1@42": "usable",
+      "billing-en-2@42": "usable",
+      "shipping-ko-1@123": "usable",
+      "shipping-ko-2@123": "wrong_relation",
+      "shipping-en-1@123": "wrong_relation",
+      "shipping-en-2@123": "usable",
+      "subscription-ko-1@123": "usable",
+      "subscription-en-1@123": "usable",
+      "subscription-en-2@123": "usable",
+      "inventory-ko-2@123": "usable",
+      "facilities-ko-1@123": "usable",
+      "facilities-en-1@123": "wrong_relation",
+      "facilities-en-2@123": "wrong_relation",
+      "billing-en-1@123": "usable",
+      "billing-en-2@123": "usable"
+    },
+    "gemma": {
+      "inventory-ko-1@42": "usable",
+      "inventory-ko-2@42": "usable",
+      "inventory-en-1@42": "usable",
+      "inventory-en-2@42": "usable",
+      "facilities-en-1@42": "incomplete_value",
+      "billing-en-1@42": "incomplete_value",
+      "inventory-ko-1@123": "usable",
+      "inventory-ko-2@123": "usable",
+      "inventory-en-1@123": "usable",
+      "inventory-en-2@123": "usable",
+      "facilities-en-1@123": "incomplete_value"
+    },
+    "qwen": {
+      "inventory-en-1@42": "usable",
+      "shipping-ko-1@123": "unsupported_fact",
+      "shipping-ko-2@123": "unsupported_fact",
+      "shipping-en-1@123": "meta_text",
+      "inventory-en-1@123": "usable",
+      "facilities-en-1@123": "unsupported_fact"
+    }
+  }
+}

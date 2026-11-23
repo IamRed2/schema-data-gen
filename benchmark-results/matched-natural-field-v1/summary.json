@@ -1,0 +1,182 @@
+{
+  "models": {
+    "exaone": {
+      "usable": 0,
+      "word": 0,
+      "sentence": 0,
+      "korean": 0,
+      "english": 0,
+      "pairs": 0,
+      "median_seconds": 0.736,
+      "total_seconds": 44.15,
+      "domains": {
+        "billing": {
+          "usable": 0,
+          "total": 8
+        },
+        "facilities": {
+          "usable": 0,
+          "total": 8
+        },
+        "inventory": {
+          "usable": 0,
+          "total": 8
+        },
+        "reservation": {
+          "usable": 0,
+          "total": 8
+        },
+        "shipping": {
+          "usable": 0,
+          "total": 8
+        },
+        "subscription": {
+          "usable": 0,
+          "total": 8
+        }
+      },
+      "failures": {
+        "unusable": 48
+      }
+    },
+    "gemma": {
+      "usable": 8,
+      "word": 8,
+      "sentence": 0,
+      "korean": 4,
+      "english": 4,
+      "pairs": 4,
+      "median_seconds": 1.427,
+      "total_seconds": 76.92,
+      "domains": {
+        "billing": {
+          "usable": 0,
+          "total": 8
+        },
+        "facilities": {
+          "usable": 0,
+          "total": 8
+        },
+        "inventory": {
+          "usable": 8,
+          "total": 8
+        },
+        "reservation": {
+          "usable": 0,
+          "total": 8
+        },
+        "shipping": {
+          "usable": 0,
+          "total": 8
+        },
+        "subscription": {
+          "usable": 0,
+          "total": 8
+        }
+      },
+      "failures": {
+        "unusable": 40
+      }
+    },
+    "exaone-lora": {
+      "usable": 17,
+      "word": 2,
+      "sentence": 15,
+      "korean": 10,
+      "english": 7,
+      "pairs": 6,
+      "median_seconds": 1.142,
+      "total_seconds": 52.13,
+      "domains": {
+        "billing": {
+          "usable": 5,
+          "total": 8
+        },
+        "facilities": {
+          "usable": 2,
+          "total": 8
+        },
+        "inventory": {
+          "usable": 2,
+          "total": 8
+        },
+        "reservation": {
+          "usable": 1,
+          "total": 8
+        },
+        "shipping": {
+          "usable": 0,
+          "total": 8
+        },
+        "subscription": {
+          "usable": 7,
+          "total": 8
+        }
+      },
+      "failures": {
+        "unusable": 31
+      }
+    },
+    "gemma-lora": {
+      "usable": 10,
+      "word": 8,
+      "sentence": 2,
+      "korean": 4,
+      "english": 6,
+      "pairs": 5,
+      "median_seconds": 1.022,
+      "total_seconds": 52.58,
+      "domains": {
+        "billing": {
+          "usable": 0,
+          "total": 8
+        },
+        "facilities": {
+          "usable": 2,
+          "total": 8
+        },
+        "inventory": {
+          "usable": 8,
+          "total": 8
+        },
+        "reservation": {
+          "usable": 0,
+          "total": 8
+        },
+        "shipping": {
+          "usable": 0,
+          "total": 8
+        },
+        "subscription": {
+          "usable": 0,
+          "total": 8
+        }
+      },
+      "failures": {
+        "unusable": 38
+      }
+    }
+  },
+  "paired_comparisons": {
+    "exaone vs gemma": {
+      "left_only": 0,
+      "right_only": 8,
+      "both": 0
+    },
+    "exaone-lora vs gemma-lora": {
+      "left_only": 15,
+      "right_only": 8,
+      "both": 2
+    },
+    "exaone-lora vs exaone": {
+      "left_only": 17,
+      "right_only": 0,
+      "both": 0
+    },
+    "gemma-lora vs gemma": {
+      "left_only": 2,
+      "right_only": 0,
+      "both": 8
+    }
+  }
+}

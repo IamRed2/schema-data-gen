@@ -1,0 +1,122 @@
+[
+  {
+    "id": "space-ko-limit",
+    "task": "role",
+    "prompt": "상황: 공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다.\n요청: 공간의 최대 수용 인원을 정수로 반환한다.",
+    "output": "-1",
+    "correct": false,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 3.605
+  },
+  {
+    "id": "space-ko-booked",
+    "task": "role",
+    "prompt": "상황: 공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다.\n요청: 현재 예약자 수를 정수로 반환한다.",
+    "output": "-11",
+    "correct": false,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 3.094
+  },
+  {
+    "id": "shipment-en-ordered",
+    "task": "role",
+    "prompt": "Situation: A shop ordered 35 units. The supplier shipped 21 units and will send the rest later.\nRequest: Return the number of units ordered as an integer.",
+    "output": "-145",
+    "correct": false,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.909
+  },
+  {
+    "id": "shipment-en-shipped",
+    "task": "role",
+    "prompt": "Situation: A shop ordered 35 units. The supplier shipped 21 units and will send the rest later.\nRequest: Return the number of units already shipped as an integer.",
+    "output": "-2000000001",
+    "correct": false,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.753
+  },
+  {
+    "id": "scenario-observatory-Korean-0-notice",
+    "task": "notice",
+    "prompt": "상황: 전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다.\n반드시 포함할 정보: 달 관측, 정원 16명\n요청: 상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장.",
+    "output": "sync",
+    "correct": null,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.877
+  },
+  {
+    "id": "scenario-observatory-Korean-1-notice",
+    "task": "notice",
+    "prompt": "상황: 전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다.\n반드시 포함할 정보: 토성 관측, 정원 24명\n요청: 상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장.",
+    "output": "sync",
+    "correct": null,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.725
+  },
+  {
+    "id": "scenario-observatory-English-0-notice",
+    "task": "notice",
+    "prompt": "Situation: The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance.\nMust include: Moon viewing, 16 participants\nRequest: One notice stating the main subject and the relevant number or time.",
+    "output": "errors: no response",
+    "correct": null,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.122
+  },
+  {
+    "id": "scenario-observatory-English-1-notice",
+    "task": "notice",
+    "prompt": "Situation: The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance.\nMust include: Saturn viewing, 24 participants\nRequest: One notice stating the main subject and the relevant number or time.",
+    "output": "sync' notice: The observatory is hosting a Saturn viewing for up to 24 people. The Saturn viewing is open until 6 PM. The number of people is 24. The main time,",
+    "correct": null,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 3.429
+  },
+  {
+    "id": "scenario-sports-Korean-0-notice",
+    "task": "notice",
+    "prompt": "상황: 실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다.\n반드시 포함할 정보: 배드민턴 체험, 오후 2시\n요청: 상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장.",
+    "output": "sync",
+    "correct": null,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.28
+  },
+  {
+    "id": "scenario-sports-Korean-1-notice",
+    "task": "notice",
+    "prompt": "상황: 실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다.\n반드시 포함할 정보: 탁구 체험, 오후 4시\n요청: 상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장.",
+    "output": "sync",
+    "correct": null,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.51
+  },
+  {
+    "id": "scenario-sports-English-0-notice",
+    "task": "notice",
+    "prompt": "Situation: The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed.\nMust include: badminton session, 2 p.m.\nRequest: One notice stating the main subject and the relevant number or time.",
+    "output": "strconv(2,2,2)'",
+    "correct": null,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.907
+  },
+  {
+    "id": "scenario-sports-English-1-notice",
+    "task": "notice",
+    "prompt": "Situation: The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed.\nMust include: table tennis session, 4 p.m.\nRequest: One notice stating the main subject and the relevant number or time.",
+    "output": "sync",
+    "correct": null,
+    "error": null,
+    "gpu_layers": 29,
+    "seconds": 2.325
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "type_cases": [
+    {"id":"capacity-ko-count","language":"Korean","field":"capacity","description":"신청 가능한 최대 인원 수","expected":"integer"},
+    {"id":"capacity-ko-notice","language":"Korean","field":"capacity","description":"최대 인원을 포함한 방문객용 안내 문장","expected":"string"},
+    {"id":"available-en-flag","language":"English","field":"available","description":"Whether a reservation can be made right now","expected":"boolean"},
+    {"id":"available-en-slots","language":"English","field":"available","description":"List of available reservation time slots","expected":"array"},
+    {"id":"delivery-ko-address","language":"Korean","field":"delivery","description":"우편번호, 도로명 주소, 상세 주소를 각각 키로 담은 객체","expected":"object"},
+    {"id":"delivery-ko-label","language":"Korean","field":"delivery","description":"배송 방법을 나타내는 한 줄 문구","expected":"string"},
+    {"id":"weight-en-exact","language":"English","field":"weight","description":"Measured weight in kilograms, including fractional values","expected":"number"},
+    {"id":"weight-en-rounded","language":"English","field":"weight","description":"Weight in kilograms rounded to the nearest whole kilogram","expected":"integer"}
+  ],
+  "role_cases": [
+    {"id":"space-ko-limit","language":"Korean","field":"headcount","description":"공간의 최대 수용 인원을 정수로 반환한다.","scenario":"공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다.","expected":28},
+    {"id":"space-ko-booked","language":"Korean","field":"headcount","description":"현재 예약자 수를 정수로 반환한다.","scenario":"공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다.","expected":19},
+    {"id":"shipment-en-ordered","language":"English","field":"quantity","description":"Return the number of units ordered as an integer.","scenario":"A shop ordered 35 units. The supplier shipped 21 units and will send the rest later.","expected":35},
+    {"id":"shipment-en-shipped","language":"English","field":"quantity","description":"Return the number of units already shipped as an integer.","scenario":"A shop ordered 35 units. The supplier shipped 21 units and will send the rest later.","expected":21}
+  ]
+}

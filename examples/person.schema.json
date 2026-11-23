@@ -6,11 +6,11 @@
     "age": {"type": "integer", "minimum": 18, "maximum": 90},
     "occupation": {
       "type": "string",
-      "description": "일상에서 접할 수 있는 구체적인 직업명 하나."
+      "description": "프로필에 표시되는 직업명."
     },
     "introduction": {
       "type": "string",
-      "description": "이름과 직업을 포함해 본인을 소개하는 자연스러운 한 문장."
+      "description": "프로필에 표시되는 한 문장 자기소개. 이름과 직업을 포함합니다."
     }
   },
   "required": ["name", "age", "occupation", "introduction"],

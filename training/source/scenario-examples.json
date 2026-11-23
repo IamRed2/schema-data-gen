@@ -1,0 +1,212 @@
+[
+  {
+    "split": "train",
+    "group": "scenario-craft",
+    "variants": {
+      "Korean": [
+        [
+          "초보자 도자기 체험에서 작은 컵을 만든다. 정원은 18명이다. 앞치마가 제공된다.",
+          "도자기 컵 만들기",
+          "도자기 컵 만들기 체험은 18명까지 신청할 수 있습니다."
+        ],
+        [
+          "초보자 도자기 체험에서 작은 접시를 만든다. 정원은 12명이다. 앞치마가 제공된다.",
+          "도자기 접시 만들기",
+          "도자기 접시 만들기 체험은 12명까지 신청할 수 있습니다."
+        ]
+      ],
+      "English": [
+        [
+          "Beginners make a ceramic cup. Capacity is 18. Aprons are provided.",
+          "Make a Ceramic Cup",
+          "The ceramic cup workshop has 18 places."
+        ],
+        [
+          "Beginners make a ceramic plate. Capacity is 12. Aprons are provided.",
+          "Make a Ceramic Plate",
+          "The ceramic plate workshop has 12 places."
+        ]
+      ]
+    }
+  },
+  {
+    "split": "train",
+    "group": "scenario-exhibit",
+    "variants": {
+      "Korean": [
+        [
+          "유리 조각전이 제4전시실에 열린다. 로비에 물품 보관함이 있다.",
+          "유리 조각전",
+          "유리 조각전은 제4전시실에서 관람할 수 있습니다."
+        ],
+        [
+          "목판화전이 제7전시실에 열린다. 로비에 물품 보관함이 있다.",
+          "목판화전",
+          "목판화전은 제7전시실에서 관람할 수 있습니다."
+        ]
+      ],
+      "English": [
+        [
+          "Glass sculptures are on display in Gallery 4. Lockers are in the lobby.",
+          "Glass Sculpture Exhibition",
+          "Visit Gallery 4 to see the glass sculpture exhibition."
+        ],
+        [
+          "Woodblock prints are on display in Gallery 7. Lockers are in the lobby.",
+          "Woodblock Print Exhibition",
+          "Visit Gallery 7 to see the woodblock print exhibition."
+        ]
+      ]
+    }
+  },
+  {
+    "split": "train",
+    "group": "scenario-transit",
+    "variants": {
+      "Korean": [
+        [
+          "강변행 셔틀이 오전 9시에 출발한다. 승차권은 현장에서 확인한다.",
+          "강변행 셔틀",
+          "강변행 셔틀은 오전 9시에 출발합니다."
+        ],
+        [
+          "공원행 셔틀이 오전 11시에 출발한다. 승차권은 현장에서 확인한다.",
+          "공원행 셔틀",
+          "공원행 셔틀은 오전 11시에 출발합니다."
+        ]
+      ],
+      "English": [
+        [
+          "The riverside shuttle departs at 9 a.m. Tickets are checked on site.",
+          "Riverside Shuttle",
+          "The riverside shuttle departs at 9 a.m."
+        ],
+        [
+          "The park shuttle departs at 11 a.m. Tickets are checked on site.",
+          "Park Shuttle",
+          "The park shuttle departs at 11 a.m."
+        ]
+      ]
+    }
+  },
+  {
+    "split": "train",
+    "group": "scenario-inventory",
+    "variants": {
+      "Korean": [
+        [
+          "북쪽 창고에 우산 12개가 입고됐다. 담당 직원은 검수표를 작성한다.",
+          "우산 입고",
+          "북쪽 창고에 우산 12개가 입고되었습니다."
+        ],
+        [
+          "북쪽 창고에 손전등 8개가 입고됐다. 담당 직원은 검수표를 작성한다.",
+          "손전등 입고",
+          "북쪽 창고에 손전등 8개가 입고되었습니다."
+        ]
+      ],
+      "English": [
+        [
+          "The north warehouse received 12 umbrellas. Staff will complete an inspection form.",
+          "Umbrella Delivery",
+          "The north warehouse received 12 umbrellas."
+        ],
+        [
+          "The north warehouse received 8 flashlights. Staff will complete an inspection form.",
+          "Flashlight Delivery",
+          "The north warehouse received 8 flashlights."
+        ]
+      ]
+    }
+  },
+  {
+    "split": "train",
+    "group": "scenario-community",
+    "variants": {
+      "Korean": [
+        [
+          "토요일에 중고책 교환회를 연다. 참가자는 책을 최대 5권 가져올 수 있다. 종이 가방을 제공한다.",
+          "중고책 교환회",
+          "중고책 교환회에 책을 최대 5권 가져올 수 있습니다."
+        ],
+        [
+          "토요일에 묘목 교환회를 연다. 참가자는 묘목을 최대 3개 가져올 수 있다. 종이 가방을 제공한다.",
+          "묘목 교환회",
+          "묘목 교환회에 묘목을 최대 3개 가져올 수 있습니다."
+        ]
+      ],
+      "English": [
+        [
+          "Saturday's book swap accepts up to 5 books per participant. Paper bags are provided.",
+          "Used Book Swap",
+          "Participants can bring up to 5 books to the book swap."
+        ],
+        [
+          "Saturday's seedling swap accepts up to 3 seedlings per participant. Paper bags are provided.",
+          "Seedling Swap",
+          "Participants can bring up to 3 seedlings to the seedling swap."
+        ]
+      ]
+    }
+  },
+  {
+    "split": "test",
+    "group": "scenario-observatory",
+    "variants": {
+      "Korean": [
+        [
+          "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다.",
+          "달 관측",
+          "달 관측 프로그램은 16명까지 신청할 수 있습니다."
+        ],
+        [
+          "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다.",
+          "토성 관측",
+          "토성 관측 프로그램은 24명까지 신청할 수 있습니다."
+        ]
+      ],
+      "English": [
+        [
+          "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance.",
+          "Moon Viewing",
+          "The Moon viewing has room for 16 participants."
+        ],
+        [
+          "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance.",
+          "Saturn Viewing",
+          "The Saturn viewing has room for 24 participants."
+        ]
+      ]
+    }
+  },
+  {
+    "split": "test",
+    "group": "scenario-sports",
+    "variants": {
+      "Korean": [
+        [
+          "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다.",
+          "배드민턴 체험",
+          "배드민턴 체험은 오후 2시에 시작합니다."
+        ],
+        [
+          "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다.",
+          "탁구 체험",
+          "탁구 체험은 오후 4시에 시작합니다."
+        ]
+      ],
+      "English": [
+        [
+          "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed.",
+          "Badminton Session",
+          "The badminton session starts at 2 p.m."
+        ],
+        [
+          "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed.",
+          "Table Tennis Session",
+          "The table tennis session starts at 4 p.m."
+        ]
+      ]
+    }
+  }
+]

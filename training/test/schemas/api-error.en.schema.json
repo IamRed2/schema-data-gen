@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "status_code": {
+      "type": "integer",
+      "enum": [
+        429
+      ]
+    },
+    "error_code": {
+      "const": "RATE_LIMIT_EXCEEDED"
+    },
+    "retry_after_seconds": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 120
+    },
+    "message": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 180,
+      "description": "Client-facing error message describing the request rate limit and the retry interval in seconds."
+    },
+    "request_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Identifier used to look up the request in server logs."
+    }
+  },
+  "required": [
+    "status_code",
+    "error_code",
+    "retry_after_seconds",
+    "message",
+    "request_id"
+  ],
+  "additionalProperties": false
+}

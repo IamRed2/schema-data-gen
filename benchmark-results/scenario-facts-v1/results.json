@@ -1,0 +1,229 @@
+{
+  "seed": 2746317213,
+  "rows": [
+    {
+      "id": "scenario-observatory-Korean-0-notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다.",
+        "plan": {
+          "activity": "달 관측",
+          "exact_detail": "정원 16명",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "scenario_only": "전망대에서 물을 판매합니다.",
+      "scenario_only_error": null,
+      "scenario_and_facts": "정원은 16명에 달린 관측을 진행했습니다.",
+      "error": null,
+      "attempts": 1,
+      "seconds": 6.461
+    },
+    {
+      "id": "scenario-observatory-Korean-1-notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다.",
+        "plan": {
+          "activity": "토성 관측",
+          "exact_detail": "정원 24명",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "scenario_only": "전망대에서 물을 판매합니다.",
+      "scenario_only_error": null,
+      "scenario_and_facts": "정원에서 24명이 토성 관측을 진행했다.",
+      "error": null,
+      "attempts": 1,
+      "seconds": 2.809
+    },
+    {
+      "id": "scenario-observatory-English-0-notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance.",
+        "plan": {
+          "activity": "Moon viewing",
+          "exact_detail": "16 participants",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "scenario_only": "Water is sold at the observatory entrance.",
+      "scenario_only_error": null,
+      "scenario_and_facts": "The observatory has a Moon viewing for 16 participants.",
+      "error": null,
+      "attempts": 1,
+      "seconds": 2.469
+    },
+    {
+      "id": "scenario-observatory-English-1-notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance.",
+        "plan": {
+          "activity": "Saturn viewing",
+          "exact_detail": "24 participants",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "scenario_only": "Saturn Observation",
+      "scenario_only_error": null,
+      "scenario_and_facts": "The observatory has a Saturn viewing for 24 participants.",
+      "error": null,
+      "attempts": 1,
+      "seconds": 2.591
+    },
+    {
+      "id": "scenario-sports-Korean-0-notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다.",
+        "plan": {
+          "activity": "배드민턴 체험",
+          "exact_detail": "오후 2시",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "scenario_only": "배드민전을 라켓을 이용한 배드민전 체험을 떨었어요.",
+      "scenario_only_error": null,
+      "scenario_and_facts": "실내 배드민턴 체험을 시작할 수 있습니다.",
+      "error": null,
+      "attempts": 1,
+      "seconds": 2.597
+    },
+    {
+      "id": "scenario-sports-Korean-1-notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다.",
+        "plan": {
+          "activity": "탁구 체험",
+          "exact_detail": "오후 4시",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "scenario_only": "탁구를 빌 수 있는 라켓을 선물받아 이용할 수 있어요.",
+      "scenario_only_error": null,
+      "scenario_and_facts": "탁구를 빌린 라켓을 털다.",
+      "error": null,
+      "attempts": 1,
+      "seconds": 2.908
+    },
+    {
+      "id": "scenario-sports-English-0-notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed.",
+        "plan": {
+          "activity": "badminton session",
+          "exact_detail": "2 p.m.",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "scenario_only": "Book your slot in the indoor gym",
+      "scenario_only_error": null,
+      "scenario_and_facts": "In one sentence, state both the activity and the exact detail.",
+      "error": null,
+      "attempts": 1,
+      "seconds": 3.265
+    },
+    {
+      "id": "scenario-sports-English-1-notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed.",
+        "plan": {
+          "activity": "table tennis session",
+          "exact_detail": "4 p.m.",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "scenario_only": "Please bring a paddle from the indoor gym.",
+      "scenario_only_error": null,
+      "scenario_and_facts": "The indoor gym hosts a table tennis session at 4 p.m.",
+      "error": null,
+      "attempts": 1,
+      "seconds": 3.447
+    }
+  ]
+}

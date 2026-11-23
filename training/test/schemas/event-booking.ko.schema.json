@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "workshop",
+        "seminar",
+        "tour"
+      ]
+    },
+    "event_name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 70,
+      "description": "예약 화면에 표시되는 행사명."
+    },
+    "location": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 70,
+      "description": "행사가 열리는 시설 또는 행사장 이름."
+    },
+    "capacity": {
+      "type": "integer",
+      "minimum": 8,
+      "maximum": 80
+    },
+    "notice": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 200,
+      "description": "참가자에게 표시되는 예약 안내문. 행사명, 장소, 최대 참가 인원을 포함합니다."
+    }
+  },
+  "required": [
+    "event_type",
+    "event_name",
+    "location",
+    "capacity",
+    "notice"
+  ],
+  "additionalProperties": false
+}

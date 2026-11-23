@@ -1,0 +1,1169 @@
+{
+  "seed": 2746317213,
+  "rows": [
+    {
+      "model": "qwen-base",
+      "id": "space-ko-limit",
+      "task": "role",
+      "request": {
+        "field_name": "headcount",
+        "path": "$.headcount",
+        "field_schema": {
+          "type": "integer",
+          "description": "공간의 최대 수용 인원을 정수로 반환한다."
+        },
+        "target_type": "integer",
+        "output_language": "Korean",
+        "context": {},
+        "scenario": "공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다."
+      },
+      "expected": 28,
+      "output": null,
+      "valid": false,
+      "correct": false,
+      "error": "Invalid control character at: line 1 column 514 (char 513)",
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 16.65
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "space-ko-booked",
+      "task": "role",
+      "request": {
+        "field_name": "headcount",
+        "path": "$.headcount",
+        "field_schema": {
+          "type": "integer",
+          "description": "현재 예약자 수를 정수로 반환한다."
+        },
+        "target_type": "integer",
+        "output_language": "Korean",
+        "context": {},
+        "scenario": "공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다."
+      },
+      "expected": 19,
+      "output": "-29",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.993
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "shipment-en-ordered",
+      "task": "role",
+      "request": {
+        "field_name": "quantity",
+        "path": "$.quantity",
+        "field_schema": {
+          "type": "integer",
+          "description": "Return the number of units ordered as an integer."
+        },
+        "target_type": "integer",
+        "output_language": "English",
+        "context": {},
+        "scenario": "A shop ordered 35 units. The supplier shipped 21 units and will send the rest later."
+      },
+      "expected": 35,
+      "output": "-35",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.582
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "shipment-en-shipped",
+      "task": "role",
+      "request": {
+        "field_name": "quantity",
+        "path": "$.quantity",
+        "field_schema": {
+          "type": "integer",
+          "description": "Return the number of units already shipped as an integer."
+        },
+        "target_type": "integer",
+        "output_language": "English",
+        "context": {},
+        "scenario": "A shop ordered 35 units. The supplier shipped 21 units and will send the rest later."
+      },
+      "expected": 21,
+      "output": "-35",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.968
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "scenario-observatory-Korean-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다.",
+        "plan": {
+          "activity": "달 관측",
+          "exact_detail": "정원 16명",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "errors: expected a single field value, but there are 2 fields in the provided JSON. Please check the input format and structure. Ensure that the input is well-1",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 4.028
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "scenario-observatory-Korean-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다.",
+        "plan": {
+          "activity": "토성 관측",
+          "exact_detail": "정원 24명",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": ":[-]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]{}[]",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 4.618
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "scenario-observatory-English-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance.",
+        "plan": {
+          "activity": "Moon viewing",
+          "exact_detail": "16 participants",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "errors",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.254
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "scenario-observatory-English-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance.",
+        "plan": {
+          "activity": "Saturn viewing",
+          "exact_detail": "24 participants",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "errors",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.55
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "scenario-sports-Korean-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다.",
+        "plan": {
+          "activity": "배드민턴 체험",
+          "exact_detail": "오후 2시",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "errors: [too long, invalid, missing] when the field is empty, or no value provided",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 3.167
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "scenario-sports-Korean-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다.",
+        "plan": {
+          "activity": "탁구 체험",
+          "exact_detail": "오후 4시",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "errors: expected a scenario",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.301
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "scenario-sports-English-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed.",
+        "plan": {
+          "activity": "badminton session",
+          "exact_detail": "2 p.m.",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": ":[-1, null, ",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 3.373
+        }
+      ]
+    },
+    {
+      "model": "qwen-base",
+      "id": "scenario-sports-English-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed.",
+        "plan": {
+          "activity": "table tennis session",
+          "exact_detail": "4 p.m.",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "errors",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.233
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "space-ko-limit",
+      "task": "role",
+      "request": {
+        "field_name": "headcount",
+        "path": "$.headcount",
+        "field_schema": {
+          "type": "integer",
+          "description": "공간의 최대 수용 인원을 정수로 반환한다."
+        },
+        "target_type": "integer",
+        "output_language": "Korean",
+        "context": {},
+        "scenario": "공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다."
+      },
+      "expected": 28,
+      "output": "28",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 4.18
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "space-ko-booked",
+      "task": "role",
+      "request": {
+        "field_name": "headcount",
+        "path": "$.headcount",
+        "field_schema": {
+          "type": "integer",
+          "description": "현재 예약자 수를 정수로 반환한다."
+        },
+        "target_type": "integer",
+        "output_language": "Korean",
+        "context": {},
+        "scenario": "공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다."
+      },
+      "expected": 19,
+      "output": "28",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.792
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "shipment-en-ordered",
+      "task": "role",
+      "request": {
+        "field_name": "quantity",
+        "path": "$.quantity",
+        "field_schema": {
+          "type": "integer",
+          "description": "Return the number of units ordered as an integer."
+        },
+        "target_type": "integer",
+        "output_language": "English",
+        "context": {},
+        "scenario": "A shop ordered 35 units. The supplier shipped 21 units and will send the rest later."
+      },
+      "expected": 35,
+      "output": "21",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.502
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "shipment-en-shipped",
+      "task": "role",
+      "request": {
+        "field_name": "quantity",
+        "path": "$.quantity",
+        "field_schema": {
+          "type": "integer",
+          "description": "Return the number of units already shipped as an integer."
+        },
+        "target_type": "integer",
+        "output_language": "English",
+        "context": {},
+        "scenario": "A shop ordered 35 units. The supplier shipped 21 units and will send the rest later."
+      },
+      "expected": 21,
+      "output": "21",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.559
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "scenario-observatory-Korean-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다.",
+        "plan": {
+          "activity": "달 관측",
+          "exact_detail": "정원 16명",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "정원은 16명에 달린 관측을 진행했습니다.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 3.039
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "scenario-observatory-Korean-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다.",
+        "plan": {
+          "activity": "토성 관측",
+          "exact_detail": "정원 24명",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "정원에는 24명이 토성 관측을 진행하고 있습니다.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.87
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "scenario-observatory-English-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance.",
+        "plan": {
+          "activity": "Moon viewing",
+          "exact_detail": "16 participants",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "The observatory has a Moon viewing for 16 participants.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.804
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "scenario-observatory-English-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance.",
+        "plan": {
+          "activity": "Saturn viewing",
+          "exact_detail": "24 participants",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "The observatory has a Saturn viewing for 24 participants.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.664
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "scenario-sports-Korean-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다.",
+        "plan": {
+          "activity": "배드민턴 체험",
+          "exact_detail": "오후 2시",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "실내 배드민턴 체험을 시작할 수 있습니다.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.909
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "scenario-sports-Korean-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다.",
+        "plan": {
+          "activity": "탁구 체험",
+          "exact_detail": "오후 4시",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "탁구 라켓을 빌린다.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.623
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "scenario-sports-English-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed.",
+        "plan": {
+          "activity": "badminton session",
+          "exact_detail": "2 p.m.",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "In one sentence, state both the activity and the exact detail.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.959
+        }
+      ]
+    },
+    {
+      "model": "qwen-lora",
+      "id": "scenario-sports-English-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed.",
+        "plan": {
+          "activity": "table tennis session",
+          "exact_detail": "4 p.m.",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "Table tennis session at 4 p.m.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 29,
+          "total_layers": 29,
+          "seconds": 2.558
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "space-ko-limit",
+      "task": "role",
+      "request": {
+        "field_name": "headcount",
+        "path": "$.headcount",
+        "field_schema": {
+          "type": "integer",
+          "description": "공간의 최대 수용 인원을 정수로 반환한다."
+        },
+        "target_type": "integer",
+        "output_language": "Korean",
+        "context": {},
+        "scenario": "공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다."
+      },
+      "expected": 28,
+      "output": "19",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 3.048
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "space-ko-booked",
+      "task": "role",
+      "request": {
+        "field_name": "headcount",
+        "path": "$.headcount",
+        "field_schema": {
+          "type": "integer",
+          "description": "현재 예약자 수를 정수로 반환한다."
+        },
+        "target_type": "integer",
+        "output_language": "Korean",
+        "context": {},
+        "scenario": "공간의 최대 수용 인원은 28명이고 현재 예약자는 19명이다."
+      },
+      "expected": 19,
+      "output": "28",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 3.297
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "shipment-en-ordered",
+      "task": "role",
+      "request": {
+        "field_name": "quantity",
+        "path": "$.quantity",
+        "field_schema": {
+          "type": "integer",
+          "description": "Return the number of units ordered as an integer."
+        },
+        "target_type": "integer",
+        "output_language": "English",
+        "context": {},
+        "scenario": "A shop ordered 35 units. The supplier shipped 21 units and will send the rest later."
+      },
+      "expected": 35,
+      "output": "14",
+      "valid": true,
+      "correct": false,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 2.717
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "shipment-en-shipped",
+      "task": "role",
+      "request": {
+        "field_name": "quantity",
+        "path": "$.quantity",
+        "field_schema": {
+          "type": "integer",
+          "description": "Return the number of units already shipped as an integer."
+        },
+        "target_type": "integer",
+        "output_language": "English",
+        "context": {},
+        "scenario": "A shop ordered 35 units. The supplier shipped 21 units and will send the rest later."
+      },
+      "expected": 21,
+      "output": "21",
+      "valid": true,
+      "correct": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 2.856
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "scenario-observatory-Korean-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 달 관측을 진행한다. 정원은 16명이다. 입구에 물을 판매한다.",
+        "plan": {
+          "activity": "달 관측",
+          "exact_detail": "정원 16명",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "> notice = '{ ",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 3.372
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "scenario-observatory-Korean-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "전망대에서 토성 관측을 진행한다. 정원은 24명이다. 입구에 물을 판매한다.",
+        "plan": {
+          "activity": "토성 관측",
+          "exact_detail": "정원 24명",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "# notice_value",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 2.82
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "scenario-observatory-English-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Moon viewing for up to 16 people. Water is sold at the entrance.",
+        "plan": {
+          "activity": "Moon viewing",
+          "exact_detail": "16 participants",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": ";</think></think>",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 2.799
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "scenario-observatory-English-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The observatory is hosting a Saturn viewing for up to 24 people. Water is sold at the entrance.",
+        "plan": {
+          "activity": "Saturn viewing",
+          "exact_detail": "24 participants",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "/no_think",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 2.901
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "scenario-sports-Korean-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 배드민턴 체험을 진행한다. 시작 시각은 오후 2시다. 라켓은 빌릴 수 있다.",
+        "plan": {
+          "activity": "배드민턴 체험",
+          "exact_detail": "오후 2시",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "# notice field 생성 시 필요한 정보를 모두 포함하고 JSON 문자열로 반환할 때, 한 줄에 하나의 줄마다 하나의 JSON 객체를 출력하라는 요구사항에 따라, 각 줄은 구분하는 들여쓰기를 사용하여 JSON 문자열을 출력하세요.",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 4.679
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "scenario-sports-Korean-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "상황의 핵심 주제와 안내에 필요한 수치나 시각을 포함한 한 문장."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "Korean",
+        "scenario": "실내 체육관에서 탁구 체험을 진행한다. 시작 시각은 오후 4시다. 라켓은 빌릴 수 있다.",
+        "plan": {
+          "activity": "탁구 체험",
+          "exact_detail": "오후 4시",
+          "instruction": "한 문장에 활동과 수치 또는 시각을 모두 포함하세요. 다른 수치나 시각을 추가하지 마세요."
+        }
+      },
+      "output": "$field_value$는 다음과 같이 생성됩니다:",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 3.986
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "scenario-sports-English-0-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a badminton session at 2 p.m. Rackets can be borrowed.",
+        "plan": {
+          "activity": "badminton session",
+          "exact_detail": "2 p.m.",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "notice",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 2.768
+        }
+      ]
+    },
+    {
+      "model": "exaone-base",
+      "id": "scenario-sports-English-1-notice",
+      "task": "notice",
+      "request": {
+        "field_name": "notice",
+        "path": "$.notice",
+        "field_schema": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160,
+          "description": "One notice stating the main subject and the relevant number or time."
+        },
+        "target_type": "string",
+        "context": {},
+        "output_language": "English",
+        "scenario": "The indoor gym hosts a table tennis session at 4 p.m. Paddles can be borrowed.",
+        "plan": {
+          "activity": "table tennis session",
+          "exact_detail": "4 p.m.",
+          "instruction": "In one sentence, state both the activity and the exact detail. Add no other numbers or times."
+        }
+      },
+      "output": "notice",
+      "valid": true,
+      "error": null,
+      "calls": [
+        {
+          "gpu_layers": 31,
+          "total_layers": 31,
+          "seconds": 2.9
+        }
+      ]
+    }
+  ]
+}

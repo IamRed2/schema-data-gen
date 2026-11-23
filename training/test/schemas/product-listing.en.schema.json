@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "home",
+        "sports",
+        "electronics"
+      ]
+    },
+    "product_name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 70,
+      "description": "Catalog display name for a product in the selected category."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 220,
+      "description": "Product detail copy describing the named product's main use and a distinguishing feature."
+    },
+    "unit_price": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 500,
+      "multipleOf": 0.01
+    },
+    "stock_quantity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 300
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "compact",
+          "portable",
+          "durable",
+          "lightweight"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "category",
+    "product_name",
+    "description",
+    "unit_price",
+    "stock_quantity",
+    "tags"
+  ],
+  "additionalProperties": false
+}
