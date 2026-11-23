@@ -1,0 +1,18 @@
+[
+  {
+    "category": "refund",
+    "message": "I am not sure about my order. I need to confirm the details before proceeding."
+  },
+  {
+    "category": "delivery",
+    "message": "I received my package within the promised delivery time. I am happy with the service."
+  },
+  {
+    "category": "delivery",
+    "message": "I received my package within the promised delivery time. I am happy with the service."
+  },
+  {
+    "category": "refund",
+    "message": "I cannot confirm my order. I need to check the details again."
+  }
+]

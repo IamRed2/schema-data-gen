@@ -1,0 +1,19 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local training environments, checkpoints and model weights
+/.training/
+*.gguf
+*.safetensors
+
+# Downloaded runtime and generated data
+/runtime/llama.cpp/
+/outputs/
+
+# Local environment settings
+.env
+.env.*
+!.env.example

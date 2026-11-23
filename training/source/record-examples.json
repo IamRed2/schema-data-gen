@@ -1,0 +1,542 @@
+[
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "refund",
+            "delivery"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "description": "고객이 고객센터에 보낸 문의다. category에 맞는 구체적인 문제를 고객의 입장에서 설명하고 원하는 조치를 요청한다."
+        }
+      },
+      "required": [
+        "category",
+        "message"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "refund",
+          "message": "이중 결제된 금액 중 한 건을 환불해 주실 수 있나요?"
+        },
+        {
+          "category": "delivery",
+          "message": "배송 완료 알림을 받았는데 택배가 보이지 않아 배달 위치를 확인해 주세요."
+        }
+      ],
+      "English": [
+        {
+          "category": "refund",
+          "message": "I was charged twice for the same order. Could you refund the duplicate payment?"
+        },
+        {
+          "category": "delivery",
+          "message": "The tracking page says delivered, but I haven't received the parcel. Could you check where it was left?"
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "refund",
+            "delivery"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "description": "Write a message from a customer to support. Describe a concrete problem matching category and request a remedy."
+        }
+      },
+      "required": [
+        "category",
+        "message"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "refund",
+          "message": "이중 결제된 금액 중 한 건을 환불해 주실 수 있나요?"
+        },
+        {
+          "category": "delivery",
+          "message": "배송 완료 알림을 받았는데 택배가 보이지 않아 배달 위치를 확인해 주세요."
+        }
+      ],
+      "English": [
+        {
+          "category": "refund",
+          "message": "I was charged twice for the same order. Could you refund the duplicate payment?"
+        },
+        {
+          "category": "delivery",
+          "message": "The tracking page says delivered, but I haven't received the parcel. Could you check where it was left?"
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "refund",
+            "delivery"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "description": "상담원이 고객에게 보내는 답변이다. category에 맞는 확인 사항과 다음 조치를 안내한다."
+        }
+      },
+      "required": [
+        "category",
+        "message"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "refund",
+          "message": "중복 결제를 확인했으며 한 건은 오늘 원래 결제 수단으로 환불해 드리겠습니다."
+        },
+        {
+          "category": "delivery",
+          "message": "기사님에게 배달 위치를 확인한 뒤 오늘 오후에 다시 안내해 드리겠습니다."
+        }
+      ],
+      "English": [
+        {
+          "category": "refund",
+          "message": "I've confirmed the duplicate charge and issued a refund to your original payment method."
+        },
+        {
+          "category": "delivery",
+          "message": "I'll ask the courier where the parcel was left and update you this afternoon."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "refund",
+            "delivery"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "description": "Write a support agent's reply. Explain what the agent checked and what will happen next for the given category."
+        }
+      },
+      "required": [
+        "category",
+        "message"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "refund",
+          "message": "중복 결제를 확인했으며 한 건은 오늘 원래 결제 수단으로 환불해 드리겠습니다."
+        },
+        {
+          "category": "delivery",
+          "message": "기사님에게 배달 위치를 확인한 뒤 오늘 오후에 다시 안내해 드리겠습니다."
+        }
+      ],
+      "English": [
+        {
+          "category": "refund",
+          "message": "I've confirmed the duplicate charge and issued a refund to your original payment method."
+        },
+        {
+          "category": "delivery",
+          "message": "I'll ask the courier where the parcel was left and update you this afternoon."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "login",
+            "export"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "description": "소프트웨어 버그 재현 절차를 작성한다. category에 해당하는 동작과 실제로 발생한 오류를 구체적으로 적는다."
+        }
+      },
+      "required": [
+        "category",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "login",
+          "detail": "비밀번호를 변경한 직후 새 비밀번호로 로그인하면 올바른 정보를 입력해도 오류가 표시됩니다."
+        },
+        {
+          "category": "export",
+          "detail": "빈 행이 포함된 표를 CSV로 내보내면 첫 번째 빈 행 이후의 데이터가 누락됩니다."
+        }
+      ],
+      "English": [
+        {
+          "category": "login",
+          "detail": "After changing your password, sign in with the new password. The sign-in page rejects it as incorrect."
+        },
+        {
+          "category": "export",
+          "detail": "Export a table containing a blank row as CSV. The exported file omits every row after the blank one."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "login",
+            "export"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "description": "Describe steps to reproduce a software bug, including the action and observed failure for the category."
+        }
+      },
+      "required": [
+        "category",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "login",
+          "detail": "비밀번호를 변경한 직후 새 비밀번호로 로그인하면 올바른 정보를 입력해도 오류가 표시됩니다."
+        },
+        {
+          "category": "export",
+          "detail": "빈 행이 포함된 표를 CSV로 내보내면 첫 번째 빈 행 이후의 데이터가 누락됩니다."
+        }
+      ],
+      "English": [
+        {
+          "category": "login",
+          "detail": "After changing your password, sign in with the new password. The sign-in page rejects it as incorrect."
+        },
+        {
+          "category": "export",
+          "detail": "Export a table containing a blank row as CSV. The exported file omits every row after the blank one."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "cafe",
+            "bookstore"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "방문자가 남긴 리뷰를 작성한다. category에 맞는 장소의 구체적인 경험을 한두 문장으로 적는다."
+        }
+      },
+      "required": [
+        "category",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "cafe",
+          "text": "아침에 들렀는데 라테가 고소했고 창가 자리가 조용해서 책을 읽기 좋았어요."
+        },
+        {
+          "category": "bookstore",
+          "text": "찾던 번역본이 없었는데 직원이 비슷한 책 두 권을 직접 골라 줬어요."
+        }
+      ],
+      "English": [
+        {
+          "category": "cafe",
+          "text": "The latte had a nutty flavor, and the quiet window seat was perfect for reading."
+        },
+        {
+          "category": "bookstore",
+          "text": "They didn't have the translation I wanted, but a bookseller took the time to suggest two similar titles."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "cafe",
+            "bookstore"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "Write a visitor review with a specific experience at the type of place given by category."
+        }
+      },
+      "required": [
+        "category",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "cafe",
+          "text": "아침에 들렀는데 라테가 고소했고 창가 자리가 조용해서 책을 읽기 좋았어요."
+        },
+        {
+          "category": "bookstore",
+          "text": "찾던 번역본이 없었는데 직원이 비슷한 책 두 권을 직접 골라 줬어요."
+        }
+      ],
+      "English": [
+        {
+          "category": "cafe",
+          "text": "The latte had a nutty flavor, and the quiet window seat was perfect for reading."
+        },
+        {
+          "category": "bookstore",
+          "text": "They didn't have the translation I wanted, but a bookseller took the time to suggest two similar titles."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "appointment",
+            "payment"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "description": "사용자에게 알림을 보낸다. category에 맞는 일정 또는 처리 결과와 필요한 행동을 짧게 안내한다."
+        }
+      },
+      "required": [
+        "category",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "appointment",
+          "detail": "예약이 내일 오후 2시로 확정됐습니다. 시작 10분 전까지 도착해 주세요."
+        },
+        {
+          "category": "payment",
+          "detail": "결제가 승인되었습니다. 영수증은 주문 내역에서 확인할 수 있습니다."
+        }
+      ],
+      "English": [
+        {
+          "category": "appointment",
+          "detail": "Your appointment is tomorrow at 2 p.m. Please arrive ten minutes early."
+        },
+        {
+          "category": "payment",
+          "detail": "Your payment was approved. You can find the receipt in your order history."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "appointment",
+            "payment"
+          ]
+        },
+        "detail": {
+          "type": "string",
+          "description": "Write a short notification about the category, with a concrete time or outcome and any action needed."
+        }
+      },
+      "required": [
+        "category",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "appointment",
+          "detail": "예약이 내일 오후 2시로 확정됐습니다. 시작 10분 전까지 도착해 주세요."
+        },
+        {
+          "category": "payment",
+          "detail": "결제가 승인되었습니다. 영수증은 주문 내역에서 확인할 수 있습니다."
+        }
+      ],
+      "English": [
+        {
+          "category": "appointment",
+          "detail": "Your appointment is tomorrow at 2 p.m. Please arrive ten minutes early."
+        },
+        {
+          "category": "payment",
+          "detail": "Your payment was approved. You can find the receipt in your order history."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "access",
+            "equipment"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "직원이 사내 지원팀에 보내는 요청이다. category에 따라 필요한 대상과 이유를 한 문장에 적는다."
+        }
+      },
+      "required": [
+        "category",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "access",
+          "text": "이번 주 매출 보고서를 작성할 수 있도록 분석 대시보드의 읽기 권한을 열어 주세요."
+        },
+        {
+          "category": "equipment",
+          "text": "화상회의 중 소리가 끊겨서 고장 난 헤드셋을 교체해 주세요."
+        }
+      ],
+      "English": [
+        {
+          "category": "access",
+          "text": "Please grant me read access to the analytics dashboard so I can prepare this week's sales report."
+        },
+        {
+          "category": "equipment",
+          "text": "Could you replace my headset? The audio keeps dropping during video calls."
+        }
+      ]
+    }
+  },
+  {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "access",
+            "equipment"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "Write an employee's request to internal support, naming the resource and why it is needed."
+        }
+      },
+      "required": [
+        "category",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "answers": {
+      "Korean": [
+        {
+          "category": "access",
+          "text": "이번 주 매출 보고서를 작성할 수 있도록 분석 대시보드의 읽기 권한을 열어 주세요."
+        },
+        {
+          "category": "equipment",
+          "text": "화상회의 중 소리가 끊겨서 고장 난 헤드셋을 교체해 주세요."
+        }
+      ],
+      "English": [
+        {
+          "category": "access",
+          "text": "Please grant me read access to the analytics dashboard so I can prepare this week's sales report."
+        },
+        {
+          "category": "equipment",
+          "text": "Could you replace my headset? The audio keeps dropping during video calls."
+        }
+      ]
+    }
+  }
+]

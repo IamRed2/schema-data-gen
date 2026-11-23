@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {"enum": ["elevator", "water"]},
+    "notice": {
+      "type": "string",
+      "description": "건물 관리 담당자가 입주자에게 보내는 시설 점검 안내다. 점검 날짜나 시간과 점검 중 입주자가 할 수 있는 대안을 구체적으로 안내한다. category에 해당하는 시설을 다룬다."
+    }
+  },
+  "required": ["category", "notice"],
+  "additionalProperties": false
+}

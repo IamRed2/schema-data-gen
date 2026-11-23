@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {"enum": ["elevator", "water"]},
+    "notice": {
+      "type": "string",
+      "description": "입주자가 건물 관리 담당자에게 보내는 수리 요청이다. category에 맞는 고장 증상과 담당자에게 요청하는 조치를 구체적으로 적는다."
+    }
+  },
+  "required": ["category", "notice"],
+  "additionalProperties": false
+}

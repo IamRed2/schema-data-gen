@@ -1,0 +1,18 @@
+[
+  {
+    "category": "refund",
+    "message": "I received an incorrect item due to a mismatch in the SKU. Please refund my payment for the incorrect item."
+  },
+  {
+    "category": "delivery",
+    "message": "The service was delayed due to a system error, and I need to request an immediate fix to the service."
+  },
+  {
+    "category": "refund",
+    "message": "The product was defective and returned. I am requesting a full refund for the defective product."
+  },
+  {
+    "category": "delivery",
+    "message": "The package was delayed in the delivery window. I need to request an urgent service to correct the delivery."
+  }
+]

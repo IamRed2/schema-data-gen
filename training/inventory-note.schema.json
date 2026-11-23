@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {"enum": ["kitchen", "outdoor"]},
+    "text": {
+      "type": "string",
+      "description": "category에 속하는 물품 하나를 특정하고, 물품에서 발견한 구체적인 상태나 결함을 한 문장으로 기록한다."
+    }
+  },
+  "required": ["category", "text"],
+  "additionalProperties": false
+}

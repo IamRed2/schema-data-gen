@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": ["refund", "delivery"]
+    },
+    "message": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Write one sentence from a support agent to a customer explaining what the agent checked and what will happen next for the given category."
+    }
+  },
+  "required": ["category", "message"],
+  "additionalProperties": false
+}

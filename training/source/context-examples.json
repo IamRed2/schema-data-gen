@@ -1,0 +1,100 @@
+[
+  {
+    "schema": "context-library.schema.json",
+    "split": "train",
+    "group": "library-renewal",
+    "answers": {
+      "Korean": [
+        {
+          "branch": "서림점",
+          "book_title": "달빛 지도",
+          "details": {
+            "renewal_days": 7,
+            "notice": "서림점에서 빌린 『달빛 지도』의 대출 기간을 7일 연장했습니다."
+          }
+        },
+        {
+          "branch": "솔빛점",
+          "book_title": "달빛 지도",
+          "details": {
+            "renewal_days": 14,
+            "notice": "솔빛점에서 빌린 『달빛 지도』의 대출 기간을 14일 연장했습니다."
+          }
+        }
+      ],
+      "English": [
+        {
+          "branch": "Maple Branch",
+          "book_title": "Moon Atlas",
+          "details": {
+            "renewal_days": 7,
+            "notice": "Your loan of Moon Atlas from Maple Branch has been extended by 7 days."
+          }
+        },
+        {
+          "branch": "Cedar Branch",
+          "book_title": "Moon Atlas",
+          "details": {
+            "renewal_days": 14,
+            "notice": "Your loan of Moon Atlas from Cedar Branch has been extended by 14 days."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema": "context-event.schema.json",
+    "split": "test",
+    "group": "event-booking",
+    "answers": {
+      "Korean": [
+        {
+          "event": "도자기 워크숍",
+          "details": {
+            "seats": 12,
+            "notice": "도자기 워크숍에 12석이 마련되어 있습니다."
+          },
+          "tags": [
+            "도예",
+            "물레"
+          ]
+        },
+        {
+          "event": "천체 관측회",
+          "details": {
+            "seats": 18,
+            "notice": "천체 관측회에는 참가자 18명이 앉을 자리가 있습니다."
+          },
+          "tags": [
+            "망원경",
+            "별자리"
+          ]
+        }
+      ],
+      "English": [
+        {
+          "event": "Pottery workshop",
+          "details": {
+            "seats": 12,
+            "notice": "The pottery workshop has 12 seats available."
+          },
+          "tags": [
+            "ceramics",
+            "clay"
+          ]
+        },
+        {
+          "event": "Stargazing session",
+          "details": {
+            "seats": 18,
+            "notice": "The stargazing session has 18 seats available."
+          },
+          "tags": [
+            "telescope",
+            "constellations"
+          ]
+        }
+      ]
+    }
+  }
+]

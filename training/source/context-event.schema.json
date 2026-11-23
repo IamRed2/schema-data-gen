@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "event": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "seats": {
+          "type": "integer",
+          "minimum": 12,
+          "maximum": 18,
+          "multipleOf": 2
+        },
+        "notice": {
+          "type": "string",
+          "description": "Write a natural sentence that names the event and states the exact seat count.",
+          "minLength": 15,
+          "maxLength": 130
+        }
+      },
+      "required": [
+        "seats",
+        "notice"
+      ],
+      "additionalProperties": false
+    },
+    "tags": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "description": "행사 주제에 맞는 관련 단어 하나.",
+        "minLength": 2,
+        "maxLength": 20
+      }
+    }
+  },
+  "required": [
+    "event",
+    "details",
+    "tags"
+  ],
+  "additionalProperties": false
+}

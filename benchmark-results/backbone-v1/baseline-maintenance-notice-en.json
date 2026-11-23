@@ -1,0 +1,18 @@
+[
+  {
+    "category": "elevator",
+    "notice": "elevator maintenance notice"
+  },
+  {
+    "category": "water",
+    "notice": "water maintenance notice"
+  },
+  {
+    "category": "elevator",
+    "notice": "elevator maintenance notice"
+  },
+  {
+    "category": "water",
+    "notice": "water maintenance notice"
+  }
+]

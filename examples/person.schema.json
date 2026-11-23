@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {"type": "string"},
+    "age": {"type": "integer", "minimum": 18, "maximum": 90},
+    "occupation": {
+      "type": "string",
+      "description": "일상에서 접할 수 있는 구체적인 직업명 하나."
+    },
+    "introduction": {
+      "type": "string",
+      "description": "이름과 직업을 포함해 본인을 소개하는 자연스러운 한 문장."
+    }
+  },
+  "required": ["name", "age", "occupation", "introduction"],
+  "additionalProperties": false
+}

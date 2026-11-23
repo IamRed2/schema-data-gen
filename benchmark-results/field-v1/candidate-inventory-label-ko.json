@@ -1,0 +1,18 @@
+[
+  {
+    "category": "kitchen",
+    "text": "kitchen"
+  },
+  {
+    "category": "kitchen",
+    "text": "outdoor"
+  },
+  {
+    "category": "outdoor",
+    "text": "kitchen"
+  },
+  {
+    "category": "kitchen",
+    "text": "kitchen"
+  }
+]

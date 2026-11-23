@@ -1,0 +1,18 @@
+[
+  {
+    "category": "elevator",
+    "notice": "Elevator Maintenance Reminder for New Tenant"
+  },
+  {
+    "category": "water",
+    "notice": "Water Quality Inspection Notice for New Tenant"
+  },
+  {
+    "category": "elevator",
+    "notice": "Elevator Safety Check Reminder for New Tenant"
+  },
+  {
+    "category": "water",
+    "notice": "Water Quality Inspection Reminder for New Tenant"
+  }
+]

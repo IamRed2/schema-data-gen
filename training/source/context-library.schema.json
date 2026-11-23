@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "branch": {
+      "type": "string"
+    },
+    "book_title": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "renewal_days": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 14
+        },
+        "notice": {
+          "type": "string",
+          "description": "지점과 도서 제목, 연장 일수를 빠짐없이 포함해 대출 연장 안내를 한 문장으로 작성한다.",
+          "minLength": 20,
+          "maxLength": 160
+        }
+      },
+      "required": [
+        "renewal_days",
+        "notice"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "branch",
+    "book_title",
+    "details"
+  ],
+  "additionalProperties": false
+}

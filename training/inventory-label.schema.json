@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {"enum": ["kitchen", "outdoor"]},
+    "text": {
+      "type": "string",
+      "description": "category에 속하는 구체적인 물품의 보통명사 하나만 적는다. 한 단어로 출력한다."
+    }
+  },
+  "required": ["category", "text"],
+  "additionalProperties": false
+}

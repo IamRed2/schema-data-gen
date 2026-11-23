@@ -1,0 +1,18 @@
+[
+  {
+    "category": "refund",
+    "message": "The customer wants a refund for their order that was delivered on January 10th, but the return policy states that refunds can only be obtained via the official website after a successful order completion. The customer requests an exception for an automated delivery failure scenario."
+  },
+  {
+    "category": "delivery",
+    "message": "The customer is experiencing slow delivery times due to a restricted network connection that affects all orders from their location, causing a significant delay in receiving their items within the last 24 hours."
+  },
+  {
+    "category": "refund",
+    "message": "The customer is unable to process a refund for the purchase of a 2023 model phone that was ordered on 2024-01-15, as the company's policy prohibits refunds for items sold outside their fiscal year. The customer requests an exception for this specific transaction."
+  },
+  {
+    "category": "delivery",
+    "message": "The customer is experiencing delayed delivery due to an unexpected surge in traffic on the main highway, which affects delivery times for all orders from their location, causing a significant delay in receiving their items within the last 24 hours."
+  }
+]

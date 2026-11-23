@@ -1,0 +1,32 @@
+{
+  "sources": [
+    "Project-authored examples",
+    "Cleaned E2E NLG, CC-BY-SA-4.0"
+  ],
+  "split_rule": "Domains grouped together; translated description variants share a split",
+  "splits": {
+    "train": {
+      "count": 98,
+      "groups": [
+        "library-renewal",
+        "notification",
+        "person",
+        "restaurant-e2e",
+        "review",
+        "shipping",
+        "software",
+        "support",
+        "tools",
+        "weather"
+      ]
+    },
+    "test": {
+      "count": 38,
+      "groups": [
+        "event-booking",
+        "garden",
+        "internal-support"
+      ]
+    }
+  }
+}

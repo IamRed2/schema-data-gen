@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "category": {"enum": ["science", "art"]},
+    "text": {
+      "type": "string",
+      "description": "Write a short title of two to four space-separated words for a hands-on activity in the given category. The title should name the actual activity."
+    }
+  },
+  "required": ["category", "text"],
+  "additionalProperties": false
+}

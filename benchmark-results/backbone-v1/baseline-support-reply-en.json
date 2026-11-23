@@ -1,0 +1,18 @@
+[
+  {
+    "category": "refund",
+    "message": "I will check the refund process and confirm that the refund has been applied."
+  },
+  {
+    "category": "delivery",
+    "message": "I will check the delivery process and confirm that the delivery is expected next week."
+  },
+  {
+    "category": "refund",
+    "message": "I will check the refund process and confirm that the refund has been applied."
+  },
+  {
+    "category": "delivery",
+    "message": "I will check the delivery process and confirm that the delivery is expected next week."
+  }
+]

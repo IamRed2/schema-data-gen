@@ -1,0 +1,18 @@
+[
+  {
+    "category": "elevator",
+    "notice": "The building elevator is not running and the service technician has not been assigned yet. The property manager requested the service technician to be assigned immediately since this is a critical building malfunction that needs urgent attention."
+  },
+  {
+    "category": "elevator",
+    "notice": "The building elevator is not running and the service technician has not been assigned yet. The property manager requested the service technician to be assigned immediately since this is a critical building malfunction that needs urgent attention."
+  },
+  {
+    "category": "water",
+    "notice": "The building water tank is overflowing and the service technician has not been assigned yet. The property manager requested the service technician to be assigned immediately since this is a critical building malfunction that needs urgent attention."
+  },
+  {
+    "category": "water",
+    "notice": "The building water tank is overflowing and the service technician has not been assigned yet. The property manager requested the service technician to be assigned immediately since this is a critical building malfunction that needs urgent attention."
+  }
+]

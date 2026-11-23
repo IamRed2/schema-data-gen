@@ -1,0 +1,18 @@
+[
+  {
+    "category": "elevator",
+    "notice": "입주자가 elevator 고장의 사유와 방향에 맞는 고장 증상 및 수리 요청을 제공합니다."
+  },
+  {
+    "category": "water",
+    "notice": "입주자가 water 고장의 사유와 방향에 맞는 고장 증상 및 수리 요청을 제공합니다."
+  },
+  {
+    "category": "elevator",
+    "notice": "입주자가 elevator 고장의 사유와 방향에 맞는 고장 증상 및 수리 요청을 제공합니다."
+  },
+  {
+    "category": "water",
+    "notice": "입주자가 water 고장의 사유와 방향에 맞는 고장 증상 및 수리 요청을 제공합니다."
+  }
+]
